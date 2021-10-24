@@ -15,6 +15,6 @@
   </div>
   <div id='paxpamir-map' class='map-section'></div>
   <div id='paxpamir-market' class='market-section'></div>
-  <div id='paxpamir-playerBoards'>Pax Pamir Player Boards</div>
+  <div id='paxpamir-playerBoards' class='playerBoards-section'>Pax Pamir Player Boards</div>
 </div>
 {OVERALL_GAME_FOOTER}

@@ -59,16 +59,16 @@
     color: #6b6663;
 }
 
-#paxpamir-summary, 
-#paxpamir-map, 
-#paxpamir-market, 
+#paxpamir-summary,
+#paxpamir-map,
+#paxpamir-market,
 #paxpamir-playerBoards {
     display: none;
 }
 
-#paxpamir-summary.section-visible, 
-#paxpamir-map.section-visible, 
-#paxpamir-market.section-visible, 
+#paxpamir-summary.section-visible,
+#paxpamir-map.section-visible,
+#paxpamir-market.section-visible,
 #paxpamir-playerBoards.section-visible {
     display: block;
 }
@@ -93,7 +93,7 @@
     width: 100%;
     box-sizing: border-box;
     margin: 20px 0;
-    background-image: url('./img/assets/mounted-map.jpg');
+    background-image: url('./img/mounted-map.jpg');
     background-size: cover;
     min-height: 800px
 }
@@ -106,7 +106,21 @@
     width: 100%;
     box-sizing: border-box;
     margin: 20px 0;
-    background-image: url('./img/assets/mounted-market.jpg');
+    background-image: url('./img/mounted-market.jpg');
     background-size: cover;
     min-height: 800px
 }
+
+.playerBoards-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0;
+    background-image: url('./img/player-board.png');
+    background-size: cover;
+    min-height: 800px
+}
+
