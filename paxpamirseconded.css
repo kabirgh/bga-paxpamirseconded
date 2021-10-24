@@ -1,0 +1,112 @@
+/**
+ *------
+ * BGA framework: © Gregory Isabelli <gisabelli@boardgamearena.com> & Emmanuel Colin <ecolin@boardgamearena.com>
+ * PaxPamirSecondEd implementation : © <Your name here> <Your email address here>
+ *
+ * This code has been produced on the BGA studio platform for use on http://boardgamearena.com.
+ * See http://en.boardgamearena.com/#!doc/Studio for more information.
+ * -----
+ *
+ * paxpamirseconded.css
+ *
+ * PaxPamirSecondEd stylesheet
+ *
+ */
+
+.pax-pamir-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 1;
+}
+
+.layout-actions-wrapper {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #f0f0f0;
+    box-shadow: 0 3px 8px rgb(0,0,0,0.3);
+}
+
+.layout-action-button {
+    padding: 6px 12px;
+    border: 1px solid #305a72;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-right: 6px;
+    background-color: #305a72;
+    color: #f0f0f0;
+    cursor: pointer;
+}
+
+.layout-action-button:hover {
+    background-color: #6b6663;
+    border-color: #6b6663;
+    color: #f0f0f0;
+    transition: all ease-in-out 0.3s;
+}
+.disabled-layout-action-button {
+    background-color: #f0f0f0;
+    border-color: #6b6663;
+    color: #6b6663;
+}
+
+#paxpamir-summary, 
+#paxpamir-map, 
+#paxpamir-market, 
+#paxpamir-playerBoards {
+    display: none;
+}
+
+#paxpamir-summary.section-visible, 
+#paxpamir-map.section-visible, 
+#paxpamir-market.section-visible, 
+#paxpamir-playerBoards.section-visible {
+    display: block;
+}
+
+.summary-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.map-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0;
+    background-image: url('./img/assets/mounted-map.jpg');
+    background-size: cover;
+    min-height: 800px
+}
+
+.market-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0;
+    background-image: url('./img/assets/mounted-market.jpg');
+    background-size: cover;
+    min-height: 800px
+}
