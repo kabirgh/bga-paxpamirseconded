@@ -93,7 +93,7 @@
     width: 100%;
     box-sizing: border-box;
     margin: 20px 0;
-    background-image: url('./img/mounted-map.jpg');
+    background-image: url('./img/mounted-map-4096.jpg');
     background-size: cover;
     min-height: 800px
 }
@@ -106,7 +106,7 @@
     width: 100%;
     box-sizing: border-box;
     margin: 20px 0;
-    background-image: url('./img/mounted-market.jpg');
+    background-image: url('./img/mounted-market-4096.jpg');
     background-size: cover;
     min-height: 800px
 }
