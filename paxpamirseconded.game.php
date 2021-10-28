@@ -17,6 +17,8 @@
  *
  */
 
+// Automatically include all classes in the modules/php folder. They must be
+// namespaced PAX\<folder_ame>
 $swdNamespaceAutoload = function ($class) {
     $classParts = explode('\\', $class);
     if ($classParts[0] == 'PAX') {
