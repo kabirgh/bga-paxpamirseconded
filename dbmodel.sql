@@ -22,7 +22,7 @@
 ALTER TABLE `player`
   ADD `rupees` int unsigned NOT NULL DEFAULT 0,
   ADD `faction` varchar(32),
-  ADD `loyalty` int unsigned NOT NULL;
+  ADD `loyalty` int unsigned NOT NULL DEFAULT 0;
 
 CREATE TABLE IF NOT EXISTS `card` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,

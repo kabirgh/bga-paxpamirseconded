@@ -14,11 +14,11 @@ class Player extends DbModel
   protected $player_color;
   protected $player_canal;
   protected $player_avatar;
-  // protected $player_score;
+  protected $player_score;
   // New fields
-  // protected $rupees;
-  // protected $faction;
-  // protected $loyalty;
+  protected $rupees;
+  protected $faction;
+  protected $loyalty;
 
   static public function create($params)
   {
@@ -34,10 +34,10 @@ class Player extends DbModel
     $this->player_color = $params['player_color'];
     $this->player_canal = $params['player_canal'];
     $this->player_avatar = $params['player_avatar'];
-    // $this->player_score = $params['player_score'];
-    // $this->rupees = $params['rupees'];
-    // $this->faction = $params['faction'];
-    // $this->loyalty = $params['loyalty'];
+    $this->player_score = $params['player_score'];
+    $this->rupees = $params['rupees'];
+    $this->faction = $params['faction'];
+    $this->loyalty = $params['loyalty'];
   }
 
   protected function tableName()

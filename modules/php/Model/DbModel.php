@@ -69,8 +69,18 @@ abstract class DbModel
       "SET {$this->sqlFormattedKeyEqualValue($fieldMap)}" .
       "WHERE {$primaryKeyName} = {$primaryKeyValue}" .
       '');
-    // print $sql;
     Game::get()->DbQuery($sql);
+  }
+
+  private function formatValue($value)
+  {
+    if ($value === null) { // Impt: ===, not ==
+      return 'NULL';
+    } else if (is_string(($value))) {
+      return "'{$value}'";
+    } else {
+      return strval($value);
+    }
   }
 
   // Returns comma-separated string of values.
@@ -78,9 +88,7 @@ abstract class DbModel
   {
     $arr = [];
     foreach ($fieldMap as $_prop => $value) {
-      // Wraps string in single quotes
-      $formattedValue = is_string($value) ? "'{$value}'" : "$value";
-      $arr[] = $formattedValue;
+      $arr[] = $this->formatValue($value);
     }
     return implode(', ', $arr);
   }
@@ -90,8 +98,7 @@ abstract class DbModel
   {
     $arr = [];
     foreach ($fieldMap as $prop => $value) {
-      $formattedValue = is_string($value) ? "'{$value}'" : "$value";
-      $arr[] = $formattedValue;
+      $arr[] = "{$prop} = {$this->formatValue($value)}";
     }
     return implode(', ', $arr);
   }

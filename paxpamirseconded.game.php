@@ -98,6 +98,10 @@ class PaxPamirSecondEd extends Table
                 'player_color' => $color,
                 'player_canal' => $player['player_canal'],
                 'player_avatar' => $player['player_avatar'],
+                'player_score' => 1,
+                'rupees' => 4,
+                'faction' => null,
+                'loyalty' => 0,
             ];
 
             PAX\Model\Player::create($playerprops);
