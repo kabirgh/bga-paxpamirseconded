@@ -122,7 +122,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: flex-start;
     width: 100%;
     box-sizing: border-box;
     margin: 0 0 20px 0;
@@ -133,10 +133,10 @@
     margin: 5px 0;
     background-size: contain;
     background-repeat: no-repeat;
-    padding-top: 22.8%;
+    padding-top: 16%; /* (img_height / img_width) * 70% */
     min-width: 300px;
+    width: 70%;
     /* TODO add faction wheel in row */
-    /* width: 70%; */
 }
 
 .playerBoard-305a72 {background-image: url('./img/player-board-blue.png');}
@@ -144,3 +144,7 @@
 .playerBoard-d30505 {background-image: url('./img/player-board-red.png');}
 .playerBoard-292623 {background-image: url('./img/player-board-black.png');}
 .playerBoard-6b6663 {background-image: url('./img/player-board-grey.png');}
+
+.font-baskerville {
+    font-family: 'Libre Baskerville', serif;
+}
