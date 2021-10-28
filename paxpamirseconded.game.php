@@ -35,6 +35,8 @@ spl_autoload_register($swdNamespaceAutoload, true, true);
 
 require_once(APP_GAMEMODULE_PATH . 'module/table/table.game.php');
 
+use PAX\Manager\PlayerManager;
+
 class PaxPamirSecondEd extends Table
 {
     // Singleton game instance
@@ -81,34 +83,7 @@ class PaxPamirSecondEd extends Table
     */
     protected function setupNewGame($players, $options = array())
     {
-        // Set the colors of the players with HTML color code
-        // The default below is red/green/blue/orange/brown
-        // The number of colors defined here must correspond to the maximum number of players allowed for the gams
-        $gameinfos = self::getGameinfos();
-        $default_colors = $gameinfos['player_colors'];
-
-        // Create players
-        // Note: if you added some extra field on "player" table in the database (dbmodel.sql), you can initialize it there.
-        foreach ($players as $player_id => $player) {
-            $color = array_shift($default_colors);
-
-            $playerprops = [
-                'player_id' => $player_id,
-                'player_name' => $player['player_name'],
-                'player_color' => $color,
-                'player_canal' => $player['player_canal'],
-                'player_avatar' => $player['player_avatar'],
-                'player_score' => 1,
-                'rupees' => 4,
-                'faction' => null,
-                'loyalty' => 0,
-            ];
-
-            PAX\Model\Player::create($playerprops);
-        }
-
-        self::reattributeColorsBasedOnPreferences($players, $gameinfos['player_colors']);
-        self::reloadPlayersBasicInfos();
+        PlayerManager::setupNewGame($players, $options);
 
         /************ Start the game initialization *****/
 

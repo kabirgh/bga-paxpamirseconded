@@ -2,30 +2,41 @@
 
 namespace PAX\Manager;
 
+use PAX\Core\Game;
+use PAX\Model\Player;
+
+// Class with only static methods. Manages
 class PlayerManager
 {
-  public function setupNewGame($players, $options)
+  private static $players;
+
+  public static function setupNewGame($playerMap, $options)
   {
     // Create players
-    $gameInfos = Game::get()->getGameinfos();
-    $colors = $gameInfos['player_colors'];
-    $query = self::DB()->multipleInsert([
-      'player_id',
-      'player_color',
-      'player_canal',
-      'player_name',
-      'player_avatar',
-      'player_score',
-    ]);
+    $gameinfos = Game::get()->getGameinfos();
+    $colors = $gameinfos['player_colors'];
 
-    $values = [];
-    $score = $options[OPTION_SCORING] == OPTION_SCORING_ENABLED ? -14 : 0;
-    foreach ($players as $pId => $player) {
+    $players = [];
+
+    foreach ($playerMap as $player_id => $playerInfo) {
       $color = array_shift($colors);
-      $values[] = [$pId, $color, $player['player_canal'], $player['player_name'], $player['player_avatar'], $score];
+
+      $players[] = Player::create([
+        'player_id' => $player_id,
+        'player_name' => $playerInfo['player_name'],
+        'player_color' => $color,
+        'player_canal' => $playerInfo['player_canal'],
+        'player_avatar' => $playerInfo['player_avatar'],
+        'player_score' => 1,
+        'rupees' => 4,
+        'faction' => null,
+        'loyalty' => 0,
+      ]);
     }
-    $query->values($values);
-    Game::get()->reattributeColorsBasedOnPreferences($players, $gameInfos['player_colors']);
+
+    Game::get()->reattributeColorsBasedOnPreferences($playerMap, $gameinfos['player_colors']);
     Game::get()->reloadPlayersBasicInfos();
+
+    self::$players = $players;
   }
 }

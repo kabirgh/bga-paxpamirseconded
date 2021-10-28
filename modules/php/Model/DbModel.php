@@ -18,7 +18,7 @@ abstract class DbModel
   }
 
   // TODO is DbQuery vulnerable to sql injection?
-  static public function create($instance)
+  public static function create($instance)
   {
     $props = get_object_vars($instance);
     $propKeys = implode(', ', array_keys($props));
