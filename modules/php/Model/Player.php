@@ -2,6 +2,8 @@
 
 namespace PAX\Model;
 
+use PAX\Model\DbModel;
+
 class Player extends DbModel
 {
   // The BGA framework pre-defined columns in the table for these fields. See

@@ -100,6 +100,19 @@ class PaxPamirSecondEd extends Table
         self::reattributeColorsBasedOnPreferences($players, $gameinfos['player_colors']);
         self::reloadPlayersBasicInfos();
 
+        $p = PAX\Model\Player::create([
+            'player_id' => 'id_1',
+            'player_name' => 'Bob',
+            'player_no' => 5,
+            'player_color' => 'red',
+            'player_score' => 0,
+            'player_canal' => 'canal',
+            'player_avatar' => 'avatar',
+            'rupees' => 4,
+            'faction' => 'Afghan',
+            'loyalty' => 2
+        ]);
+
         /************ Start the game initialization *****/
 
         // Init global values with their initial values

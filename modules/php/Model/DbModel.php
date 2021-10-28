@@ -1,8 +1,8 @@
 <?php
 
 namespace PAX\Model;
-// TODO
-// require_once '../core/Game.php';
+
+use PAX\Core\Game;
 
 // Active Record-stle ORM.
 // Subclasses may only define instance variables that will be persisted to the
@@ -22,11 +22,11 @@ abstract class DbModel
   {
     $props = get_object_vars($instance);
     $propKeys = implode(', ', array_keys($props));
-    $sql = <<<SQL
-      INSERT INTO {$instance->tableName()} ($propKeys)
-      VALUES ({$instance->sqlFormattedValues($props)})
-    SQL;
-    // print $sql . "\n";
+    // Flexible heredoc syntax not available until PHP 7.3.0
+    $sql = ('' .
+      "INSERT INTO {$instance->tableName()} ($propKeys)\n" .
+      "VALUES ({$instance->sqlFormattedValues($props)})" .
+      '');
     Game::get()->DbQuery($sql);
   }
 
@@ -55,20 +55,20 @@ abstract class DbModel
     }
 
     // Commit to database
-    $this->commit($fieldMap);
+    $this->commitUpdate($fieldMap);
   }
 
   // Persist specified object properties to the database.
-  public function commit($fieldMap)
+  public function commitUpdate($fieldMap)
   {
     $primaryKeyName = $this->primaryKey();
     $primaryKeyValue = $this->$primaryKeyName;
 
-    $sql = <<<SQL
-      UPDATE {$this->tableName()}
-      SET {$this->sqlFormattedKeyEqualValue($fieldMap)}
-      WHERE {$primaryKeyName} = {$primaryKeyValue}
-    SQL;
+    $sql = ('' .
+      "UPDATE {$this->tableName()}" .
+      "SET {$this->sqlFormattedKeyEqualValue($fieldMap)}" .
+      "WHERE {$primaryKeyName} = {$primaryKeyValue}" .
+      '');
     // print $sql;
     Game::get()->DbQuery($sql);
   }
@@ -80,8 +80,7 @@ abstract class DbModel
     foreach ($fieldMap as $_prop => $value) {
       // Wraps string in single quotes
       $formattedValue = is_string($value) ? "'{$value}'" : "$value";
-      // Alternative syntax to append to array throws a parse error, even as a comment (?!)
-      array_push($arr, $formattedValue);
+      $arr[] = $formattedValue;
     }
     return implode(', ', $arr);
   }
@@ -92,7 +91,7 @@ abstract class DbModel
     $arr = [];
     foreach ($fieldMap as $prop => $value) {
       $formattedValue = is_string($value) ? "'{$value}'" : "$value";
-      array_push($arr, "{$prop} = {$formattedValue}");
+      $arr[] = $formattedValue;
     }
     return implode(', ', $arr);
   }

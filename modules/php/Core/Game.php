@@ -1,7 +1,8 @@
 <?php
 
 namespace PAX\Core;
-// use PaxPamirSecondEd; // defined in paxpamirseconded.game.php
+
+use PaxPamirSecondEd; // defined in paxpamirseconded.game.php
 
 /*
  * Game: a wrapper over table object to allow more generic modules
