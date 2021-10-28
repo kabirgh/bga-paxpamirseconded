@@ -21,7 +21,7 @@
 
 ALTER TABLE `player`
   ADD `rupees` int(2) unsigned NOT NULL DEFAULT 0,
-  ADD `faction` varchar(32) NOT NULL;
+  ADD `faction` varchar(32) NOT NULL,
   ADD `loyalty` varchar(32) NOT NULL;
 
 CREATE TABLE IF NOT EXISTS `card` (
@@ -29,4 +29,4 @@ CREATE TABLE IF NOT EXISTS `card` (
   `type` varchar(16) NOT NULL,
   `location` varchar(16) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
