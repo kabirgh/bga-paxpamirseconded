@@ -19,10 +19,14 @@
 
 
 require_once(APP_GAMEMODULE_PATH . 'module/table/table.game.php');
+require_once('php/model/Player.php');
 
 
 class PaxPamirSecondEd extends Table
 {
+    // Singleton game instance
+    public static $instance = null;
+
     function __construct()
     {
         // Your global variables labels:
@@ -32,6 +36,7 @@ class PaxPamirSecondEd extends Table
         //  the corresponding ID in gameoptions.inc.php.
         // Note: afterwards, you can get/set the global variables with getGameStateValue/setGameStateInitialValue/setGameStateValue
         parent::__construct();
+        self::$instance = $this;
 
         self::initGameStateLabels(array(
             //    "my_first_global_variable" => 10,
@@ -41,6 +46,11 @@ class PaxPamirSecondEd extends Table
             //    "my_second_game_variant" => 101,
             //      ...
         ));
+    }
+
+    public static function get()
+    {
+        return self::$instance;
     }
 
     protected function getGameName()
@@ -66,7 +76,7 @@ class PaxPamirSecondEd extends Table
 
         // Create players
         // Note: if you added some extra field on "player" table in the database (dbmodel.sql), you can initialize it there.
-        $sql = "INSERT INTO player (player_id, player_color, player_canal, player_name, player_avatar, rupees, loyalty) VALUES ";
+        $sql = "INSERT INTO player (player_id, player_color, player_canal, player_name, player_avatar, player_score, rupees, loyalty) VALUES ";
         $values = array();
         foreach ($players as $player_id => $player) {
             $color = array_shift($default_colors);

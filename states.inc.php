@@ -50,6 +50,25 @@
 
 //    !! It is not a good idea to modify this file when a game is running !!
 
+// // BGA framework states
+// const ST_GAME_SETUP = 1;
+// const ST_END_GAME = 99;
+// // Core actions
+// const ST_PURCHASE = 20;
+// const ST_PLAY_CARD = 21;
+// // // Special core actions
+// const ST_PURCHASE_DOMINANCE_CHECK = 22;
+// const ST_PURCHASE_EVENT = 22;
+// // Card-based actions
+// const ST_BUILD = 30;
+// const ST_TAX = 31;
+// const ST_GIFT = 32;
+// const ST_MARCH = 33;
+// const ST_BETRAY = 34;
+// const ST_TAKE_PRIZE = 35;
+// const ST_BATTLE = 36;
+// // Misc states
+// const ST_CONFIRM_TURN = 90;
 
 $machinestates = array(
 
@@ -73,28 +92,96 @@ $machinestates = array(
         "transitions" => array("playCard" => 2, "pass" => 2)
     ),
 
-    /*
-    Examples:
+    // ST_PURCHASE => array(
+    //     "name" => "purchase",
+    //     "description" => clienttranslate('${actplayer} must purchase a card'),
+    //     "descriptionmyturn" => clienttranslate('${you} must purchase a card'),
+    //     "type" => "activeplayer",
+    //     "possibleactions" => array("playCard", "pass"),
+    //     "transitions" => array("playCard" => 2, "pass" => 2)
+    // ),
 
-    2 => array(
-        "name" => "nextPlayer",
-        "description" => '',
-        "type" => "game",
-        "action" => "stNextPlayer",
-        "updateGameProgression" => true,
-        "transitions" => array( "endGame" => 99, "nextPlayer" => 10 )
-    ),
+    // ST_PLAY_CARD => array(
+    //     "name" => "playCard",
+    //     "description" => clienttranslate('${actplayer} must play a card'),
+    //     "descriptionmyturn" => clienttranslate('${you} must play a card'),
+    //     "type" => "activeplayer",
+    //     "possibleactions" => array("playCard", "pass"),
+    //     "transitions" => array("playCard" => 2, "pass" => 2)
+    // ),
 
-    10 => array(
-        "name" => "playerTurn",
-        "description" => clienttranslate('${actplayer} must play a card or pass'),
-        "descriptionmyturn" => clienttranslate('${you} must play a card or pass'),
-        "type" => "activeplayer",
-        "possibleactions" => array( "playCard", "pass" ),
-        "transitions" => array( "playCard" => 2, "pass" => 2 )
-    ),
+    // ST_BUILD => array(
+    //     "name" => "build",
+    //     "description" => clienttranslate('${actplayer} must build armies or roads in a region they rule'),
+    //     "descriptionmyturn" => clienttranslate('${you} must build armies or roads in a region you rule'),
+    //     "type" => "activeplayer",
+    //     "possibleactions" => array("playCard", "pass"),
+    //     "transitions" => array("playCard" => 2, "pass" => 2)
+    // ),
 
-*/
+    // ST_TAX => array(
+    //     "name" => "tax",
+    //     "description" => clienttranslate('${actplayer} must take rupees from the market or players with cards in a region they rule'),
+    //     "descriptionmyturn" => clienttranslate('${you} must take rupees from the market or players with cards in a region you rule'),
+    //     "type" => "activeplayer",
+    //     "possibleactions" => array("playCard", "pass"),
+    //     "transitions" => array("playCard" => 2, "pass" => 2)
+    // ),
+
+    // ST_GIFT => array(
+    //     "name" => "gift",
+    //     "description" => clienttranslate('${actplayer} must buy a gift'),
+    //     "descriptionmyturn" => clienttranslate('${you} must buy a gift'),
+    //     "type" => "activeplayer",
+    //     "possibleactions" => array("playCard", "pass"),
+    //     "transitions" => array("playCard" => 2, "pass" => 2)
+    // ),
+
+    // ST_MARCH => array(
+    //     "name" => "march",
+    //     "description" => clienttranslate('${actplayer} must move armies or spies'),
+    //     "descriptionmyturn" => clienttranslate('${you} must move armies or spies'),
+    //     "type" => "activeplayer",
+    //     "possibleactions" => array("playCard", "pass"),
+    //     "transitions" => array("playCard" => 2, "pass" => 2)
+    // ),
+
+    // ST_BETRAY => array(
+    //     "name" => "betray",
+    //     "description" => clienttranslate('${actplayer} must discard a card where they have a spy'),
+    //     "descriptionmyturn" => clienttranslate('${you} must discard a card where you have a spy'),
+    //     "type" => "activeplayer",
+    //     "possibleactions" => array("playCard", "pass"),
+    //     "transitions" => array("playCard" => 2, "pass" => 2)
+    // ),
+
+    // ST_TAKE_PRIZE => array(
+    //     "name" => "takePrize",
+    //     "description" => clienttranslate('${actplayer} may take a prize'),
+    //     "descriptionmyturn" => clienttranslate('${you} may take a prize'),
+    //     "type" => "activeplayer",
+    //     "possibleactions" => array("playCard", "pass"),
+    //     "transitions" => array("playCard" => 2, "pass" => 2)
+    // ),
+
+    // ST_BATTLE => array(
+    //     "name" => "battle",
+    //     "description" => clienttranslate('${actplayer} must battle at a region or card'),
+    //     "descriptionmyturn" => clienttranslate('${you} must battle at a region or card'),
+    //     "type" => "activeplayer",
+    //     "possibleactions" => array("playCard", "pass"),
+    //     "transitions" => array("playCard" => 2, "pass" => 2)
+    // ),
+
+    // ST_CONFIRM_TURN => [
+    //     'name' => 'confirmTurn',
+    //     'description' => clienttranslate('${actplayer} must confirm or restart their turn'),
+    //     'descriptionmyturn' => clienttranslate('${you} must confirm or restart your turn'),
+    //     'type' => 'activeplayer',
+    //     'args' => 'argsConfirmTurn',
+    //     'action' => 'stConfirmTurn',
+    //     'possibleactions' => ['actConfirmTurn', 'actRestart'],
+    // ],
 
     // Final state.
     // Please do not modify (and do not overload action/args methods).
