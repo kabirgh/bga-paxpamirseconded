@@ -1,5 +1,7 @@
 <?php
 
+namespace PAX\Manager;
+
 class PlayerManager
 {
   public function setupNewGame($players, $options)

@@ -1,5 +1,6 @@
 <?php
 
+namespace PAX\Model;
 // TODO
 // require_once '../core/Game.php';
 
@@ -33,9 +34,10 @@ abstract class DbModel
   // subclass property to $fieldMap[$prop]. Immediately commits to the database.
   public function update($fieldMap)
   {
+    $primaryKeyName = $this->primaryKey();
     // Check primary key not set
-    if (isset($fieldMap[$this->primaryKey()])) {
-      throw new Exception("Cannot update "  . get_class($this) . " {$this->primaryKey()} to {$fieldMap[$prop]}: {$this->primaryKey()} is the primary key");
+    if (isset($fieldMap[$primaryKeyName])) {
+      throw new Exception("Cannot update "  . get_class($this) . " {$primaryKeyName} to {$fieldMap[$primaryKeyName]}: {$primaryKeyName} is the primary key");
     }
 
     // Check only fields that exist are set
@@ -43,7 +45,7 @@ abstract class DbModel
 
     foreach ($fieldMap as $field => $unused_value) {
       if (!isset($props[$field])) {
-        throw new Exception("Cannot update "  . get_class($this) . " {$this->primaryKey()} to {$fieldMap[$prop]}: {$field} is not a valid property");
+        throw new Exception("Cannot update "  . get_class($this) . " {$primaryKeyName} to {$fieldMap[$field]}: {$field} is not a valid property");
       }
     }
 
@@ -57,9 +59,6 @@ abstract class DbModel
   }
 
   // Persist specified object properties to the database.
-  //
-  // This function only works if called from paxpamirseconded.game.php, where
-  // self::DbQuery can be accessed.
   public function commit($fieldMap)
   {
     $primaryKeyName = $this->primaryKey();
@@ -81,7 +80,8 @@ abstract class DbModel
     foreach ($fieldMap as $_prop => $value) {
       // Wraps string in single quotes
       $formattedValue = is_string($value) ? "'{$value}'" : "$value";
-      $arr[] = $formattedValue;
+      // Alternative syntax to append to array throws a parse error, even as a comment (?!)
+      array_push($arr, $formattedValue);
     }
     return implode(', ', $arr);
   }
@@ -92,7 +92,7 @@ abstract class DbModel
     $arr = [];
     foreach ($fieldMap as $prop => $value) {
       $formattedValue = is_string($value) ? "'{$value}'" : "$value";
-      $arr[] = "{$prop} = {$formattedValue}";
+      array_push($arr, "{$prop} = {$formattedValue}");
     }
     return implode(', ', $arr);
   }

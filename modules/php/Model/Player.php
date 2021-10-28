@@ -1,5 +1,6 @@
 <?php
-require_once 'DbModel.php';
+
+namespace PAX\Model;
 
 class Player extends DbModel
 {
