@@ -19,7 +19,7 @@ define([
   "dojo", "dojo/_base/declare",
   "ebg/core/gamegui",
   "ebg/counter",
-  g_gamethemeurl + "modules/paxpamir-ui.js"
+  g_gamethemeurl + "modules/js/paxpamir-ui.js"
 ],
   function (dojo, declare) {
     return declare("bgagame.paxpamirseconded", [ebg.core.gamegui, paxpamir.ui], {

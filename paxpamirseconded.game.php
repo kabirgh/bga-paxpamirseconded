@@ -89,29 +89,22 @@ class PaxPamirSecondEd extends Table
 
         // Create players
         // Note: if you added some extra field on "player" table in the database (dbmodel.sql), you can initialize it there.
-        $sql = "INSERT INTO player (player_id, player_color, player_canal, player_name, player_avatar) VALUES ";
-        $values = array();
         foreach ($players as $player_id => $player) {
             $color = array_shift($default_colors);
-            $values[] = "('" . $player_id . "','$color','" . $player['player_canal'] . "','" . addslashes($player['player_name']) . "','" . addslashes($player['player_avatar']) . "')";
+
+            $playerprops = [
+                'player_id' => $player_id,
+                'player_name' => $player['player_name'],
+                'player_color' => $color,
+                'player_canal' => $player['player_canal'],
+                'player_avatar' => $player['player_avatar'],
+            ];
+
+            PAX\Model\Player::create($playerprops);
         }
-        $sql .= implode($values, ',');
-        self::DbQuery($sql);
+
         self::reattributeColorsBasedOnPreferences($players, $gameinfos['player_colors']);
         self::reloadPlayersBasicInfos();
-
-        $p = PAX\Model\Player::create([
-            'player_id' => 'id_1',
-            'player_name' => 'Bob',
-            'player_no' => 5,
-            'player_color' => 'red',
-            'player_score' => 0,
-            'player_canal' => 'canal',
-            'player_avatar' => 'avatar',
-            'rupees' => 4,
-            'faction' => 'Afghan',
-            'loyalty' => 2
-        ]);
 
         /************ Start the game initialization *****/
 

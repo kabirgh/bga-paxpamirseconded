@@ -12,15 +12,13 @@ class Player extends DbModel
   protected $player_id;
   protected $player_name;
   protected $player_color;
-  protected $player_no; // Turn order within the game
-  protected $player_score;
-  // Unused
   protected $player_canal;
   protected $player_avatar;
+  // protected $player_score;
   // New fields
-  protected $rupees;
-  protected $faction;
-  protected $loyalty;
+  // protected $rupees;
+  // protected $faction;
+  // protected $loyalty;
 
   static public function create($params)
   {
@@ -33,14 +31,13 @@ class Player extends DbModel
   {
     $this->player_id = $params['player_id'];
     $this->player_name = $params['player_name'];
-    $this->player_no = $params['player_no'];
     $this->player_color = $params['player_color'];
-    $this->player_score = $params['player_score'];
     $this->player_canal = $params['player_canal'];
     $this->player_avatar = $params['player_avatar'];
-    $this->rupees = $params['rupees'];
-    $this->faction = $params['faction'];
-    $this->loyalty = $params['loyalty'];
+    // $this->player_score = $params['player_score'];
+    // $this->rupees = $params['rupees'];
+    // $this->faction = $params['faction'];
+    // $this->loyalty = $params['loyalty'];
   }
 
   protected function tableName()
@@ -58,7 +55,6 @@ class Player extends DbModel
 // $p = Player::create([
 //   'player_id' => 'id_1',
 //   'player_name' => 'Bob',
-//   'player_no' => 2,
 //   'player_color' => 'red',
 //   'player_score' => 0,
 //   'player_canal' => 'canal',
