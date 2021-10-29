@@ -21,12 +21,20 @@
 
 ALTER TABLE `player`
   ADD `rupees` int unsigned NOT NULL DEFAULT 0,
-  ADD `faction` varchar(32),
+  ADD `faction` enum('afghan', 'british', 'russian'),
   ADD `loyalty` int unsigned NOT NULL DEFAULT 0;
 
 CREATE TABLE IF NOT EXISTS `card` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `type` varchar(16) NOT NULL,
   `location` varchar(16) NOT NULL,
+  `name` varchar(32) NOT NULL,
+  `type` enum('court', 'event'),
+  `suit` enum('economic', 'political', 'military', 'intelligence'),
+  `rank` int unsigned DEFAULT NULL,
+  `patriot` enum('afghan', 'british', 'russian'),
+  `prize` enum('afghan', 'british', 'russian'),
+  `card_actions` set('build', 'tax', 'gift', 'march', 'betray', 'battle'),
+   -- TODO json api definition
+  `extra_data` JSON, -- play action, special action, purchase behavior, fall off behavior
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+) ENGINE = InnoDB DEFAULT CHARSET = utf8 AUTO_INCREMENT = 1;
