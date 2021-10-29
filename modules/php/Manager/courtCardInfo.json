@@ -1,0 +1,1642 @@
+[
+  {
+    "name": "The Ark of Bukhara",
+    "location": "Transcaspia",
+    "patriot": null,
+    "suit": "M",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "army": 1,
+      "suit_change": "I"
+    },
+    "card_actions": [
+      "build"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Bank",
+    "location": "Kandahar",
+    "patriot": null,
+    "suit": "E",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "road": 2,
+      "leverage": true,
+      "suit_change": "I"
+    },
+    "card_actions": [
+      "gift"
+    ],
+    "special": null
+  },
+  {
+    "name": "Hari Singh Nawla",
+    "location": "Punjab",
+    "patriot": null,
+    "suit": "M",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "army": 2,
+      "suit_change": "P"
+    },
+    "card_actions": [
+      "march",
+      "battle"
+    ],
+    "special": null
+  },
+  {
+    "name": "Mohammad Shah",
+    "location": "Persia",
+    "patriot": null,
+    "suit": "P",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "army": 1,
+      "tribe": 1,
+      "suit_change": "I"
+    },
+    "card_actions": [
+      "build",
+      "betray"
+    ],
+    "special": null
+  },
+  {
+    "name": "Nomadic Warlord",
+    "location": "Herat",
+    "patriot": null,
+    "suit": "M",
+    "rank": 1,
+    "prize": "R",
+    "impact": {
+      "army": 1
+    },
+    "card_actions": [
+      "battle",
+      "tax",
+      "gift"
+    ],
+    "special": null
+  },
+  {
+    "name": "Sir John Keane",
+    "location": "Kandahar",
+    "patriot": "B",
+    "suit": "M",
+    "rank": 1,
+    "prize": "R",
+    "impact": {
+      "army": 1
+    },
+    "card_actions": [
+      "battle"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Josiah Harlan",
+    "location": "Punjab",
+    "patriot": "A",
+    "suit": "P",
+    "rank": 1,
+    "prize": "B",
+    "impact": {
+      "tribe": 1
+    },
+    "card_actions": [
+      "tax"
+    ],
+    "special": null
+  },
+  {
+    "name": "Khyber Pass",
+    "location": "Punjab",
+    "patriot": null,
+    "suit": "E",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "road": 2
+    },
+    "card_actions": [
+      "march",
+      "tax"
+    ],
+    "special": null
+  },
+  {
+    "name": "Aga Mehdi",
+    "location": "Transcaspia",
+    "patriot": "R",
+    "suit": "I",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "spy": 1
+    },
+    "card_actions": [
+      "march",
+      "battle",
+      "betray"
+    ],
+    "special": null
+  },
+  {
+    "name": "Herati Bandits",
+    "location": "Herat",
+    "patriot": null,
+    "suit": "I",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "spy": 1,
+      "leverage": true
+    },
+    "card_actions": [
+      "tax"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Alexander Burnes",
+    "location": "Punjab",
+    "patriot": null,
+    "suit": "I",
+    "rank": 2,
+    "prize": "A",
+    "impact": {
+      "spy": 2
+    },
+    "card_actions": [
+      "march"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Kandahari Markets",
+    "location": "Kandahar",
+    "patriot": null,
+    "suit": "E",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "road": 1,
+      "suit_change": "P"
+    },
+    "card_actions": [
+      "tax",
+      "build"
+    ],
+    "special": null
+  },
+  {
+    "name": "Opium Fields",
+    "location": "Herat",
+    "patriot": null,
+    "suit": "E",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "road": 2,
+      "spy": 1,
+      "suit_change": "M"
+    },
+    "card_actions": [
+      "tax"
+    ],
+    "special": null
+  },
+  {
+    "name": "Wiliam Moorcroft",
+    "location": "Kandahar",
+    "patriot": null,
+    "suit": "I",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "spy": 1
+    },
+    "card_actions": [
+      "march",
+      "battle"
+    ],
+    "special": null
+  },
+  {
+    "name": "Alexander Griboyedov",
+    "location": "Persia",
+    "patriot": "R",
+    "suit": "I",
+    "rank": 2,
+    "prize": "A",
+    "impact": {
+      "spy": 2
+    },
+    "card_actions": [
+      "march"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Shas Guard",
+    "location": "Persia",
+    "patriot": null,
+    "suit": "M",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "army": 1,
+      "spy": 1
+    },
+    "card_actions": [
+      "tax"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Exiled Durrani Nobility",
+    "location": "Herat",
+    "patriot": null,
+    "suit": "P",
+    "rank": 1,
+    "prize": "B",
+    "impact": {
+      "tribe": 1
+    },
+    "card_actions": [
+      "march",
+      "betray"
+    ],
+    "special": null
+  },
+  {
+    "name": "Fath Ali shah",
+    "location": "Persia",
+    "patriot": null,
+    "suit": "P",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "tribe": 2,
+      "suit_change": "I"
+    },
+    "card_actions": [],
+    "special": null
+  },
+  {
+    "name": "Cossasc",
+    "location": "Transcaspia",
+    "patriot": "R",
+    "suit": "M",
+    "rank": 1,
+    "prize": "B",
+    "impact": {
+      "army": 1,
+      "spy": 1
+    },
+    "card_actions": [
+      "battle"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Jean Fransois Allard",
+    "location": "Persia",
+    "patriot": null,
+    "suit": "I",
+    "rank": 1,
+    "prize": "B",
+    "impact": {
+      "spy": 1,
+      "suit_change": "M"
+    },
+    "card_actions": [
+      "battle",
+      "build"
+    ],
+    "special": null
+  },
+  {
+    "name": "Civic Improvements",
+    "location": "Persia",
+    "patriot": null,
+    "suit": "E",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "road": 2,
+      "leverage": true,
+      "suit_change": "I"
+    },
+    "card_actions": [
+      "build"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Ranjit Singh",
+    "location": "Punjab",
+    "patriot": null,
+    "suit": "P",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "army": 1,
+      "tribe": 2
+    },
+    "card_actions": [
+      "betray"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Mir Murad Beg",
+    "location": "Transcaspia",
+    "patriot": null,
+    "suit": "P",
+    "rank": 1,
+    "prize": "B",
+    "impact": {
+      "spy": 1,
+      "tribe": 1,
+      "suit_change": "M"
+    },
+    "card_actions": [
+      "march",
+      "battle",
+      "tax"
+    ],
+    "special": null
+  },
+  {
+    "name": "Persian Army",
+    "location": "Persia",
+    "patriot": null,
+    "suit": "M",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "army": 2,
+      "suit_change": "I"
+    },
+    "card_actions": [
+      "battle",
+      "gift"
+    ],
+    "special": null
+  },
+  {
+    "name": "Harry Flashman",
+    "location": "Punjab",
+    "patriot": null,
+    "suit": "I",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "spy": 1
+    },
+    "card_actions": [
+      "gift",
+      "betray"
+    ],
+    "special": null
+  },
+  {
+    "name": "Comapny Weapons",
+    "location": "Punjab",
+    "patriot": null,
+    "suit": "M",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "army": 1,
+      "suit_change": "I"
+    },
+    "card_actions": [
+      "tax",
+      "betray"
+    ],
+    "special": null
+  },
+  {
+    "name": "Arthur Conolly",
+    "location": "Transcaspia",
+    "patriot": "B",
+    "suit": "I",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "spy": 1
+    },
+    "card_actions": [
+      "march",
+      "build"
+    ],
+    "special": null
+  },
+  {
+    "name": "Geaorge Hayward",
+    "location": "Punjab",
+    "patriot": "B",
+    "suit": "I",
+    "rank": 1,
+    "prize": "R",
+    "impact": {
+      "spy": 1,
+      "suit_change": "P"
+    },
+    "card_actions": [
+      "march",
+      "gift"
+    ],
+    "special": null
+  },
+  {
+    "name": "Fruit Marketers",
+    "location": "Kandahar",
+    "patriot": null,
+    "suit": "E",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "road": 1,
+      "suit_change": "P"
+    },
+    "card_actions": [
+      "march",
+      "build"
+    ],
+    "special": null
+  },
+  {
+    "name": "Sindhi Warriors",
+    "location": "Punjab",
+    "patriot": null,
+    "suit": "M",
+    "rank": 1,
+    "prize": "B",
+    "impact": {
+      "army": 1,
+      "suit_change": "E"
+    },
+    "card_actions": [
+      "march",
+      "battle",
+      "betray"
+    ],
+    "special": null
+  },
+  {
+    "name": "Anarkli Bazaar",
+    "location": "Punjab",
+    "patriot": null,
+    "suit": "E",
+    "rank": 1,
+    "prize": "A",
+    "impact": {
+      "road": 1,
+      "tribe": 1
+    },
+    "card_actions": [
+      "tax",
+      "build"
+    ],
+    "special": null
+  },
+  {
+    "name": "Jan fishan Khan",
+    "location": "Kabul",
+    "patriot": null,
+    "suit": "I",
+    "rank": 2,
+    "prize": "R",
+    "impact": {
+      "army": 1,
+      "spy": 2,
+      "suit_change": "M"
+    },
+    "card_actions": [
+      "march",
+      "battle"
+    ],
+    "special": null
+  },
+  {
+    "name": "Count Petrovsky",
+    "location": "Transkaspia",
+    "patriot": "R",
+    "suit": "M",
+    "rank": 2,
+    "prize": "B",
+    "impact": {
+      "army": 2
+    },
+    "card_actions": [
+      "battle"
+    ],
+    "special": null
+  },
+  {
+    "name": "Citadel of Ghazni",
+    "location": "Kabul",
+    "patriot": null,
+    "suit": "M",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "army": 1
+    },
+    "card_actions": [
+      "build"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Minaret of Jam",
+    "location": "Herat",
+    "patriot": null,
+    "suit": "E",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "road": 1,
+      "army": 1
+    },
+    "card_actions": [
+      "march",
+      "battle",
+      "tax"
+    ],
+    "special": null
+  },
+  {
+    "name": "Sikh merchants in Lahore",
+    "location": "Punjab",
+    "patriot": null,
+    "suit": "E",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "road": 1,
+      "spy": 1,
+      "leverage": true
+    },
+    "card_actions": [
+      "tax",
+      "gift"
+    ],
+    "special": null
+  },
+  {
+    "name": "Supplies from orenburg",
+    "location": "Transcaspia",
+    "patriot": "R",
+    "suit": "E",
+    "rank": 1,
+    "prize": "A",
+    "impact": {
+      "road": 1
+    },
+    "card_actions": [
+      "march",
+      "tax"
+    ],
+    "special": null
+  },
+  {
+    "name": "Slave Markets",
+    "location": "Persia",
+    "patriot": null,
+    "suit": "E",
+    "rank": 1,
+    "prize": "B",
+    "impact": {
+      "road": 1,
+      "spy": 1,
+      "leverage": true
+    },
+    "card_actions": [
+      "march",
+      "tax"
+    ],
+    "special": null
+  },
+  {
+    "name": "Nasrullah Khan",
+    "location": "Transcaspia",
+    "patriot": null,
+    "suit": "P",
+    "rank": 1,
+    "prize": "B",
+    "impact": {
+      "tribe": 1
+    },
+    "card_actions": [
+      "tax",
+      "betray"
+    ],
+    "special": null
+  },
+  {
+    "name": "Aminullah Khan Logari",
+    "location": "Kabul",
+    "patriot": "A",
+    "suit": "P",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "army": 1,
+      "spy": 1,
+      "tribe": 1
+    },
+    "card_actions": [
+      "battle",
+      "build"
+    ],
+    "special": null
+  },
+  {
+    "name": "Slave Markets",
+    "location": "Transcaspia",
+    "patriot": null,
+    "suit": "E",
+    "rank": 1,
+    "prize": "B",
+    "impact": {
+      "road": 1,
+      "spy": 1,
+      "leverage": true
+    },
+    "card_actions": [
+      "tax",
+      "betray"
+    ],
+    "special": null
+  },
+  {
+    "name": "Glijee Nobles",
+    "location": "Kandahar",
+    "patriot": null,
+    "suit": "P",
+    "rank": 1,
+    "prize": "A",
+    "impact": {
+      "army": 1,
+      "tribe": 1
+    },
+    "card_actions": [
+      "battle"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Qanat System",
+    "location": "Herat",
+    "patriot": null,
+    "suit": "E",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "road": 1,
+      "suit_change": "P"
+    },
+    "card_actions": [
+      "gift",
+      "build"
+    ],
+    "special": null
+  },
+  {
+    "name": "Abbas Mirza",
+    "location": "Persia",
+    "patriot": null,
+    "suit": "P",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "army": 1,
+      "tribe": 1
+    },
+    "card_actions": [
+      "battle",
+      "tax"
+    ],
+    "special": null
+  },
+  {
+    "name": "Joseph Wolf",
+    "location": "Persia",
+    "patriot": "B",
+    "suit": "I",
+    "rank": 1,
+    "prize": "A",
+    "impact": {
+      "spy": 1
+    },
+    "card_actions": [
+      "march",
+      "gift"
+    ],
+    "special": null
+  },
+  {
+    "name": "Pandjeh Oasis",
+    "location": "Transcaspia",
+    "patriot": null,
+    "suit": "E",
+    "rank": 2,
+    "prize": "B",
+    "impact": {
+      "road": 2
+    },
+    "card_actions": [
+      "march",
+      "tax"
+    ],
+    "special": null
+  },
+  {
+    "name": "Wheat Fields",
+    "location": "Herat",
+    "patriot": null,
+    "suit": "E",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "road": 1
+    },
+    "card_actions": [
+      "march",
+      "gift"
+    ],
+    "special": null
+  },
+  {
+    "name": "Shah Shujah Durrani",
+    "location": "Kabul",
+    "patriot": null,
+    "suit": "P",
+    "rank": 1,
+    "prize": "A",
+    "impact": {
+      "tribe": 1
+    },
+    "card_actions": [
+      "build"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Karakal Sheep",
+    "location": "Herat",
+    "patriot": null,
+    "suit": "E",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "road": 2
+    },
+    "card_actions": [
+      "tax"
+    ],
+    "special": null
+  },
+  {
+    "name": "Europeans Cannons",
+    "location": "Transcaspia",
+    "patriot": null,
+    "suit": "M",
+    "rank": 3,
+    "prize": "B",
+    "impact": {
+      "army": 3
+    },
+    "card_actions": [
+      "gift"
+    ],
+    "special": null
+  },
+  {
+    "name": "baluchi Smugglers",
+    "location": "Herat",
+    "patriot": null,
+    "suit": "E",
+    "rank": 2,
+    "prize": "A",
+    "impact": {
+      "road": 2,
+      "army": 1
+    },
+    "card_actions": [
+      "battle"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Money Lenders",
+    "location": "Kabul",
+    "patriot": null,
+    "suit": "E",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "road": 2,
+      "leverage": true
+    },
+    "card_actions": [
+      "gift",
+      "build"
+    ],
+    "special": null
+  },
+  {
+    "name": "Lapis Lazuli Mine",
+    "location": "Kabul",
+    "patriot": "A",
+    "suit": "E",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "road": 2
+    },
+    "card_actions": [
+      "tax",
+      "gift"
+    ],
+    "special": null
+  },
+  {
+    "name": "Dost Mohammad",
+    "location": "Kabul",
+    "patriot": null,
+    "suit": "P",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "army": 1,
+      "spy": 1,
+      "tribe": 2
+    },
+    "card_actions": [],
+    "special": null
+  },
+  {
+    "name": "Jan Prosper Witkiewicz",
+    "location": "Transcaspia",
+    "patriot": "R",
+    "suit": "I",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "spy": 2
+    },
+    "card_actions": [
+      "march",
+      "build"
+    ],
+    "special": null
+  },
+  {
+    "name": "Charles Stoddarr",
+    "location": "Kabul",
+    "patriot": null,
+    "suit": "I",
+    "rank": 1,
+    "prize": "A",
+    "impact": {
+      "spy": 1
+    },
+    "card_actions": [
+      "march",
+      "gift"
+    ],
+    "special": null
+  },
+  {
+    "name": "Russo-Persian Trade",
+    "location": "Persia",
+    "patriot": "R",
+    "suit": "E",
+    "rank": 2,
+    "prize": "B",
+    "impact": {
+      "road": 2,
+      "leverage": true
+    },
+    "card_actions": [
+      "tax",
+      "build"
+    ],
+    "special": null
+  },
+  {
+    "name": "Henry Rawlinson",
+    "location": "Punjab",
+    "patriot": "B",
+    "suit": "I",
+    "rank": 1,
+    "prize": "R",
+    "impact": {
+      "spy": 1,
+      "suit_change": "E"
+    },
+    "card_actions": [
+      "march",
+      "gift"
+    ],
+    "special": null
+  },
+  {
+    "name": "Henry Pottinger",
+    "location": "Punjab",
+    "patriot": "B",
+    "suit": "I",
+    "rank": 1,
+    "prize": "R",
+    "impact": {
+      "spy": 1,
+      "suit_change": "E"
+    },
+    "card_actions": [
+      "march",
+      "battle"
+    ],
+    "special": null
+  },
+  {
+    "name": "City of Ghazni",
+    "location": "Kabul",
+    "patriot": null,
+    "suit": "E",
+    "rank": 3,
+    "prize": null,
+    "impact": {
+      "road": 3,
+      "army": 1
+    },
+    "card_actions": [
+      "gift"
+    ],
+    "special": null
+  },
+  {
+    "name": "Durrani Royal Guard",
+    "location": "Kabul",
+    "patriot": null,
+    "suit": "M",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "army": 1
+    },
+    "card_actions": [
+      "betray"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Afgan Handicrafts",
+    "location": "Kabul",
+    "patriot": null,
+    "suit": "E",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "road": 1
+    },
+    "card_actions": [
+      "march",
+      "tax"
+    ],
+    "special": null
+  },
+  {
+    "name": "Imperial Surveyors",
+    "location": "Transcaspia",
+    "patriot": "R",
+    "suit": "I",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "spy": 1
+    },
+    "card_actions": [
+      "march",
+      "gift",
+      "build"
+    ],
+    "special": null
+  },
+  {
+    "name": "Russian Regulars",
+    "location": "Persia",
+    "patriot": "R",
+    "suit": "M",
+    "rank": 2,
+    "prize": "A",
+    "impact": {
+      "army": 2,
+      "suit_change": "E"
+    },
+    "card_actions": [
+      "battle"
+    ],
+    "special": null
+  },
+  {
+    "name": "Farah Riad",
+    "location": "Herat",
+    "patriot": null,
+    "suit": "E",
+    "rank": 3,
+    "prize": null,
+    "impact": {
+      "road": 3
+    },
+    "card_actions": [
+      "march"
+    ],
+    "special": null
+  },
+  {
+    "name": "Hazara Chiefs",
+    "location": "Herat",
+    "patriot": null,
+    "suit": "P",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "army": 1,
+      "tribe": 1
+    },
+    "card_actions": [
+      "march",
+      "battle",
+      "tax"
+    ],
+    "special": null
+  },
+  {
+    "name": "Balkh Arsenic Mine",
+    "location": "Kabul",
+    "patriot": null,
+    "suit": "E",
+    "rank": 1,
+    "prize": "A",
+    "impact": {
+      "road": 1,
+      "suit_change": "M"
+    },
+    "card_actions": [
+      "build",
+      "betray"
+    ],
+    "special": null
+  },
+  {
+    "name": "Bukharan Jews",
+    "location": "Transcaspia",
+    "patriot": null,
+    "suit": "I",
+    "rank": 1,
+    "prize": "B",
+    "impact": {
+      "spy": 1,
+      "leverage": true,
+      "suit_change": "E"
+    },
+    "card_actions": [
+      "gift",
+      "build"
+    ],
+    "special": null
+  },
+  {
+    "name": "Maqpon Dynastry",
+    "location": "Punjab",
+    "patriot": null,
+    "suit": "P",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "tribe": 1,
+      "leverage": true
+    },
+    "card_actions": [
+      "build"
+    ],
+    "special": null
+  },
+  {
+    "name": "Paolo Avitable",
+    "location": "Punjab",
+    "patriot": null,
+    "suit": "P",
+    "rank": 1,
+    "prize": "A",
+    "impact": {
+      "army": 1,
+      "tribe": 1
+    },
+    "card_actions": [
+      "betray"
+    ],
+    "special": null
+  },
+  {
+    "name": "Tajik Warband",
+    "location": "Herat",
+    "patriot": null,
+    "suit": "M",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "army": 2
+    },
+    "card_actions": [
+      "battle",
+      "betray"
+    ],
+    "special": null
+  },
+  {
+    "name": "Ghaem Magham Farahni",
+    "location": "Persia",
+    "patriot": null,
+    "suit": "I",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "army": 1,
+      "spy": 2
+    },
+    "card_actions": [
+      "tax"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Bala Hissar",
+    "location": "Kabul",
+    "patriot": null,
+    "suit": "M",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "army": 1
+    },
+    "card_actions": [
+      "tax",
+      "betray"
+    ],
+    "special": null
+  },
+  {
+    "name": "William Hay Macnaghten",
+    "location": "Kandahar",
+    "patriot": "B",
+    "suit": "I",
+    "rank": 2,
+    "prize": "A",
+    "impact": {
+      "spy": 2,
+      "leverage": true
+    },
+    "card_actions": [
+      "march",
+      "tax"
+    ],
+    "special": null
+  },
+  {
+    "name": "Haji Mirza Aghasi",
+    "location": "Persia",
+    "patriot": "A",
+    "suit": "P",
+    "rank": 1,
+    "prize": "R",
+    "impact": {
+      "tribe": 1,
+      "suit_change": "I"
+    },
+    "card_actions": [
+      "battle",
+      "betray"
+    ],
+    "special": null
+  },
+  {
+    "name": "Zorawar Sigh Kahluria",
+    "location": "Punjab",
+    "patriot": null,
+    "suit": "M",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "army": 2
+    },
+    "card_actions": [
+      "battle",
+      "gift"
+    ],
+    "special": null
+  },
+  {
+    "name": "Baluchi Chiefs",
+    "location": "Kandahar",
+    "patriot": null,
+    "suit": "P",
+    "rank": 1,
+    "prize": "R",
+    "impact": {
+      "army": 1,
+      "tribe": 1
+    },
+    "card_actions": [
+      "tax",
+      "build"
+    ],
+    "special": null
+  },
+  {
+    "name": "Ghilzai Nomads",
+    "location": "Kabul",
+    "patriot": null,
+    "suit": "E",
+    "rank": 2,
+    "prize": "R",
+    "impact": {
+      "road": 2
+    },
+    "card_actions": [
+      "march",
+      "tax"
+    ],
+    "special": null
+  },
+  {
+    "name": "Yar Mohammad Alikozai",
+    "location": "Herat",
+    "patriot": null,
+    "suit": "P",
+    "rank": 2,
+    "prize": "A",
+    "impact": {
+      "tribe": 2,
+      "suit_change": "P"
+    },
+    "card_actions": [
+      "betray"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Ishaqzai Chiefs",
+    "location": "Herat",
+    "patriot": "A",
+    "suit": "P",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "tribe": 1,
+      "suit_change": "E"
+    },
+    "card_actions": [
+      "gift",
+      "build"
+    ],
+    "special": null
+  },
+  {
+    "name": "Akali Sikhs",
+    "location": "Punjab",
+    "patriot": null,
+    "suit": "M",
+    "rank": 2,
+    "prize": "B",
+    "impact": {
+      "army": 2
+    },
+    "card_actions": [
+      "battle"
+    ],
+    "special": null
+  },
+  {
+    "name": "Count Ivan Simonich",
+    "location": "Persia",
+    "patriot": "R",
+    "suit": "I",
+    "rank": 2,
+    "prize": "B",
+    "impact": {
+      "spy": 2
+    },
+    "card_actions": [
+      "march",
+      "battle"
+    ],
+    "special": null
+  },
+  {
+    "name": "Haji Khan Kakar",
+    "location": "Kandahar",
+    "patriot": null,
+    "suit": "P",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "army": 1,
+      "tribe": 1
+    },
+    "card_actions": [
+      "gift",
+      "betray"
+    ],
+    "special": null
+  },
+  {
+    "name": "Bolan Pass",
+    "location": "Kandahar",
+    "patriot": null,
+    "suit": "E",
+    "rank": 2,
+    "prize": "R",
+    "impact": {
+      "road": 2,
+      "army": 1
+    },
+    "card_actions": [
+      "march",
+      "gift"
+    ],
+    "special": null
+  },
+  {
+    "name": "Barakzai Sadars",
+    "location": "Kandahar",
+    "patriot": "A",
+    "suit": "P",
+    "rank": 1,
+    "prize": "A",
+    "impact": {
+      "tribe": 1,
+      "leverage": true,
+      "suit_change": "E"
+    },
+    "card_actions": [
+      "build"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Anglo-Persian Trade",
+    "location": "Persia",
+    "patriot": "B",
+    "suit": "E",
+    "rank": 1,
+    "prize": "R",
+    "impact": {
+      "road": 1,
+      "leverage": true
+    },
+    "card_actions": [
+      "tax",
+      "build"
+    ],
+    "special": null
+  },
+  {
+    "name": "Bengal Native Infrantry",
+    "location": "Punjab",
+    "patriot": "B",
+    "suit": "M",
+    "rank": 1,
+    "prize": "A",
+    "impact": {
+      "army": 1,
+      "suit_change": "I"
+    },
+    "card_actions": [
+      "battle",
+      "betray"
+    ],
+    "special": null
+  },
+  {
+    "name": "Claude Wade",
+    "location": "Persia",
+    "patriot": null,
+    "suit": "I",
+    "rank": 2,
+    "prize": "R",
+    "impact": {
+      "spy": 2
+    },
+    "card_actions": [
+      "march"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Allah Quli Bahadur",
+    "location": "Transcaspia",
+    "patriot": null,
+    "suit": "P",
+    "rank": 1,
+    "prize": "R",
+    "impact": {
+      "army": 1,
+      "spy": 1,
+      "tribe": 1
+    },
+    "card_actions": [
+      "betray"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Charler Masson",
+    "location": "Kandahar",
+    "patriot": null,
+    "suit": "I",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "spy": 2
+    },
+    "card_actions": [
+      "build"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "British Regulars",
+    "location": "Kandahar",
+    "patriot": "B",
+    "suit": "M",
+    "rank": 2,
+    "prize": "R",
+    "impact": {
+      "army": 2
+    },
+    "card_actions": [
+      "march",
+      "battle"
+    ],
+    "special": null
+  },
+  {
+    "name": "Seaforth Highlanders",
+    "location": "Punjab",
+    "patriot": "B",
+    "suit": "M",
+    "rank": 1,
+    "prize": "A",
+    "impact": {
+      "army": 1,
+      "suit_change": "P"
+    },
+    "card_actions": [
+      "march",
+      "battle"
+    ],
+    "special": null
+  },
+  {
+    "name": "Army of Indus",
+    "location": "Punjab",
+    "patriot": "B",
+    "suit": "M",
+    "rank": 3,
+    "prize": "A",
+    "impact": {
+      "army": 3
+    },
+    "card_actions": [
+      "march"
+    ],
+    "special": null
+  },
+  {
+    "name": "Prince Akhbar Khan",
+    "location": "Kabul",
+    "patriot": "A",
+    "suit": "I",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "army": 1,
+      "spy": 2,
+      "suit_change": "M"
+    },
+    "card_actions": [
+      "battle"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Kabul Bazaar",
+    "location": "Kabul",
+    "patriot": null,
+    "suit": "E",
+    "rank": 2,
+    "prize": null,
+    "impact": {
+      "road": 2,
+      "spy": 1,
+      "suit_change": "P"
+    },
+    "card_actions": [
+      "tax"
+    ],
+    "special": null
+  },
+  {
+    "name": "Pashtun Mercenary",
+    "location": "Kandahar",
+    "patriot": null,
+    "suit": "M",
+    "rank": 1,
+    "prize": null,
+    "impact": {
+      "army": 1,
+      "suit_change": "P"
+    },
+    "card_actions": [
+      "battle",
+      "tax"
+    ],
+    "special": null
+  },
+  {
+    "name": "Mohan Lal",
+    "location": "Kabul",
+    "patriot": null,
+    "suit": "I",
+    "rank": 3,
+    "prize": "R",
+    "impact": {
+      "spy": 3
+    },
+    "card_actions": [
+      "march"
+    ],
+    "special": "TODO"
+  },
+  {
+    "name": "Jezail Sharpshooters",
+    "location": "Kandahar",
+    "patriot": null,
+    "suit": "M",
+    "rank": 2,
+    "prize": "R",
+    "impact": {
+      "army": 2,
+      "spy": 1
+    },
+    "card_actions": [
+      "betray"
+    ],
+    "special": null
+  },
+  {
+    "name": "Eldred Pottinger",
+    "location": "Punjab",
+    "patriot": "B",
+    "suit": "I",
+    "rank": 2,
+    "prize": "R",
+    "impact": {
+      "spy": 2,
+      "suit_change": "E"
+    },
+    "card_actions": [
+      "march",
+      "betray"
+    ],
+    "special": null
+  },
+  {
+    "name": "Madali Khan",
+    "location": "Transcaspia",
+    "patriot": null,
+    "suit": "P",
+    "rank": 2,
+    "prize": "B",
+    "impact": {
+      "tribe": 2
+    },
+    "card_actions": [
+      "battle",
+      "betray"
+    ],
+    "special": null
+  }
+]

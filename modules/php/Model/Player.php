@@ -42,13 +42,12 @@ class Player extends DbModel
 
   protected function tableName()
   {
-    return "player";
+    return 'player';
   }
 
-  // We map $id to player_id so the superclass can update correctly
   protected function primaryKey()
   {
-    return "player_id";
+    return 'player_id';
   }
 }
 

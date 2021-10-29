@@ -26,15 +26,16 @@ ALTER TABLE `player`
 
 CREATE TABLE IF NOT EXISTS `card` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `location` varchar(16) NOT NULL,
   `name` varchar(32) NOT NULL,
   `type` enum('court', 'event'),
-  `suit` enum('economic', 'political', 'military', 'intelligence'),
+  `location` enum('kabul', 'transcaspia', 'punjab', 'kandahar', 'herat'),
+  `suit` enum('blue', 'red', 'yellow', 'purple'), -- map to actual names in code
   `rank` int unsigned DEFAULT NULL,
   `patriot` enum('afghan', 'british', 'russian'),
   `prize` enum('afghan', 'british', 'russian'),
-  `card_actions` set('build', 'tax', 'gift', 'march', 'betray', 'battle'),
-   -- TODO json api definition
-  `extra_data` JSON, -- play action, special action, purchase behavior, fall off behavior
+  `impact` JSON,
+  `card_actions` JSON,
+  `event_behavior` JSON,
+  `special` varchar(16),
   PRIMARY KEY (`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8 AUTO_INCREMENT = 1;
