@@ -1,5 +1,8 @@
 <?php
 
+declare(strict_types=1);
+
+
 namespace PAX\Model;
 
 use PAX\Model\DbModel;
@@ -10,7 +13,7 @@ class Card extends DbModel
   protected $name;
   protected $type;
   protected $location;
-  protected $suit;
+  // protected $suit;
   protected $rank;
   protected $patriot;
   protected $prize;
@@ -21,7 +24,7 @@ class Card extends DbModel
 
   static public function create($params)
   {
-    $instance = new Player($params);
+    $instance = new Card($params);
     parent::create($instance);
     return $instance;
   }
@@ -31,8 +34,9 @@ class Card extends DbModel
     $this->id = $params['id'];
     $this->name = $params['name'];
     $this->type = $params['type'];
-    $this->location = $params['location'];
-    $this->suit = $params['suit'];
+    $this->location =  $params['location'];
+    // TODO suit causes insert error
+    // $this->suit = $params['suit'];
     $this->rank = $params['rank'];
     $this->patriot = $params['patriot'];
     $this->prize = $params['prize'];

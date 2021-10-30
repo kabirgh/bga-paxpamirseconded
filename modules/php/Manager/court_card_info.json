@@ -510,7 +510,7 @@
     "special": null
   },
   {
-    "name": "Jan fishan Khan",
+    "name": "Jan-Fishan Khan",
     "location": "Kabul",
     "patriot": null,
     "suit": "I",
@@ -522,14 +522,16 @@
       "suit_change": "M"
     },
     "card_actions": [
-      "march",
-      "battle"
+      "battle",
+      "march"
     ],
-    "special": null
+    "special": null,
+    "id": 2,
+    "filename": "2.jpg"
   },
   {
     "name": "Count Petrovsky",
-    "location": "Transkaspia",
+    "location": "Transcaspia",
     "patriot": "R",
     "suit": "M",
     "rank": 2,
@@ -1588,7 +1590,9 @@
     "card_actions": [
       "march"
     ],
-    "special": "TODO"
+    "special": "Indispensable Advisors",
+    "id": 1,
+    "filename": "1.jpg"
   },
   {
     "name": "Jezail Sharpshooters",

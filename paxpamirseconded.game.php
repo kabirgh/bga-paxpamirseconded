@@ -36,6 +36,7 @@ spl_autoload_register($swdNamespaceAutoload, true, true);
 require_once(APP_GAMEMODULE_PATH . 'module/table/table.game.php');
 
 use PAX\Manager\PlayerManager;
+use PAX\Manager\CardManager;
 
 class PaxPamirSecondEd extends Table
 {
@@ -84,6 +85,7 @@ class PaxPamirSecondEd extends Table
     protected function setupNewGame($players, $options = array())
     {
         PlayerManager::setupNewGame($players, $options);
+        CardManager::setupNewGame($players, $options);
 
         /************ Start the game initialization *****/
 

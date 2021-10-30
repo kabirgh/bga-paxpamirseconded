@@ -21,21 +21,21 @@
 
 ALTER TABLE `player`
   ADD `rupees` int unsigned NOT NULL DEFAULT 0,
-  ADD `faction` enum('afghan', 'british', 'russian'),
+  ADD `faction` enum('Afghan', 'British', 'Russian'),
   ADD `loyalty` int unsigned NOT NULL DEFAULT 0;
 
 CREATE TABLE IF NOT EXISTS `card` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(10) unsigned NOT NULL,
   `name` varchar(32) NOT NULL,
   `type` enum('court', 'event'),
-  `location` enum('kabul', 'transcaspia', 'punjab', 'kandahar', 'herat'),
-  `suit` enum('blue', 'red', 'yellow', 'purple'), -- map to actual names in code
+  `location` enum('Kabul', 'Transcaspia', 'Punjab', 'Kandahar', 'Herat', 'Persia'),
+  `suit` enum('I', 'M', 'P', 'E'), -- map to actual names in code
   `rank` int unsigned DEFAULT NULL,
-  `patriot` enum('afghan', 'british', 'russian'),
-  `prize` enum('afghan', 'british', 'russian'),
-  `impact` JSON,
-  `card_actions` JSON,
-  `event_behavior` JSON,
+  `patriot` enum('Afghan', 'British', 'Russian'),
+  `prize` enum('Afghan', 'British', 'Russian'),
+  `impact` JSON DEFAULT NULL,
+  `card_actions` JSON DEFAULT NULL,
+  `event_behavior` JSON DEFAULT NULL,
   `special` varchar(16),
   PRIMARY KEY (`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8 AUTO_INCREMENT = 1;

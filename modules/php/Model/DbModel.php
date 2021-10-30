@@ -27,6 +27,10 @@ abstract class DbModel
       "INSERT INTO {$instance->tableName()} ($propKeys)\n" .
       "VALUES ({$instance->sqlFormattedValues($props)})" .
       '');
+
+    // if (strpos($sql, 'suit') !== false) {
+    //   var_dump($sql);
+    // }
     Game::get()->DbQuery($sql);
   }
 
@@ -78,6 +82,8 @@ abstract class DbModel
       return 'NULL';
     } else if (is_string(($value))) {
       return "'{$value}'";
+    } else if (is_array($value)) { // array or map
+      return "'" . json_encode($value) . "'";
     } else {
       return strval($value);
     }
