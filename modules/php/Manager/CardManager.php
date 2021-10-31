@@ -22,29 +22,12 @@ abstract class CardManager
       if (isset($map['id'])) {
         $map['type'] = 'court';
         $map['event_behavior'] = null;
-        $map['prize'] = self::abbreviationToFaction($map['prize']);
-        $map['patriot'] = self::abbreviationToFaction($map['patriot']);
-        // TODO impact should be array, not json
-        // TODO card actions right to left for easier html element positioning
+        // TODO order impact array
+        // TODO order card actions right to left for easier html element positioning
+        // TODO special
 
         $cards[] = Card::create($map);
       }
-    }
-  }
-
-  private static function abbreviationToFaction($abbr)
-  {
-    switch ($abbr) {
-      case 'B':
-        return 'British';
-      case 'R':
-        return 'Russian';
-      case 'A':
-        return 'Afghan';
-      case null:
-        return null;
-      default:
-        throw new Exception("Could not parse faction abbreviation '{$abbr}'");
     }
   }
 }
