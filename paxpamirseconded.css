@@ -90,7 +90,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 100%;
     box-sizing: border-box;
     margin: 0 0 20px 0;
     background-image: url('./img/mounted-map-4096.jpg');
@@ -98,9 +97,19 @@
     /* From https://stackoverflow.com/questions/600743/how-to-get-div-height-to-auto-adjust-to-background-size */
     background-size: contain;
     background-repeat: no-repeat;
-    padding-top: 58.2%;
+    --width: 100%;
+    padding-top: calc(0.582 * var(--width)); /* (img_height / img_width) * width% */
+    width: var(--width);
     /* Don't resize below this width */
     min-width: 500px;
+}
+
+/* ------- MARKET START ------- */
+
+#market-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 .market-section {
@@ -108,15 +117,36 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-    width: 100%;
     box-sizing: border-box;
     margin: 0 0 20px 0;
     background-image: url('./img/mounted-market-4096.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    padding-top: 49.3%;
+    --width: 87.5%;
+    padding-top: calc(0.493 * var(--width)); /* (img_height / img_width) * width% */
+    width: var(--width);
     min-width: 500px;
 }
+
+#paxpamir-deck-container {
+    display: flex;
+    flex-direction: column;
+    width: 12.5%;
+}
+
+.deck {
+    background-image: url('./img/cards/back.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 5px;
+    height: 100%;
+    --width: 100%;
+    padding-top: calc(0.715 * var(--width)); /* (img_height / img_width) * width% */
+    width: var(--width);
+    border-radius: 5%;
+}
+
+/* ------- MARKET END ------- */
 
 .playerBoards-section {
     display: flex;
@@ -133,9 +163,10 @@
     margin: 5px 0;
     background-size: contain;
     background-repeat: no-repeat;
-    padding-top: 16%; /* (img_height / img_width) * 70% */
+    --width: 70%;
+    padding-top: calc(0.228 * var(--width)); /* (img_height / img_width) * width% */
+    width: var(--width);
     min-width: 300px;
-    width: 70%;
     /* TODO add faction wheel in row */
 }
 

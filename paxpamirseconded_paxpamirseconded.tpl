@@ -14,7 +14,14 @@
     <div>Removed Effect and Domination Cards List</div>
   </div>
   <div id='paxpamir-map' class='map-section'></div>
-  <div id='paxpamir-market' class='market-section'></div>
+  <div id='market-container'>
+    <div id='paxpamir-market' class='market-section'></div>
+    <div id='paxpamir-deck-container'>
+      <div id='paxpamir-deck-top' class='deck'></div>
+      <div id='paxpamir-deck-bot' class='deck'></div>
+    </div>
+  </div>
+  </div>
   <div id='paxpamir-playerBoards' class='playerBoards-section'>
 
   </div>
