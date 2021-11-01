@@ -1,7 +1,7 @@
 [
   {
     "name": "The Ark of Bukhara",
-    "location": "Transcaspia",
+    "region": "Transcaspia",
     "patriot": null,
     "suit": "Military",
     "rank": 1,
@@ -17,7 +17,7 @@
   },
   {
     "name": "Bank",
-    "location": "Kandahar",
+    "region": "Kandahar",
     "patriot": null,
     "suit": "Economic",
     "rank": 2,
@@ -35,7 +35,7 @@
   },
   {
     "name": "Hari Singh Nawla",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": null,
     "suit": "Military",
     "rank": 2,
@@ -53,7 +53,7 @@
   },
   {
     "name": "Mohammad Shah",
-    "location": "Persia",
+    "region": "Persia",
     "patriot": null,
     "suit": "Political",
     "rank": 1,
@@ -71,7 +71,7 @@
   },
   {
     "name": "Nomadic Warlord",
-    "location": "Herat",
+    "region": "Herat",
     "patriot": null,
     "suit": "Military",
     "rank": 1,
@@ -88,7 +88,7 @@
   },
   {
     "name": "Sir John Keane",
-    "location": "Kandahar",
+    "region": "Kandahar",
     "patriot": "British",
     "suit": "Military",
     "rank": 1,
@@ -103,7 +103,7 @@
   },
   {
     "name": "Josiah Harlan",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": "Afghan",
     "suit": "Political",
     "rank": 1,
@@ -118,7 +118,7 @@
   },
   {
     "name": "Khyber Pass",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": null,
     "suit": "Economic",
     "rank": 2,
@@ -135,7 +135,7 @@
   },
   {
     "name": "Aga Mehdi",
-    "location": "Transcaspia",
+    "region": "Transcaspia",
     "patriot": "Russian",
     "suit": "Intelligence",
     "rank": 1,
@@ -152,7 +152,7 @@
   },
   {
     "name": "Herati Bandits",
-    "location": "Herat",
+    "region": "Herat",
     "patriot": null,
     "suit": "Intelligence",
     "rank": 1,
@@ -168,7 +168,7 @@
   },
   {
     "name": "Alexander Burnes",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": null,
     "suit": "Intelligence",
     "rank": 2,
@@ -184,7 +184,7 @@
   },
   {
     "name": "Kandahari Markets",
-    "location": "Kandahar",
+    "region": "Kandahar",
     "patriot": null,
     "suit": "Economic",
     "rank": 1,
@@ -201,7 +201,7 @@
   },
   {
     "name": "Opium Fields",
-    "location": "Herat",
+    "region": "Herat",
     "patriot": null,
     "suit": "Economic",
     "rank": 2,
@@ -219,7 +219,7 @@
   },
   {
     "name": "Wiliam Moorcroft",
-    "location": "Kandahar",
+    "region": "Kandahar",
     "patriot": null,
     "suit": "Intelligence",
     "rank": 1,
@@ -235,7 +235,7 @@
   },
   {
     "name": "Alexander Griboyedov",
-    "location": "Persia",
+    "region": "Persia",
     "patriot": "Russian",
     "suit": "Intelligence",
     "rank": 2,
@@ -251,7 +251,7 @@
   },
   {
     "name": "Shas Guard",
-    "location": "Persia",
+    "region": "Persia",
     "patriot": null,
     "suit": "Military",
     "rank": 1,
@@ -267,7 +267,7 @@
   },
   {
     "name": "Exiled Durrani Nobility",
-    "location": "Herat",
+    "region": "Herat",
     "patriot": null,
     "suit": "Political",
     "rank": 1,
@@ -283,7 +283,7 @@
   },
   {
     "name": "Fath Ali shah",
-    "location": "Persia",
+    "region": "Persia",
     "patriot": null,
     "suit": "Political",
     "rank": 2,
@@ -298,7 +298,7 @@
   },
   {
     "name": "Cossasc",
-    "location": "Transcaspia",
+    "region": "Transcaspia",
     "patriot": "Russian",
     "suit": "Military",
     "rank": 1,
@@ -314,7 +314,7 @@
   },
   {
     "name": "Jean Fransois Allard",
-    "location": "Persia",
+    "region": "Persia",
     "patriot": null,
     "suit": "Intelligence",
     "rank": 1,
@@ -331,7 +331,7 @@
   },
   {
     "name": "Civic Improvements",
-    "location": "Persia",
+    "region": "Persia",
     "patriot": null,
     "suit": "Economic",
     "rank": 2,
@@ -349,7 +349,7 @@
   },
   {
     "name": "Ranjit Singh",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": null,
     "suit": "Political",
     "rank": 2,
@@ -366,7 +366,7 @@
   },
   {
     "name": "Mir Murad Beg",
-    "location": "Transcaspia",
+    "region": "Transcaspia",
     "patriot": null,
     "suit": "Political",
     "rank": 1,
@@ -385,7 +385,7 @@
   },
   {
     "name": "Persian Army",
-    "location": "Persia",
+    "region": "Persia",
     "patriot": null,
     "suit": "Military",
     "rank": 2,
@@ -403,7 +403,7 @@
   },
   {
     "name": "Harry Flashman",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": null,
     "suit": "Intelligence",
     "rank": 1,
@@ -419,7 +419,7 @@
   },
   {
     "name": "Comapny Weapons",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": null,
     "suit": "Military",
     "rank": 1,
@@ -436,7 +436,7 @@
   },
   {
     "name": "Arthur Conolly",
-    "location": "Transcaspia",
+    "region": "Transcaspia",
     "patriot": "British",
     "suit": "Intelligence",
     "rank": 1,
@@ -452,7 +452,7 @@
   },
   {
     "name": "Geaorge Hayward",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": "British",
     "suit": "Intelligence",
     "rank": 1,
@@ -469,7 +469,7 @@
   },
   {
     "name": "Fruit Marketers",
-    "location": "Kandahar",
+    "region": "Kandahar",
     "patriot": null,
     "suit": "Economic",
     "rank": 1,
@@ -486,7 +486,7 @@
   },
   {
     "name": "Sindhi Warriors",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": null,
     "suit": "Military",
     "rank": 1,
@@ -504,7 +504,7 @@
   },
   {
     "name": "Anarkli Bazaar",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": null,
     "suit": "Economic",
     "rank": 1,
@@ -521,7 +521,7 @@
   },
   {
     "name": "Jan-Fishan Khan",
-    "location": "Kabul",
+    "region": "Kabul",
     "patriot": null,
     "suit": "Intelligence",
     "rank": 2,
@@ -537,12 +537,11 @@
       "battle"
     ],
     "special": null,
-    "id": 2,
-    "filename": "2.jpg"
+    "id": 2
   },
   {
     "name": "Count Petrovsky",
-    "location": "Transkaspia",
+    "region": "Transkaspia",
     "patriot": "Russian",
     "suit": "Military",
     "rank": 2,
@@ -558,7 +557,7 @@
   },
   {
     "name": "Citadel of Ghazni",
-    "location": "Kabul",
+    "region": "Kabul",
     "patriot": null,
     "suit": "Military",
     "rank": 1,
@@ -573,7 +572,7 @@
   },
   {
     "name": "Minaret of Jam",
-    "location": "Herat",
+    "region": "Herat",
     "patriot": null,
     "suit": "Economic",
     "rank": 1,
@@ -591,7 +590,7 @@
   },
   {
     "name": "Sikh merchants in Lahore",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": null,
     "suit": "Economic",
     "rank": 1,
@@ -609,7 +608,7 @@
   },
   {
     "name": "Supplies from orenburg",
-    "location": "Transcaspia",
+    "region": "Transcaspia",
     "patriot": "Russian",
     "suit": "Economic",
     "rank": 1,
@@ -625,7 +624,7 @@
   },
   {
     "name": "Slave Markets",
-    "location": "Persia",
+    "region": "Persia",
     "patriot": null,
     "suit": "Economic",
     "rank": 1,
@@ -643,7 +642,7 @@
   },
   {
     "name": "Nasrullah Khan",
-    "location": "Transcaspia",
+    "region": "Transcaspia",
     "patriot": null,
     "suit": "Political",
     "rank": 1,
@@ -659,7 +658,7 @@
   },
   {
     "name": "Aminullah Khan Logari",
-    "location": "Kabul",
+    "region": "Kabul",
     "patriot": "Afghan",
     "suit": "Political",
     "rank": 1,
@@ -677,7 +676,7 @@
   },
   {
     "name": "Slave Markets",
-    "location": "Transcaspia",
+    "region": "Transcaspia",
     "patriot": null,
     "suit": "Economic",
     "rank": 1,
@@ -695,7 +694,7 @@
   },
   {
     "name": "Glijee Nobles",
-    "location": "Kandahar",
+    "region": "Kandahar",
     "patriot": null,
     "suit": "Political",
     "rank": 1,
@@ -711,7 +710,7 @@
   },
   {
     "name": "Qanat System",
-    "location": "Herat",
+    "region": "Herat",
     "patriot": null,
     "suit": "Economic",
     "rank": 1,
@@ -728,7 +727,7 @@
   },
   {
     "name": "Abbas Mirza",
-    "location": "Persia",
+    "region": "Persia",
     "patriot": null,
     "suit": "Political",
     "rank": 1,
@@ -745,7 +744,7 @@
   },
   {
     "name": "Joseph Wolf",
-    "location": "Persia",
+    "region": "Persia",
     "patriot": "British",
     "suit": "Intelligence",
     "rank": 1,
@@ -761,7 +760,7 @@
   },
   {
     "name": "Pandjeh Oasis",
-    "location": "Transcaspia",
+    "region": "Transcaspia",
     "patriot": null,
     "suit": "Economic",
     "rank": 2,
@@ -778,7 +777,7 @@
   },
   {
     "name": "Wheat Fields",
-    "location": "Herat",
+    "region": "Herat",
     "patriot": null,
     "suit": "Economic",
     "rank": 2,
@@ -794,7 +793,7 @@
   },
   {
     "name": "Shah Shujah Durrani",
-    "location": "Kabul",
+    "region": "Kabul",
     "patriot": null,
     "suit": "Political",
     "rank": 1,
@@ -809,7 +808,7 @@
   },
   {
     "name": "Karakal Sheep",
-    "location": "Herat",
+    "region": "Herat",
     "patriot": null,
     "suit": "Economic",
     "rank": 2,
@@ -825,7 +824,7 @@
   },
   {
     "name": "Europeans Cannons",
-    "location": "Transcaspia",
+    "region": "Transcaspia",
     "patriot": null,
     "suit": "Military",
     "rank": 3,
@@ -842,7 +841,7 @@
   },
   {
     "name": "baluchi Smugglers",
-    "location": "Herat",
+    "region": "Herat",
     "patriot": null,
     "suit": "Economic",
     "rank": 2,
@@ -859,7 +858,7 @@
   },
   {
     "name": "Money Lenders",
-    "location": "Kabul",
+    "region": "Kabul",
     "patriot": null,
     "suit": "Economic",
     "rank": 2,
@@ -877,7 +876,7 @@
   },
   {
     "name": "Lapis Lazuli Mine",
-    "location": "Kabul",
+    "region": "Kabul",
     "patriot": "Afghan",
     "suit": "Economic",
     "rank": 2,
@@ -894,7 +893,7 @@
   },
   {
     "name": "Dost Mohammad",
-    "location": "Kabul",
+    "region": "Kabul",
     "patriot": null,
     "suit": "Political",
     "rank": 2,
@@ -910,7 +909,7 @@
   },
   {
     "name": "Jan Prosper Witkiewicz",
-    "location": "Transcaspia",
+    "region": "Transcaspia",
     "patriot": "Russian",
     "suit": "Intelligence",
     "rank": 2,
@@ -927,7 +926,7 @@
   },
   {
     "name": "Charles Stoddarr",
-    "location": "Kabul",
+    "region": "Kabul",
     "patriot": null,
     "suit": "Intelligence",
     "rank": 1,
@@ -943,7 +942,7 @@
   },
   {
     "name": "Russo-Persian Trade",
-    "location": "Persia",
+    "region": "Persia",
     "patriot": "Russian",
     "suit": "Economic",
     "rank": 2,
@@ -961,7 +960,7 @@
   },
   {
     "name": "Henry Rawlinson",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": "British",
     "suit": "Intelligence",
     "rank": 1,
@@ -978,7 +977,7 @@
   },
   {
     "name": "Henry Pottinger",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": "British",
     "suit": "Intelligence",
     "rank": 1,
@@ -995,7 +994,7 @@
   },
   {
     "name": "City of Ghazni",
-    "location": "Kabul",
+    "region": "Kabul",
     "patriot": null,
     "suit": "Economic",
     "rank": 3,
@@ -1013,7 +1012,7 @@
   },
   {
     "name": "Durrani Royal Guard",
-    "location": "Kabul",
+    "region": "Kabul",
     "patriot": null,
     "suit": "Military",
     "rank": 1,
@@ -1028,7 +1027,7 @@
   },
   {
     "name": "Afgan Handicrafts",
-    "location": "Kabul",
+    "region": "Kabul",
     "patriot": null,
     "suit": "Economic",
     "rank": 1,
@@ -1044,7 +1043,7 @@
   },
   {
     "name": "Imperial Surveyors",
-    "location": "Transcaspia",
+    "region": "Transcaspia",
     "patriot": "Russian",
     "suit": "Intelligence",
     "rank": 1,
@@ -1061,7 +1060,7 @@
   },
   {
     "name": "Russian Regulars",
-    "location": "Persia",
+    "region": "Persia",
     "patriot": "Russian",
     "suit": "Military",
     "rank": 2,
@@ -1078,7 +1077,7 @@
   },
   {
     "name": "Farah Riad",
-    "location": "Herat",
+    "region": "Herat",
     "patriot": null,
     "suit": "Economic",
     "rank": 3,
@@ -1095,7 +1094,7 @@
   },
   {
     "name": "Hazara Chiefs",
-    "location": "Herat",
+    "region": "Herat",
     "patriot": null,
     "suit": "Political",
     "rank": 1,
@@ -1113,7 +1112,7 @@
   },
   {
     "name": "Balkh Arsenic Mine",
-    "location": "Kabul",
+    "region": "Kabul",
     "patriot": null,
     "suit": "Economic",
     "rank": 1,
@@ -1130,7 +1129,7 @@
   },
   {
     "name": "Bukharan Jews",
-    "location": "Transcaspia",
+    "region": "Transcaspia",
     "patriot": null,
     "suit": "Intelligence",
     "rank": 1,
@@ -1148,7 +1147,7 @@
   },
   {
     "name": "Maqpon Dynastry",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": null,
     "suit": "Political",
     "rank": 1,
@@ -1164,7 +1163,7 @@
   },
   {
     "name": "Paolo Avitable",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": null,
     "suit": "Political",
     "rank": 1,
@@ -1180,7 +1179,7 @@
   },
   {
     "name": "Tajik Warband",
-    "location": "Herat",
+    "region": "Herat",
     "patriot": null,
     "suit": "Military",
     "rank": 2,
@@ -1197,7 +1196,7 @@
   },
   {
     "name": "Ghaem Magham Farahni",
-    "location": "Persia",
+    "region": "Persia",
     "patriot": null,
     "suit": "Intelligence",
     "rank": 2,
@@ -1214,7 +1213,7 @@
   },
   {
     "name": "Bala Hissar",
-    "location": "Kabul",
+    "region": "Kabul",
     "patriot": null,
     "suit": "Military",
     "rank": 1,
@@ -1230,7 +1229,7 @@
   },
   {
     "name": "William Hay Macnaghten",
-    "location": "Kandahar",
+    "region": "Kandahar",
     "patriot": "British",
     "suit": "Intelligence",
     "rank": 2,
@@ -1248,7 +1247,7 @@
   },
   {
     "name": "Haji Mirza Aghasi",
-    "location": "Persia",
+    "region": "Persia",
     "patriot": "Afghan",
     "suit": "Political",
     "rank": 1,
@@ -1265,7 +1264,7 @@
   },
   {
     "name": "Zorawar Sigh Kahluria",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": null,
     "suit": "Military",
     "rank": 2,
@@ -1282,7 +1281,7 @@
   },
   {
     "name": "Baluchi Chiefs",
-    "location": "Kandahar",
+    "region": "Kandahar",
     "patriot": null,
     "suit": "Political",
     "rank": 1,
@@ -1299,7 +1298,7 @@
   },
   {
     "name": "Ghilzai Nomads",
-    "location": "Kabul",
+    "region": "Kabul",
     "patriot": null,
     "suit": "Economic",
     "rank": 2,
@@ -1316,7 +1315,7 @@
   },
   {
     "name": "Yar Mohammad Alikozai",
-    "location": "Herat",
+    "region": "Herat",
     "patriot": null,
     "suit": "Political",
     "rank": 2,
@@ -1333,7 +1332,7 @@
   },
   {
     "name": "Ishaqzai Chiefs",
-    "location": "Herat",
+    "region": "Herat",
     "patriot": "Afghan",
     "suit": "Political",
     "rank": 1,
@@ -1350,7 +1349,7 @@
   },
   {
     "name": "Akali Sikhs",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": null,
     "suit": "Military",
     "rank": 2,
@@ -1366,7 +1365,7 @@
   },
   {
     "name": "Count Ivan Simonich",
-    "location": "Persia",
+    "region": "Persia",
     "patriot": "Russian",
     "suit": "Intelligence",
     "rank": 2,
@@ -1383,7 +1382,7 @@
   },
   {
     "name": "Haji Khan Kakar",
-    "location": "Kandahar",
+    "region": "Kandahar",
     "patriot": null,
     "suit": "Political",
     "rank": 1,
@@ -1400,7 +1399,7 @@
   },
   {
     "name": "Bolan Pass",
-    "location": "Kandahar",
+    "region": "Kandahar",
     "patriot": null,
     "suit": "Economic",
     "rank": 2,
@@ -1418,7 +1417,7 @@
   },
   {
     "name": "Barakzai Sadars",
-    "location": "Kandahar",
+    "region": "Kandahar",
     "patriot": "Afghan",
     "suit": "Political",
     "rank": 1,
@@ -1435,7 +1434,7 @@
   },
   {
     "name": "Anglo-Persian Trade",
-    "location": "Persia",
+    "region": "Persia",
     "patriot": "British",
     "suit": "Economic",
     "rank": 1,
@@ -1452,7 +1451,7 @@
   },
   {
     "name": "Bengal Native Infrantry",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": "British",
     "suit": "Military",
     "rank": 1,
@@ -1469,7 +1468,7 @@
   },
   {
     "name": "Claude Wade",
-    "location": "Persia",
+    "region": "Persia",
     "patriot": null,
     "suit": "Intelligence",
     "rank": 2,
@@ -1485,7 +1484,7 @@
   },
   {
     "name": "Allah Quli Bahadur",
-    "location": "Transcaspia",
+    "region": "Transcaspia",
     "patriot": null,
     "suit": "Political",
     "rank": 1,
@@ -1502,7 +1501,7 @@
   },
   {
     "name": "Charler Masson",
-    "location": "Kandahar",
+    "region": "Kandahar",
     "patriot": null,
     "suit": "Intelligence",
     "rank": 2,
@@ -1518,7 +1517,7 @@
   },
   {
     "name": "British Regulars",
-    "location": "Kandahar",
+    "region": "Kandahar",
     "patriot": "British",
     "suit": "Military",
     "rank": 2,
@@ -1535,7 +1534,7 @@
   },
   {
     "name": "Seaforth Highlanders",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": "British",
     "suit": "Military",
     "rank": 1,
@@ -1552,7 +1551,7 @@
   },
   {
     "name": "Army of Indus",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": "British",
     "suit": "Military",
     "rank": 3,
@@ -1569,7 +1568,7 @@
   },
   {
     "name": "Prince Akhbar Khan",
-    "location": "Kabul",
+    "region": "Kabul",
     "patriot": "Afghan",
     "suit": "Intelligence",
     "rank": 2,
@@ -1587,7 +1586,7 @@
   },
   {
     "name": "Kabul Bazaar",
-    "location": "Kabul",
+    "region": "Kabul",
     "patriot": null,
     "suit": "Economic",
     "rank": 2,
@@ -1605,7 +1604,7 @@
   },
   {
     "name": "Pashtun Mercenary",
-    "location": "Kandahar",
+    "region": "Kandahar",
     "patriot": null,
     "suit": "Military",
     "rank": 1,
@@ -1622,7 +1621,7 @@
   },
   {
     "name": "Mohan Lal",
-    "location": "Kabul",
+    "region": "Kabul",
     "patriot": null,
     "suit": "Intelligence",
     "rank": 3,
@@ -1636,12 +1635,11 @@
       "march"
     ],
     "special": "Indispensable Advisors",
-    "id": 1,
-    "filename": "1.jpg"
+    "id": 1
   },
   {
     "name": "Jezail Sharpshooters",
-    "location": "Kandahar",
+    "region": "Kandahar",
     "patriot": null,
     "suit": "Military",
     "rank": 2,
@@ -1658,7 +1656,7 @@
   },
   {
     "name": "Eldred Pottinger",
-    "location": "Punjab",
+    "region": "Punjab",
     "patriot": "British",
     "suit": "Intelligence",
     "rank": 2,
@@ -1676,7 +1674,7 @@
   },
   {
     "name": "Madali Khan",
-    "location": "Transcaspia",
+    "region": "Transcaspia",
     "patriot": null,
     "suit": "Political",
     "rank": 2,

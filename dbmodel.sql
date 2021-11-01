@@ -25,17 +25,21 @@ ALTER TABLE `player`
   ADD `loyalty` int unsigned NOT NULL DEFAULT 0;
 
 CREATE TABLE IF NOT EXISTS `card` (
-  `id` int(10) unsigned NOT NULL,
-  `name` varchar(32) NOT NULL,
-  `type` enum('court', 'event'),
-  `location` enum('Kabul', 'Transcaspia', 'Punjab', 'Kandahar', 'Herat', 'Persia'),
+  -- All cards
+  `id` int unsigned NOT NULL,
+  `type` enum('court', 'event') NOT NULL,
+  -- Court cards only
+  `name` varchar(32) DEFAULT NULL,
+  `region` enum('Kabul', 'Transcaspia', 'Punjab', 'Kandahar', 'Herat', 'Persia'),
   `suit` enum('I', 'M', 'P', 'E'), -- map to actual names in code
   `rank` int unsigned DEFAULT NULL,
   `patriot` enum('Afghan', 'British', 'Russian'),
   `prize` enum('Afghan', 'British', 'Russian'),
   `impact` JSON DEFAULT NULL,
   `card_actions` JSON DEFAULT NULL,
-  `event_behavior` JSON DEFAULT NULL,
-  `special` varchar(16),
+  `special` varchar(32),
+  -- Event cards only
+  `purchase` varchar(32),
+  `discard` varchar(32),
   PRIMARY KEY (`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8 AUTO_INCREMENT = 1;

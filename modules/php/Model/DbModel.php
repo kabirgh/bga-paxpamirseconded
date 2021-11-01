@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace PAX\Model;
 
 use PAX\Core\Game;
@@ -12,10 +14,7 @@ abstract class DbModel
   abstract protected function tableName();
 
   // Override if the table uses a different column for its primary key.
-  protected function primaryKey()
-  {
-    return 'id';
-  }
+  abstract protected function primaryKey();
 
   // TODO is DbQuery vulnerable to sql injection?
   public static function create($instance)

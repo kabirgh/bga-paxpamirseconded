@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace PAX\Model;
 
 use PAX\Model\DbModel;
@@ -22,7 +24,7 @@ class Player extends DbModel
 
   static public function create($params)
   {
-    $instance = new Player($params);
+    $instance = new self($params);
     parent::create($instance);
     return $instance;
   }
