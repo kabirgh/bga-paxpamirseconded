@@ -25,6 +25,6 @@ class EventCard extends Card
     $this->id = $params['id'];
     $this->type = $params['type'];
     $this->purchase = $params['purchase'];
-    $this->purchase = $params['discard'];
+    $this->discard = $params['discard'];
   }
 }

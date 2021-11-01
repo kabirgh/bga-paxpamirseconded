@@ -60,9 +60,8 @@ abstract class CardManager
     $cards = [];
     foreach ($cardArr as $map) {
       // TODO set ids
-      if (isset($map['id'])) {
+      if (isset($map['id']) and $map['id'] !== 999) {
         $map['type'] = 'court';
-        $map['event_behavior'] = null;
         // TODO order impact array
         // TODO order card actions right to left for easier html element positioning
         // TODO special

@@ -52,22 +52,3 @@ class Player extends DbModel
     return 'player_id';
   }
 }
-
-// $p = Player::create([
-//   'player_id' => 'id_1',
-//   'player_name' => 'Bob',
-//   'player_color' => 'red',
-//   'player_score' => 0,
-//   'player_canal' => 'canal',
-//   'player_avatar' => 'avatar',
-//   'rupees' => 4,
-//   'faction' => 'Afghan',
-//   'loyalty' => 2
-// ]);
-// $new = ["player_name" => "Alice", "player_score" => 7];
-// $p->update($new) . "\n";
-// print $p . "\n";
-// print $p->commit($new) . "\n";
-// Should fail
-// $p->update(["doesnt_exist" => "qwe"]);
-// $p->update(["player_id" => "id_new"]);
