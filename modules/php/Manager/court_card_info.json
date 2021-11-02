@@ -533,8 +533,8 @@
     "id": 30
   },
   {
-    "name": "The Ark of Bukhara",
-    "region": "Transcaspia",
+    "name": "Company Weapons",
+    "region": "Punjab",
     "patriot": null,
     "suit": "Military",
     "rank": 1,
@@ -544,10 +544,261 @@
       "Intelligence"
     ],
     "card_actions": [
+      "tax",
+      "betray"
+    ],
+    "special": null,
+    "id": 31
+  },
+  {
+    "name": "Army of the Indus",
+    "region": "Punjab",
+    "patriot": "British",
+    "suit": "Military",
+    "rank": 3,
+    "prize": "Afghan",
+    "impact": [
+      "army",
+      "army",
+      "army"
+    ],
+    "card_actions": [
+      "march"
+    ],
+    "special": null,
+    "id": 32
+  },
+  {
+    "name": "Zorawar Singh Kahluria",
+    "region": "Punjab",
+    "patriot": null,
+    "suit": "Military",
+    "rank": 2,
+    "prize": null,
+    "impact": [
+      "army",
+      "army"
+    ],
+    "card_actions": [
+      "battle",
+      "gift"
+    ],
+    "special": null,
+    "id": 33
+  },
+  {
+    "name": "Sindhi Warriors",
+    "region": "Punjab",
+    "patriot": null,
+    "suit": "Military",
+    "rank": 1,
+    "prize": "British",
+    "impact": [
+      "army",
+      "Economic"
+    ],
+    "card_actions": [
+      "march",
+      "battle",
+      "betray"
+    ],
+    "special": null,
+    "id": 34
+  },
+  {
+    "name": "Hari Singh Nalwa",
+    "region": "Punjab",
+    "patriot": null,
+    "suit": "Military",
+    "rank": 2,
+    "prize": null,
+    "impact": [
+      "army",
+      "army",
+      "Political"
+    ],
+    "card_actions": [
+      "march",
+      "battle"
+    ],
+    "special": null,
+    "id": 35
+  },
+  {
+    "name": "Bengal Native Infantry",
+    "region": "Punjab",
+    "patriot": "British",
+    "suit": "Military",
+    "rank": 1,
+    "prize": "Afghan",
+    "impact": [
+      "army",
+      "Intelligence"
+    ],
+    "card_actions": [
+      "battle",
+      "betray"
+    ],
+    "special": null,
+    "id": 36
+  },
+  {
+    "name": "Claude Wade",
+    "region": "Persia",
+    "patriot": null,
+    "suit": "Intelligence",
+    "rank": 2,
+    "prize": "Russian",
+    "impact": [
+      "spy",
+      "spy"
+    ],
+    "card_actions": [
+      "march"
+    ],
+    "special": "TODO",
+    "id": 37
+  },
+  {
+    "name": "Akali Sikhs",
+    "region": "Punjab",
+    "patriot": null,
+    "suit": "Military",
+    "rank": 2,
+    "prize": "British",
+    "impact": [
+      "army",
+      "army"
+    ],
+    "card_actions": [
+      "battle"
+    ],
+    "special": null,
+    "id": 38
+  },
+  {
+    "name": "William Moorcroft",
+    "region": "Kandahar",
+    "patriot": null,
+    "suit": "Intelligence",
+    "rank": 1,
+    "prize": null,
+    "impact": [
+      "spy"
+    ],
+    "card_actions": [
+      "march",
+      "battle"
+    ],
+    "special": null,
+    "id": 39
+  },
+  {
+    "name": "William Hay Macnaghten",
+    "region": "Kandahar",
+    "patriot": "British",
+    "suit": "Intelligence",
+    "rank": 2,
+    "prize": "Afghan",
+    "impact": [
+      "spy",
+      "spy",
+      "leverage"
+    ],
+    "card_actions": [
+      "march",
+      "tax"
+    ],
+    "special": null,
+    "id": 40
+  },
+  {
+    "name": "Charles Masson",
+    "region": "Kandahar",
+    "patriot": null,
+    "suit": "Intelligence",
+    "rank": 2,
+    "prize": null,
+    "impact": [
+      "spy",
+      "spy"
+    ],
+    "card_actions": [
       "build"
     ],
     "special": "TODO",
-    "id": 999
+    "id": 41
+  },
+  {
+    "name": "Barakzai Sadars",
+    "region": "Kandahar",
+    "patriot": "Afghan",
+    "suit": "Political",
+    "rank": 1,
+    "prize": "Afghan",
+    "impact": [
+      "tribe",
+      "leverage",
+      "Economic"
+    ],
+    "card_actions": [
+      "build"
+    ],
+    "special": "TODO",
+    "id": 42
+  },
+  {
+    "name": "Giljee Nobles",
+    "region": "Kandahar",
+    "patriot": null,
+    "suit": "Political",
+    "rank": 1,
+    "prize": "Afghan",
+    "impact": [
+      "army",
+      "tribe"
+    ],
+    "card_actions": [
+      "battle"
+    ],
+    "special": "TODO",
+    "id": 43
+  },
+  {
+    "name": "Baluchi Chiefs",
+    "region": "Kandahar",
+    "patriot": null,
+    "suit": "Political",
+    "rank": 1,
+    "prize": "Russian",
+    "impact": [
+      "army",
+      "tribe"
+    ],
+    "card_actions": [
+      "tax",
+      "build"
+    ],
+    "special": null,
+    "id": 44
+  },
+  {
+    "name": "Haji Khan Kakar",
+    "region": "Kandahar",
+    "patriot": null,
+    "suit": "Political",
+    "rank": 1,
+    "prize": null,
+    "impact": [
+      "army",
+      "tribe"
+    ],
+    "card_actions": [
+      "gift",
+      "betray"
+    ],
+    "special": null,
+    "id": 45
   },
   {
     "name": "Bank",
@@ -566,25 +817,382 @@
       "gift"
     ],
     "special": null,
-    "id": 999
+    "id": 46
   },
   {
-    "name": "Hari Singh Nawla",
-    "region": "Punjab",
+    "name": "Bolan Pass",
+    "region": "Kandahar",
     "patriot": null,
-    "suit": "Military",
+    "suit": "Economic",
     "rank": 2,
+    "prize": "Russian",
+    "impact": [
+      "road",
+      "road",
+      "army"
+    ],
+    "card_actions": [
+      "march",
+      "gift"
+    ],
+    "special": null,
+    "id": 47
+  },
+  {
+    "name": "Fruit Markets",
+    "region": "Kandahar",
+    "patriot": null,
+    "suit": "Economic",
+    "rank": 1,
     "prize": null,
     "impact": [
-      "army",
-      "army",
+      "road",
       "Political"
+    ],
+    "card_actions": [
+      "march",
+      "build"
+    ],
+    "special": null,
+    "id": 48
+  },
+  {
+    "name": "Kandahari Markets",
+    "region": "Kandahar",
+    "patriot": null,
+    "suit": "Economic",
+    "rank": 1,
+    "prize": null,
+    "impact": [
+      "road",
+      "Political"
+    ],
+    "card_actions": [
+      "tax",
+      "build"
+    ],
+    "special": null,
+    "id": 49
+  },
+  {
+    "name": "British Regulars",
+    "region": "Kandahar",
+    "patriot": "British",
+    "suit": "Military",
+    "rank": 2,
+    "prize": "Russian",
+    "impact": [
+      "army",
+      "army"
     ],
     "card_actions": [
       "march",
       "battle"
     ],
     "special": null,
+    "id": 50
+  },
+  {
+    "name": "Sir John Keane",
+    "region": "Kandahar",
+    "patriot": "British",
+    "suit": "Military",
+    "rank": 1,
+    "prize": "Russian",
+    "impact": [
+      "army"
+    ],
+    "card_actions": [
+      "battle"
+    ],
+    "special": "TODO",
+    "id": 51
+  },
+  {
+    "name": "Pashtun Mercenary",
+    "region": "Kandahar",
+    "patriot": null,
+    "suit": "Military",
+    "rank": 1,
+    "prize": null,
+    "impact": [
+      "army",
+      "Political"
+    ],
+    "card_actions": [
+      "battle",
+      "tax"
+    ],
+    "special": null,
+    "id": 52
+  },
+  {
+    "name": "Jezail Sharpshooters",
+    "region": "Kandahar",
+    "patriot": null,
+    "suit": "Military",
+    "rank": 2,
+    "prize": "Russian",
+    "impact": [
+      "army",
+      "army",
+      "spy"
+    ],
+    "card_actions": [
+      "betray"
+    ],
+    "special": null,
+    "id": 53
+  },
+  {
+    "name": "Herati Bandits",
+    "region": "Herat",
+    "patriot": null,
+    "suit": "Intelligence",
+    "rank": 1,
+    "prize": null,
+    "impact": [
+      "spy",
+      "leverage"
+    ],
+    "card_actions": [
+      "tax"
+    ],
+    "special": "TODO",
+    "id": 54
+  },
+  {
+    "name": "Hazara Chiefs",
+    "region": "Herat",
+    "patriot": null,
+    "suit": "Political",
+    "rank": 1,
+    "prize": null,
+    "impact": [
+      "army",
+      "tribe"
+    ],
+    "card_actions": [
+      "march",
+      "battle",
+      "tax"
+    ],
+    "special": null,
+    "id": 55
+  },
+  {
+    "name": "Yar Mohammad Alikozai",
+    "region": "Herat",
+    "patriot": null,
+    "suit": "Political",
+    "rank": 2,
+    "prize": "Afghan",
+    "impact": [
+      "tribe",
+      "tribe",
+      "Political"
+    ],
+    "card_actions": [
+      "betray"
+    ],
+    "special": "TODO",
+    "id": 56
+  },
+  {
+    "name": "Exiled Durrani Nobility",
+    "region": "Herat",
+    "patriot": null,
+    "suit": "Political",
+    "rank": 1,
+    "prize": "British",
+    "impact": [
+      "tribe"
+    ],
+    "card_actions": [
+      "march",
+      "betray"
+    ],
+    "special": null,
+    "id": 57
+  },
+  {
+    "name": "Ishaqzai Chiefs",
+    "region": "Herat",
+    "patriot": "Afghan",
+    "suit": "Political",
+    "rank": 1,
+    "prize": null,
+    "impact": [
+      "tribe",
+      "Economic"
+    ],
+    "card_actions": [
+      "gift",
+      "build"
+    ],
+    "special": null,
+    "id": 58
+  },
+  {
+    "name": "Tajik Warband",
+    "region": "Herat",
+    "patriot": null,
+    "suit": "Military",
+    "rank": 2,
+    "prize": null,
+    "impact": [
+      "army",
+      "army"
+    ],
+    "card_actions": [
+      "battle",
+      "betray"
+    ],
+    "special": null,
+    "id": 59
+  },
+  {
+    "name": "Nomadic Warlord",
+    "region": "Herat",
+    "patriot": null,
+    "suit": "Military",
+    "rank": 1,
+    "prize": "Russian",
+    "impact": [
+      "army"
+    ],
+    "card_actions": [
+      "battle",
+      "tax",
+      "gift"
+    ],
+    "special": null,
+    "id": 60
+  },
+  {
+    "name": "Karakal Sheep",
+    "region": "Herat",
+    "patriot": null,
+    "suit": "Economic",
+    "rank": 2,
+    "prize": null,
+    "impact": [
+      "road",
+      "road"
+    ],
+    "card_actions": [
+      "tax"
+    ],
+    "special": null,
+    "id": 61
+  },
+  {
+    "name": "Qanat System",
+    "region": "Herat",
+    "patriot": null,
+    "suit": "Economic",
+    "rank": 1,
+    "prize": null,
+    "impact": [
+      "road",
+      "Political"
+    ],
+    "card_actions": [
+      "gift",
+      "build"
+    ],
+    "special": null,
+    "id": 62
+  },
+  {
+    "name": "Farah Road",
+    "region": "Herat",
+    "patriot": null,
+    "suit": "Economic",
+    "rank": 3,
+    "prize": null,
+    "impact": [
+      "road",
+      "road",
+      "road"
+    ],
+    "card_actions": [
+      "march"
+    ],
+    "special": null,
+    "id": 63
+  },
+  {
+    "name": "Opium Fields",
+    "region": "Herat",
+    "patriot": null,
+    "suit": "Economic",
+    "rank": 2,
+    "prize": null,
+    "impact": [
+      "road",
+      "road",
+      "spy",
+      "Military"
+    ],
+    "card_actions": [
+      "tax"
+    ],
+    "special": null,
+    "id": 64
+  },
+  {
+    "name": "Minaret of Jam",
+    "region": "Herat",
+    "patriot": null,
+    "suit": "Economic",
+    "rank": 1,
+    "prize": null,
+    "impact": [
+      "road",
+      "army"
+    ],
+    "card_actions": [
+      "march",
+      "battle",
+      "tax"
+    ],
+    "special": null,
+    "id": 65
+  },
+  {
+    "name": "Baluchi Smugglers",
+    "region": "Herat",
+    "patriot": null,
+    "suit": "Economic",
+    "rank": 2,
+    "prize": "Afghan",
+    "impact": [
+      "road",
+      "road",
+      "army"
+    ],
+    "card_actions": [
+      "battle"
+    ],
+    "special": "TODO",
+    "id": 66
+  },
+  {
+    "name": "The Ark of Bukhara",
+    "region": "Transcaspia",
+    "patriot": null,
+    "suit": "Military",
+    "rank": 1,
+    "prize": null,
+    "impact": [
+      "army",
+      "Intelligence"
+    ],
+    "card_actions": [
+      "build"
+    ],
+    "special": "TODO",
     "id": 999
   },
   {
@@ -607,40 +1215,6 @@
     "id": 999
   },
   {
-    "name": "Nomadic Warlord",
-    "region": "Herat",
-    "patriot": null,
-    "suit": "Military",
-    "rank": 1,
-    "prize": "Russian",
-    "impact": [
-      "army"
-    ],
-    "card_actions": [
-      "battle",
-      "tax",
-      "gift"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
-    "name": "Sir John Keane",
-    "region": "Kandahar",
-    "patriot": "British",
-    "suit": "Military",
-    "rank": 1,
-    "prize": "Russian",
-    "impact": [
-      "army"
-    ],
-    "card_actions": [
-      "battle"
-    ],
-    "special": "TODO",
-    "id": 999
-  },
-  {
     "name": "Aga Mehdi",
     "region": "Transcaspia",
     "patriot": "Russian",
@@ -654,77 +1228,6 @@
       "march",
       "battle",
       "betray"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
-    "name": "Herati Bandits",
-    "region": "Herat",
-    "patriot": null,
-    "suit": "Intelligence",
-    "rank": 1,
-    "prize": null,
-    "impact": [
-      "spy",
-      "leverage"
-    ],
-    "card_actions": [
-      "tax"
-    ],
-    "special": "TODO",
-    "id": 999
-  },
-  {
-    "name": "Kandahari Markets",
-    "region": "Kandahar",
-    "patriot": null,
-    "suit": "Economic",
-    "rank": 1,
-    "prize": null,
-    "impact": [
-      "road",
-      "Political"
-    ],
-    "card_actions": [
-      "tax",
-      "build"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
-    "name": "Opium Fields",
-    "region": "Herat",
-    "patriot": null,
-    "suit": "Economic",
-    "rank": 2,
-    "prize": null,
-    "impact": [
-      "road",
-      "road",
-      "spy",
-      "Military"
-    ],
-    "card_actions": [
-      "tax"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
-    "name": "Wiliam Moorcroft",
-    "region": "Kandahar",
-    "patriot": null,
-    "suit": "Intelligence",
-    "rank": 1,
-    "prize": null,
-    "impact": [
-      "spy"
-    ],
-    "card_actions": [
-      "march",
-      "battle"
     ],
     "special": null,
     "id": 999
@@ -761,23 +1264,6 @@
       "tax"
     ],
     "special": "TODO",
-    "id": 999
-  },
-  {
-    "name": "Exiled Durrani Nobility",
-    "region": "Herat",
-    "patriot": null,
-    "suit": "Political",
-    "rank": 1,
-    "prize": "British",
-    "impact": [
-      "tribe"
-    ],
-    "card_actions": [
-      "march",
-      "betray"
-    ],
-    "special": null,
     "id": 999
   },
   {
@@ -890,24 +1376,6 @@
     "id": 999
   },
   {
-    "name": "Comapny Weapons",
-    "region": "Punjab",
-    "patriot": null,
-    "suit": "Military",
-    "rank": 1,
-    "prize": null,
-    "impact": [
-      "army",
-      "Intelligence"
-    ],
-    "card_actions": [
-      "tax",
-      "betray"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
     "name": "Arthur Conolly",
     "region": "Transcaspia",
     "patriot": "British",
@@ -925,43 +1393,6 @@
     "id": 999
   },
   {
-    "name": "Fruit Marketers",
-    "region": "Kandahar",
-    "patriot": null,
-    "suit": "Economic",
-    "rank": 1,
-    "prize": null,
-    "impact": [
-      "road",
-      "Political"
-    ],
-    "card_actions": [
-      "march",
-      "build"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
-    "name": "Sindhi Warriors",
-    "region": "Punjab",
-    "patriot": null,
-    "suit": "Military",
-    "rank": 1,
-    "prize": "British",
-    "impact": [
-      "army",
-      "Economic"
-    ],
-    "card_actions": [
-      "march",
-      "battle",
-      "betray"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
     "name": "Count Petrovsky",
     "region": "Transkaspia",
     "patriot": "Russian",
@@ -974,25 +1405,6 @@
     ],
     "card_actions": [
       "battle"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
-    "name": "Minaret of Jam",
-    "region": "Herat",
-    "patriot": null,
-    "suit": "Economic",
-    "rank": 1,
-    "prize": null,
-    "impact": [
-      "road",
-      "army"
-    ],
-    "card_actions": [
-      "march",
-      "battle",
-      "tax"
     ],
     "special": null,
     "id": 999
@@ -1070,41 +1482,6 @@
     "id": 999
   },
   {
-    "name": "Glijee Nobles",
-    "region": "Kandahar",
-    "patriot": null,
-    "suit": "Political",
-    "rank": 1,
-    "prize": "Afghan",
-    "impact": [
-      "army",
-      "tribe"
-    ],
-    "card_actions": [
-      "battle"
-    ],
-    "special": "TODO",
-    "id": 999
-  },
-  {
-    "name": "Qanat System",
-    "region": "Herat",
-    "patriot": null,
-    "suit": "Economic",
-    "rank": 1,
-    "prize": null,
-    "impact": [
-      "road",
-      "Political"
-    ],
-    "card_actions": [
-      "gift",
-      "build"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
     "name": "Abbas Mirza",
     "region": "Persia",
     "patriot": null,
@@ -1175,23 +1552,6 @@
     "id": 999
   },
   {
-    "name": "Karakal Sheep",
-    "region": "Herat",
-    "patriot": null,
-    "suit": "Economic",
-    "rank": 2,
-    "prize": null,
-    "impact": [
-      "road",
-      "road"
-    ],
-    "card_actions": [
-      "tax"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
     "name": "Europeans Cannons",
     "region": "Transcaspia",
     "patriot": null,
@@ -1207,24 +1567,6 @@
       "gift"
     ],
     "special": null,
-    "id": 999
-  },
-  {
-    "name": "baluchi Smugglers",
-    "region": "Herat",
-    "patriot": null,
-    "suit": "Economic",
-    "rank": 2,
-    "prize": "Afghan",
-    "impact": [
-      "road",
-      "road",
-      "army"
-    ],
-    "card_actions": [
-      "battle"
-    ],
-    "special": "TODO",
     "id": 999
   },
   {
@@ -1301,43 +1643,6 @@
     "id": 999
   },
   {
-    "name": "Farah Riad",
-    "region": "Herat",
-    "patriot": null,
-    "suit": "Economic",
-    "rank": 3,
-    "prize": null,
-    "impact": [
-      "road",
-      "road",
-      "road"
-    ],
-    "card_actions": [
-      "march"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
-    "name": "Hazara Chiefs",
-    "region": "Herat",
-    "patriot": null,
-    "suit": "Political",
-    "rank": 1,
-    "prize": null,
-    "impact": [
-      "army",
-      "tribe"
-    ],
-    "card_actions": [
-      "march",
-      "battle",
-      "tax"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
     "name": "Bukharan Jews",
     "region": "Transcaspia",
     "patriot": null,
@@ -1352,24 +1657,6 @@
     "card_actions": [
       "gift",
       "build"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
-    "name": "Tajik Warband",
-    "region": "Herat",
-    "patriot": null,
-    "suit": "Military",
-    "rank": 2,
-    "prize": null,
-    "impact": [
-      "army",
-      "army"
-    ],
-    "card_actions": [
-      "battle",
-      "betray"
     ],
     "special": null,
     "id": 999
@@ -1393,25 +1680,6 @@
     "id": 999
   },
   {
-    "name": "William Hay Macnaghten",
-    "region": "Kandahar",
-    "patriot": "British",
-    "suit": "Intelligence",
-    "rank": 2,
-    "prize": "Afghan",
-    "impact": [
-      "spy",
-      "spy",
-      "leverage"
-    ],
-    "card_actions": [
-      "march",
-      "tax"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
     "name": "Haji Mirza Aghasi",
     "region": "Persia",
     "patriot": "Afghan",
@@ -1425,95 +1693,6 @@
     "card_actions": [
       "battle",
       "betray"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
-    "name": "Zorawar Sigh Kahluria",
-    "region": "Punjab",
-    "patriot": null,
-    "suit": "Military",
-    "rank": 2,
-    "prize": null,
-    "impact": [
-      "army",
-      "army"
-    ],
-    "card_actions": [
-      "battle",
-      "gift"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
-    "name": "Baluchi Chiefs",
-    "region": "Kandahar",
-    "patriot": null,
-    "suit": "Political",
-    "rank": 1,
-    "prize": "Russian",
-    "impact": [
-      "army",
-      "tribe"
-    ],
-    "card_actions": [
-      "tax",
-      "build"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
-    "name": "Yar Mohammad Alikozai",
-    "region": "Herat",
-    "patriot": null,
-    "suit": "Political",
-    "rank": 2,
-    "prize": "Afghan",
-    "impact": [
-      "tribe",
-      "tribe",
-      "Political"
-    ],
-    "card_actions": [
-      "betray"
-    ],
-    "special": "TODO",
-    "id": 999
-  },
-  {
-    "name": "Ishaqzai Chiefs",
-    "region": "Herat",
-    "patriot": "Afghan",
-    "suit": "Political",
-    "rank": 1,
-    "prize": null,
-    "impact": [
-      "tribe",
-      "Economic"
-    ],
-    "card_actions": [
-      "gift",
-      "build"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
-    "name": "Akali Sikhs",
-    "region": "Punjab",
-    "patriot": null,
-    "suit": "Military",
-    "rank": 2,
-    "prize": "British",
-    "impact": [
-      "army",
-      "army"
-    ],
-    "card_actions": [
-      "battle"
     ],
     "special": null,
     "id": 999
@@ -1537,61 +1716,6 @@
     "id": 999
   },
   {
-    "name": "Haji Khan Kakar",
-    "region": "Kandahar",
-    "patriot": null,
-    "suit": "Political",
-    "rank": 1,
-    "prize": null,
-    "impact": [
-      "army",
-      "tribe"
-    ],
-    "card_actions": [
-      "gift",
-      "betray"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
-    "name": "Bolan Pass",
-    "region": "Kandahar",
-    "patriot": null,
-    "suit": "Economic",
-    "rank": 2,
-    "prize": "Russian",
-    "impact": [
-      "road",
-      "road",
-      "army"
-    ],
-    "card_actions": [
-      "march",
-      "gift"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
-    "name": "Barakzai Sadars",
-    "region": "Kandahar",
-    "patriot": "Afghan",
-    "suit": "Political",
-    "rank": 1,
-    "prize": "Afghan",
-    "impact": [
-      "tribe",
-      "leverage",
-      "Economic"
-    ],
-    "card_actions": [
-      "build"
-    ],
-    "special": "TODO",
-    "id": 999
-  },
-  {
     "name": "Anglo-Persian Trade",
     "region": "Persia",
     "patriot": "British",
@@ -1607,41 +1731,6 @@
       "build"
     ],
     "special": null,
-    "id": 999
-  },
-  {
-    "name": "Bengal Native Infrantry",
-    "region": "Punjab",
-    "patriot": "British",
-    "suit": "Military",
-    "rank": 1,
-    "prize": "Afghan",
-    "impact": [
-      "army",
-      "Intelligence"
-    ],
-    "card_actions": [
-      "battle",
-      "betray"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
-    "name": "Claude Wade",
-    "region": "Persia",
-    "patriot": null,
-    "suit": "Intelligence",
-    "rank": 2,
-    "prize": "Russian",
-    "impact": [
-      "spy",
-      "spy"
-    ],
-    "card_actions": [
-      "march"
-    ],
-    "special": "TODO",
     "id": 999
   },
   {
@@ -1663,41 +1752,6 @@
     "id": 999
   },
   {
-    "name": "Charler Masson",
-    "region": "Kandahar",
-    "patriot": null,
-    "suit": "Intelligence",
-    "rank": 2,
-    "prize": null,
-    "impact": [
-      "spy",
-      "spy"
-    ],
-    "card_actions": [
-      "build"
-    ],
-    "special": "TODO",
-    "id": 999
-  },
-  {
-    "name": "British Regulars",
-    "region": "Kandahar",
-    "patriot": "British",
-    "suit": "Military",
-    "rank": 2,
-    "prize": "Russian",
-    "impact": [
-      "army",
-      "army"
-    ],
-    "card_actions": [
-      "march",
-      "battle"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
     "name": "Seaforth Highlanders",
     "region": "Punjab",
     "patriot": "British",
@@ -1711,60 +1765,6 @@
     "card_actions": [
       "march",
       "battle"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
-    "name": "Army of Indus",
-    "region": "Punjab",
-    "patriot": "British",
-    "suit": "Military",
-    "rank": 3,
-    "prize": "Afghan",
-    "impact": [
-      "army",
-      "army",
-      "army"
-    ],
-    "card_actions": [
-      "march"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
-    "name": "Pashtun Mercenary",
-    "region": "Kandahar",
-    "patriot": null,
-    "suit": "Military",
-    "rank": 1,
-    "prize": null,
-    "impact": [
-      "army",
-      "Political"
-    ],
-    "card_actions": [
-      "battle",
-      "tax"
-    ],
-    "special": null,
-    "id": 999
-  },
-  {
-    "name": "Jezail Sharpshooters",
-    "region": "Kandahar",
-    "patriot": null,
-    "suit": "Military",
-    "rank": 2,
-    "prize": "Russian",
-    "impact": [
-      "army",
-      "army",
-      "spy"
-    ],
-    "card_actions": [
-      "betray"
     ],
     "special": null,
     "id": 999
