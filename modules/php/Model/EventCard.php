@@ -10,6 +10,7 @@ class EventCard extends Card
 {
   protected $id;
   protected $type;
+  protected $deck_pos;
   protected $purchase;
   protected $discard;
 
@@ -24,6 +25,7 @@ class EventCard extends Card
   {
     $this->id = $params['id'];
     $this->type = $params['type'];
+    $this->deck_pos = $params['deck_pos'];
     $this->purchase = $params['purchase'];
     $this->discard = $params['discard'];
   }

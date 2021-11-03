@@ -9,8 +9,9 @@ use PAX\Model\Card;
 class CourtCard extends Card
 {
   protected $id;
-  protected $name;
   protected $type;
+  protected $deck_pos;
+  protected $name;
   protected $region;
   // protected $suit;
   protected $rank;
@@ -30,8 +31,9 @@ class CourtCard extends Card
   private function __construct($params)
   {
     $this->id = $params['id'];
-    $this->name = $params['name'];
     $this->type = $params['type'];
+    $this->deck_pos = $params['deck_pos'];
+    $this->name = $params['name'];
     $this->region =  $params['region'];
     // TODO suit causes insert error
     // $this->suit = $params['suit'];

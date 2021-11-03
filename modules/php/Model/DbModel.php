@@ -13,7 +13,6 @@ abstract class DbModel
 {
   abstract protected function tableName();
 
-  // Override if the table uses a different column for its primary key.
   abstract protected function primaryKey();
 
   // TODO is DbQuery vulnerable to sql injection?
@@ -27,9 +26,6 @@ abstract class DbModel
       "VALUES ({$instance->sqlFormattedValues($props)})" .
       '');
 
-    // if (strpos($sql, 'suit') !== false) {
-    //   var_dump($sql);
-    // }
     Game::get()->DbQuery($sql);
   }
 

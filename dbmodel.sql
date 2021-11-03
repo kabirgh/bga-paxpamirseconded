@@ -28,6 +28,7 @@ CREATE TABLE IF NOT EXISTS `card` (
   -- All cards
   `id` int unsigned NOT NULL,
   `type` enum('court', 'event') NOT NULL,
+  `deck_pos` int unsigned NOT NULL,
   -- Court cards only
   `name` varchar(32) DEFAULT NULL,
   `region` enum('Kabul', 'Transcaspia', 'Punjab', 'Kandahar', 'Herat', 'Persia'),
