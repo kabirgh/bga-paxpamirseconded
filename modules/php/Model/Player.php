@@ -42,12 +42,12 @@ class Player extends DbModel
     $this->loyalty = $params['loyalty'];
   }
 
-  protected function tableName()
+  protected static function tableName()
   {
     return 'player';
   }
 
-  protected function primaryKey()
+  protected static function primaryKey()
   {
     return 'player_id';
   }

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PAX\Model;
 
 use PAX\Model\DbModel;
+use PAX\Core\Game;
 
 class Card extends DbModel
 {
@@ -27,14 +28,23 @@ class Card extends DbModel
     $this->deck_pos = $params['deck_pos'];
   }
 
-  protected function tableName()
+  protected static function tableName()
   {
     return 'card';
   }
 
-  // We map $id to player_id so the superclass can update correctly
-  protected function primaryKey()
+  protected static function primaryKey()
   {
     return 'id';
+  }
+
+  // Static queries
+  public static function queryByDeckPos($deckPos, $limit)
+  {
+    $rows = Game::get()->DbQuery("SELECT id, type, deck_pos from {$this->tableName()} WHERE deck_pos >= {$deckPos} ORDER BY deck_pos DESC LIMIT {$limit}");
+
+    return array_map(function ($row) {
+      return new self(['id' => $row[0], 'type' => $row[1], 'deck_pos' => $row[2]]);
+    }, $rows);
   }
 }

@@ -11,18 +11,18 @@ use PAX\Core\Game;
 // database.
 abstract class DbModel
 {
-  abstract protected function tableName();
+  abstract protected static function tableName();
 
-  abstract protected function primaryKey();
+  abstract protected static function primaryKey();
 
   // TODO is DbQuery vulnerable to sql injection?
-  public static function create($instance)
+  protected static function create($instance)
   {
     $props = get_object_vars($instance);
     $propKeys = implode(', ', array_keys($props));
     // Flexible heredoc syntax not available until PHP 7.3.0
     $sql = ('' .
-      "INSERT INTO {$instance->tableName()} ($propKeys)\n" .
+      "INSERT INTO {$instance::tableName()} ($propKeys)\n" .
       "VALUES ({$instance->sqlFormattedValues($props)})" .
       '');
 
@@ -33,7 +33,7 @@ abstract class DbModel
   // subclass property to $fieldMap[$prop]. Immediately commits to the database.
   public function update($fieldMap)
   {
-    $primaryKeyName = $this->primaryKey();
+    $primaryKeyName = $this::primaryKey();
     // Check primary key not set
     if (isset($fieldMap[$primaryKeyName])) {
       throw new Exception("Cannot update "  . get_class($this) . " {$primaryKeyName} to {$fieldMap[$primaryKeyName]}: {$primaryKeyName} is the primary key");
@@ -60,11 +60,11 @@ abstract class DbModel
   // Persist specified object properties to the database.
   public function commitUpdate($fieldMap)
   {
-    $primaryKeyName = $this->primaryKey();
+    $primaryKeyName = $this::primaryKey();
     $primaryKeyValue = $this->$primaryKeyName;
 
     $sql = ('' .
-      "UPDATE {$this->tableName()}" .
+      "UPDATE {$this::tableName()}" .
       "SET {$this->sqlFormattedKeyEqualValue($fieldMap)}" .
       "WHERE {$primaryKeyName} = {$primaryKeyValue}" .
       '');

@@ -9,6 +9,8 @@ use PAX\Model\Card;
 
 class CardManager
 {
+  private const DECK_CURSOR_ID = '127';
+
   public static function setupNewGame($players, $options)
   {
     $game = Game::get();
@@ -27,6 +29,10 @@ class CardManager
         'deck_pos' => ($i + 1),
       ]);
     }
+
+    // Initialize deck cursor (next card position)
+    // TODO move global insert and read into another class
+    $game->DbQuery("INSERT INTO global (global_id, global_value) VALUES (" . self::DECK_CURSOR_ID . ", 1)");
   }
 
   public static function getNextCard()
@@ -36,6 +42,9 @@ class CardManager
 
   public static function getNextCards($n)
   {
+    // $deckPos = Globals::get(self::DECK_CURSOR_ID);
+    // Card::queryBy
+    // Globals::set(self::DECK_CURSOR_ID, $deckPos + $n);
   }
 
   private static function buildDeck($courtCards, $eventCards, $dominanceCards, $numPlayers)
