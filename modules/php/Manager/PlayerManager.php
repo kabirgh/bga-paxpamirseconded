@@ -25,7 +25,7 @@ class PlayerManager
         'player_color' => $color,
         'player_canal' => $playerInfo['player_canal'],
         'player_avatar' => $playerInfo['player_avatar'],
-        'player_score' => 1,
+        'player_score' => 0,
         'rupees' => 4,
         'faction' => null,
         'loyalty' => 0,
@@ -34,5 +34,12 @@ class PlayerManager
 
     Game::get()->reattributeColorsBasedOnPreferences($playerMap, $gameinfos['player_colors']);
     Game::get()->reloadPlayersBasicInfos();
+  }
+
+  public static function getUiData()
+  {
+    return array_map(function ($p) {
+      return $p->toArray();
+    }, Player::queryAll());
   }
 }

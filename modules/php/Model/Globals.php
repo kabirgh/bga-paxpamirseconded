@@ -38,7 +38,7 @@ class Globals extends DbModel
 
   public function getValue()
   {
-    $this->get('global_value');
+    return $this->get('global_value');
   }
 
   public function setValue($value)

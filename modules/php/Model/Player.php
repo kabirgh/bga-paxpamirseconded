@@ -51,4 +51,38 @@ class Player extends DbModel
   {
     return 'player_id';
   }
+
+  public function toArray()
+  {
+    return [
+      // Transform to make dojo happy
+      'id' => $this->player_id,
+      'name' => $this->player_name,
+      'color' => $this->player_color,
+      'canal' => $this->player_canal,
+      'avatar' => $this->player_avatar,
+      'score' => $this->player_score,
+      'rupees' => $this->rupees,
+      'faction' => $this->faction,
+      'loyalty' => $this->loyalty,
+      // Extra
+      'eliminated' => 0,
+      'zombie' => 0,
+      'is_ai' => 0,
+      'ack' => "ack",
+    ];
+  }
+
+  /**
+   * @return array Player
+   */
+  public static function queryAll()
+  {
+    return self::query()
+      ->get()
+      ->map(function ($row) {
+        return new self($row);
+      })
+      ->toArray();
+  }
 }

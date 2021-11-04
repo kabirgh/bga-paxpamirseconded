@@ -32,6 +32,12 @@ abstract class DbModel
     return get_object_vars($this)[$prop];
   }
 
+  public function id()
+  {
+    $primaryKeyName = static::primaryKey();
+    return $this->$primaryKeyName;
+  }
+
   // If the properties specified in $fieldMap exists in the subclass, set the
   // subclass property to $fieldMap[$prop]. Immediately commits to the database.
   public function update($fieldMap)
