@@ -29,18 +29,5 @@ CREATE TABLE IF NOT EXISTS `card` (
   `id` int unsigned NOT NULL,
   `type` enum('court', 'event') NOT NULL,
   `deck_pos` int unsigned NOT NULL,
-  -- Court cards only
-  `name` varchar(32) DEFAULT NULL,
-  `region` enum('Kabul', 'Transcaspia', 'Punjab', 'Kandahar', 'Herat', 'Persia'),
-  `suit` enum('I', 'M', 'P', 'E'), -- map to actual names in code
-  `rank` int unsigned DEFAULT NULL,
-  `patriot` enum('Afghan', 'British', 'Russian'),
-  `prize` enum('Afghan', 'British', 'Russian'),
-  `impact` JSON DEFAULT NULL,
-  `card_actions` JSON DEFAULT NULL,
-  `special` varchar(32),
-  -- Event cards only
-  `purchase` varchar(32),
-  `discard` varchar(32),
   PRIMARY KEY (`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8 AUTO_INCREMENT = 1;

@@ -8,8 +8,6 @@ use PAX\Model\Player;
 // Class with only static methods. Manages
 class PlayerManager
 {
-  private static $players;
-
   public static function setupNewGame($playerMap, $options)
   {
     // Create players
@@ -36,7 +34,5 @@ class PlayerManager
 
     Game::get()->reattributeColorsBasedOnPreferences($playerMap, $gameinfos['player_colors']);
     Game::get()->reloadPlayersBasicInfos();
-
-    self::$players = $players;
   }
 }

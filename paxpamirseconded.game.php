@@ -64,6 +64,7 @@ class PaxPamirSecondEd extends Table
         ));
     }
 
+    // Allow other modules access to the game instance
     public static function get()
     {
         return self::$instance;
