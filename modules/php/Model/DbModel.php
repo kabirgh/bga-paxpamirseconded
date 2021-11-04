@@ -8,7 +8,7 @@ use Exception;
 use PAX\Core\Game;
 use PAX\Database\QueryBuilder;
 
-// Active Record-stle ORM.
+// Active Record-style ORM.
 // Subclasses may only define instance variables that will be persisted to the
 // database.
 abstract class DbModel
@@ -25,6 +25,12 @@ abstract class DbModel
   {
     // static:: refers to subclass if it exists, self:: refers to this class
     return new QueryBuilder(static::tableName(), static::primaryKey());
+  }
+
+  // Getter
+  public function get($prop)
+  {
+    return get_object_vars($this)[$prop];
   }
 
   // If the properties specified in $fieldMap exists in the subclass, set the
@@ -53,63 +59,5 @@ abstract class DbModel
 
     // Commit to database
     self::query()->update($fieldMap, $props[$primaryKeyName]);
-  }
-
-  // Persist specified object properties to the database.
-  public function commitUpdate($fieldMap)
-  {
-    $primaryKeyName = $this::primaryKey();
-    $primaryKeyValue = $this->$primaryKeyName;
-
-    $sql = ('' .
-      "UPDATE {$this::tableName()}\n" .
-      "SET {$this->sqlFormattedKeyEqualValue($fieldMap)}\n" .
-      "WHERE {$primaryKeyName} = {$primaryKeyValue}" .
-      '');
-
-    Game::get()->DbQuery($sql);
-  }
-
-  private function formatValue($value)
-  {
-    if ($value === null) { // Impt: ===, not ==
-      return 'NULL';
-    } else if (is_string(($value))) {
-      return "'{$value}'";
-    } else if (is_array($value)) { // array or map
-      return "'" . json_encode($value) . "'";
-    } else {
-      return strval($value);
-    }
-  }
-
-  // Returns comma-separated string of values.
-  private function sqlFormattedValues($fieldMap)
-  {
-    $arr = [];
-    foreach ($fieldMap as $_prop => $value) {
-      $arr[] = $this->formatValue($value);
-    }
-    return implode(', ', $arr);
-  }
-
-  // Returns a comma-separated string of key = value.
-  private function sqlFormattedKeyEqualValue($fieldMap)
-  {
-    $arr = [];
-    foreach ($fieldMap as $prop => $value) {
-      $arr[] = "{$prop} = {$this->formatValue($value)}";
-    }
-    return implode(', ', $arr);
-  }
-
-  protected function toJson()
-  {
-    return json_encode(get_object_vars($this));
-  }
-
-  public function __toString()
-  {
-    return $this->toJson();
   }
 }

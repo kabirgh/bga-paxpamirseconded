@@ -36,12 +36,6 @@ class Globals extends DbModel
     return 'global_id';
   }
 
-  // Getters
-  public function getValue()
-  {
-    return $this->global_value;
-  }
-
   // Static queries
   public static function queryById($id)
   {
@@ -50,11 +44,5 @@ class Globals extends DbModel
       ->where('global_id', $id)
       ->get(true);
     return new self($result);
-
-    // $tableName = self::tableName();
-    // // TODO refactor
-    // $mysqli = Game::get()->DbQuery("SELECT * from {$tableName} WHERE global_id = {$id}");
-    // $result = (new Result($mysqli, 'getById'))->load();
-    // return new self($result);
   }
 }

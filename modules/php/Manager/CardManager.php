@@ -33,7 +33,6 @@ class CardManager
 
     // Initialize deck cursor (next card position)
     Globals::create(['global_id' => self::DECK_CURSOR_ID, 'global_value' => 1]);
-    self::getNextCards(3);
   }
 
   public static function getNextCard()
@@ -43,9 +42,11 @@ class CardManager
 
   public static function getNextCards($n)
   {
-    $deckPos = Globals::queryById(self::DECK_CURSOR_ID);
-    // $cards = Card::queryByDeckPosAndLimit();
-    $deckPos->update(['global_value' => $deckPos->getValue() + $n]);
+    $deckPosGlobal = Globals::queryById(self::DECK_CURSOR_ID);
+    $cards = Card::queryByDeckPosAndLimit($deckPosGlobal->get('global_value'), $n);
+    $deckPosGlobal->update(['global_value' => $deckPosGlobal->get('global_value') + $n]);
+
+    return $cards;
   }
 
   private static function buildDeck($courtCards, $eventCards, $dominanceCards, $numPlayers)
