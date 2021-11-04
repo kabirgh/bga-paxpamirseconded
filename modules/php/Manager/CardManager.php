@@ -26,7 +26,6 @@ class CardManager
       $card = $deckJson[$i];
       Card::create([
         'id' => $card['id'],
-        'type' => $card['type'],
         'deck_pos' => ($i + 1),
       ]);
     }
@@ -44,7 +43,7 @@ class CardManager
   {
     $deckPosGlobal = Globals::queryById(self::DECK_CURSOR_ID);
     $cards = Card::queryByDeckPosAndLimit($deckPosGlobal->get('global_value'), $n);
-    $deckPosGlobal->update(['global_value' => $deckPosGlobal->get('global_value') + $n]);
+    $deckPosGlobal->addAmount($n);
 
     return $cards;
   }

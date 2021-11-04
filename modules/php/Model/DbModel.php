@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace PAX\Model;
 
 use Exception;
-use PAX\Core\Game;
 use PAX\Database\QueryBuilder;
 
 // Active Record-style ORM.

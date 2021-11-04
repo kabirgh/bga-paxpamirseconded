@@ -5,7 +5,7 @@ namespace PAX\Manager;
 use PAX\Core\Game;
 use PAX\Model\Player;
 
-// Class with only static methods. Manages
+// Class with only static methods. Manages players
 class PlayerManager
 {
   public static function setupNewGame($playerMap, $options)

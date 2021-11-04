@@ -5,13 +5,11 @@ declare(strict_types=1);
 namespace PAX\Model;
 
 use PAX\Model\DbModel;
-use PAX\Core\Game;
 
 class Card extends DbModel
 {
   // More card data stored in material.inc.php
   protected $id;
-  protected $type;
   protected $deck_pos;
 
   static public function create($params)
@@ -24,7 +22,6 @@ class Card extends DbModel
   private function __construct($params)
   {
     $this->id = $params['id'];
-    $this->type = $params['type'];
     $this->deck_pos = $params['deck_pos'];
   }
 
@@ -39,10 +36,20 @@ class Card extends DbModel
   }
 
   // Static queries
+
+  public static function queryById($id)
+  {
+    $result = self::query()
+      ->select(['id', 'deck_pos']) // Would be nice to use * instead
+      ->where('id', $id)
+      ->get(true);
+    return new self($result);
+  }
+
   public static function queryByDeckPosAndLimit($deckPos, $limit)
   {
     return self::query()
-      ->select(['id', 'type', 'deck_pos'])
+      ->select(['id', 'deck_pos'])
       ->where('deck_pos', '>=', $deckPos)
       ->orderBy('deck_pos', 'ASC')
       ->limit($limit)

@@ -25,9 +25,7 @@ ALTER TABLE `player`
   ADD `loyalty` int unsigned NOT NULL DEFAULT 0;
 
 CREATE TABLE IF NOT EXISTS `card` (
-  -- All cards
   `id` int unsigned NOT NULL,
-  `type` enum('court', 'event') NOT NULL,
   `deck_pos` int unsigned NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8 AUTO_INCREMENT = 1;

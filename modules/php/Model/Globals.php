@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace PAX\Model;
 
 use PAX\Model\DbModel;
-use PAX\Core\Game;
-use PAX\Database\Result;
 
 class Globals extends DbModel
 {
@@ -36,7 +34,28 @@ class Globals extends DbModel
     return 'global_id';
   }
 
+  // Utility methods
+
+  public function getValue()
+  {
+    $this->get('global_value');
+  }
+
+  public function setValue($value)
+  {
+    $this->update(['global_value' => $value]);
+  }
+
+  // Many operations need to read a value, change it by an amount, and set it
+  // again. This method abstracts that operation.
+  public function addAmount($amount)
+  {
+    $this->update(['global_value' => $this->get('global_value') + $amount]);
+  }
+
   // Static queries
+
+  // TODO move into DbModel
   public static function queryById($id)
   {
     $result = self::query()
