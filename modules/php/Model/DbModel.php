@@ -64,10 +64,11 @@ abstract class DbModel
     $primaryKeyValue = $this->$primaryKeyName;
 
     $sql = ('' .
-      "UPDATE {$this::tableName()}" .
-      "SET {$this->sqlFormattedKeyEqualValue($fieldMap)}" .
+      "UPDATE {$this::tableName()}\n" .
+      "SET {$this->sqlFormattedKeyEqualValue($fieldMap)}\n" .
       "WHERE {$primaryKeyName} = {$primaryKeyValue}" .
       '');
+
     Game::get()->DbQuery($sql);
   }
 

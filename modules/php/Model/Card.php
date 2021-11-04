@@ -41,7 +41,8 @@ class Card extends DbModel
   // Static queries
   public static function queryByDeckPos($deckPos, $limit)
   {
-    $rows = Game::get()->DbQuery("SELECT id, type, deck_pos from {$this->tableName()} WHERE deck_pos >= {$deckPos} ORDER BY deck_pos DESC LIMIT {$limit}");
+    $tableName = self::tableName();
+    $rows = Game::get()->DbQuery("SELECT id, type, deck_pos from {$tableName} WHERE deck_pos >= {$deckPos} ORDER BY deck_pos DESC LIMIT {$limit}");
 
     return array_map(function ($row) {
       return new self(['id' => $row[0], 'type' => $row[1], 'deck_pos' => $row[2]]);
