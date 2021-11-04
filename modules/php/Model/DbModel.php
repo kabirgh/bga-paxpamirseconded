@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace PAX\Model;
 
+use Exception;
 use PAX\Core\Game;
+use PAX\Database\QueryBuilder;
 
 // Active Record-stle ORM.
 // Subclasses may only define instance variables that will be persisted to the
@@ -12,21 +14,17 @@ use PAX\Core\Game;
 abstract class DbModel
 {
   abstract protected static function tableName();
-
   abstract protected static function primaryKey();
 
-  // TODO is DbQuery vulnerable to sql injection?
   protected static function create($instance)
   {
-    $props = get_object_vars($instance);
-    $propKeys = implode(', ', array_keys($props));
-    // Flexible heredoc syntax not available until PHP 7.3.0
-    $sql = ('' .
-      "INSERT INTO {$instance::tableName()} ($propKeys)\n" .
-      "VALUES ({$instance->sqlFormattedValues($props)})" .
-      '');
+    self::query()->insert(get_object_vars($instance));
+  }
 
-    Game::get()->DbQuery($sql);
+  protected static function query()
+  {
+    // static:: refers to subclass if it exists, self:: refers to this class
+    return new QueryBuilder(static::tableName(), static::primaryKey());
   }
 
   // If the properties specified in $fieldMap exists in the subclass, set the
@@ -54,7 +52,7 @@ abstract class DbModel
     }
 
     // Commit to database
-    $this->commitUpdate($fieldMap);
+    self::query()->update($fieldMap, $props[$primaryKeyName]);
   }
 
   // Persist specified object properties to the database.

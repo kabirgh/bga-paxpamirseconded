@@ -43,12 +43,18 @@ class Globals extends DbModel
   }
 
   // Static queries
-  public static function getById($id)
+  public static function queryById($id)
   {
-    $tableName = self::tableName();
-    // TODO refactor
-    $mysqli = Game::get()->DbQuery("SELECT * from {$tableName} WHERE global_id = {$id}");
-    $result = (new Result($mysqli, 'getById'))->load();
+    $result = self::query()
+      ->select(['global_id', 'global_value']) // Would be nice to use * instead
+      ->where('global_id', $id)
+      ->get(true);
     return new self($result);
+
+    // $tableName = self::tableName();
+    // // TODO refactor
+    // $mysqli = Game::get()->DbQuery("SELECT * from {$tableName} WHERE global_id = {$id}");
+    // $result = (new Result($mysqli, 'getById'))->load();
+    // return new self($result);
   }
 }

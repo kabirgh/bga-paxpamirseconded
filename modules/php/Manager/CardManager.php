@@ -6,6 +6,7 @@ namespace PAX\Manager;
 
 use PAX\Core\Game;
 use PAX\Model\Card;
+use PAX\Model\Globals;
 
 class CardManager
 {
@@ -31,8 +32,8 @@ class CardManager
     }
 
     // Initialize deck cursor (next card position)
-    // TODO move global insert and read into another class
-    $game->DbQuery("INSERT INTO global (global_id, global_value) VALUES (" . self::DECK_CURSOR_ID . ", 1)");
+    Globals::create(['global_id' => self::DECK_CURSOR_ID, 'global_value' => 1]);
+    self::getNextCards(3);
   }
 
   public static function getNextCard()
@@ -42,9 +43,9 @@ class CardManager
 
   public static function getNextCards($n)
   {
-    // $deckPos = Globals::get(self::DECK_CURSOR_ID);
-    // Card::queryBy
-    // Globals::set(self::DECK_CURSOR_ID, $deckPos + $n);
+    $deckPos = Globals::queryById(self::DECK_CURSOR_ID);
+    // $cards = Card::queryByDeckPosAndLimit();
+    $deckPos->update(['global_value' => $deckPos->getValue() + $n]);
   }
 
   private static function buildDeck($courtCards, $eventCards, $dominanceCards, $numPlayers)
