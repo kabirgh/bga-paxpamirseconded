@@ -54,27 +54,19 @@ class Player extends DbModel
 
   public function toArray()
   {
+    // Transform to make frontend happy
     return [
-      // Transform to make dojo happy
-      'id' => $this->player_id,
-      'name' => $this->player_name,
-      'color' => $this->player_color,
-      'canal' => $this->player_canal,
-      'avatar' => $this->player_avatar,
+      'id' => strval($this->player_id),
+      'color' => strval($this->player_color),
       'score' => $this->player_score,
       'rupees' => $this->rupees,
       'faction' => $this->faction,
       'loyalty' => $this->loyalty,
-      // Extra
-      'eliminated' => 0,
-      'zombie' => 0,
-      'is_ai' => 0,
-      'ack' => "ack",
     ];
   }
 
   /**
-   * @return array Player
+   * @return Player[]
    */
   public static function queryAll()
   {

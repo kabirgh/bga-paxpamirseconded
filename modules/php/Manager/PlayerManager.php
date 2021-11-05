@@ -38,8 +38,11 @@ class PlayerManager
 
   public static function getUiData()
   {
-    return array_map(function ($p) {
-      return $p->toArray();
-    }, Player::queryAll());
+    $players = Player::queryAll();
+    $data = [];
+    foreach ($players as $player) {
+      $data[strval($player->id())] = $player->toArray();
+    }
+    return $data;
   }
 }
