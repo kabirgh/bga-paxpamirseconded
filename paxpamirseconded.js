@@ -86,13 +86,13 @@ define([
 
       playerBoardsHtml: function (players) {
         return Object.entries(players).map(([id, playerData]) => {
-          return `<div class='playerBoard playerBoard-${playerData.color}'></div>`
+          return `<div class="playerBoard playerBoard-${playerData.color}"></div>`
         }).join('')
       },
 
       setupMarket: function (market) {
         const cards = market.map((data, index) => {
-          return `<div class='card[id="${data.cardId}"]'></div>`;
+          return `<div class="card" card-id="${data.cardId}"></div>`;
         }).join('');
 
         dojo.place(cards, document.getElementById('paxpamir-market'));

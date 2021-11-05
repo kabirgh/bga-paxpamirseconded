@@ -8,7 +8,14 @@
   '103', '104', '105', '106', '107', '108', '109', '110', '111', '112', '113', '114', '115', '116', 'back';
   @each $id in $deck {
     &[card-id='#{$id}'] {
-      background-image: url('img/card/#{$id}.jpg');
+      background-image: url('img/cards/#{$id}.jpg');
     }
   }
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  --width: 12.5%;
+  padding-top: calc(0.715 * var(--width)); /* (img_height / img_width) * width% */
+  width: var(--width);
+  border-radius: 5%;
 }

@@ -194,358 +194,365 @@
 }
 
 /* ---- CARD CSS START ---- */
+.card {
+  background-size: contain;
+  background-repeat: no-repeat;
+  --width: 12.5%;
+  padding-top: calc(0.715 * var(--width));
+  /* (img_height / img_width) * width% */
+  width: var(--width);
+  border-radius: 5%;
+}
 .card[card-id="1"] {
-  background-image: url("img/card/1.jpg");
+  background-image: url("img/cards/1.jpg");
 }
 .card[card-id="2"] {
-  background-image: url("img/card/2.jpg");
+  background-image: url("img/cards/2.jpg");
 }
 .card[card-id="3"] {
-  background-image: url("img/card/3.jpg");
+  background-image: url("img/cards/3.jpg");
 }
 .card[card-id="4"] {
-  background-image: url("img/card/4.jpg");
+  background-image: url("img/cards/4.jpg");
 }
 .card[card-id="5"] {
-  background-image: url("img/card/5.jpg");
+  background-image: url("img/cards/5.jpg");
 }
 .card[card-id="6"] {
-  background-image: url("img/card/6.jpg");
+  background-image: url("img/cards/6.jpg");
 }
 .card[card-id="7"] {
-  background-image: url("img/card/7.jpg");
+  background-image: url("img/cards/7.jpg");
 }
 .card[card-id="8"] {
-  background-image: url("img/card/8.jpg");
+  background-image: url("img/cards/8.jpg");
 }
 .card[card-id="9"] {
-  background-image: url("img/card/9.jpg");
+  background-image: url("img/cards/9.jpg");
 }
 .card[card-id="10"] {
-  background-image: url("img/card/10.jpg");
+  background-image: url("img/cards/10.jpg");
 }
 .card[card-id="11"] {
-  background-image: url("img/card/11.jpg");
+  background-image: url("img/cards/11.jpg");
 }
 .card[card-id="12"] {
-  background-image: url("img/card/12.jpg");
+  background-image: url("img/cards/12.jpg");
 }
 .card[card-id="13"] {
-  background-image: url("img/card/13.jpg");
+  background-image: url("img/cards/13.jpg");
 }
 .card[card-id="14"] {
-  background-image: url("img/card/14.jpg");
+  background-image: url("img/cards/14.jpg");
 }
 .card[card-id="15"] {
-  background-image: url("img/card/15.jpg");
+  background-image: url("img/cards/15.jpg");
 }
 .card[card-id="16"] {
-  background-image: url("img/card/16.jpg");
+  background-image: url("img/cards/16.jpg");
 }
 .card[card-id="17"] {
-  background-image: url("img/card/17.jpg");
+  background-image: url("img/cards/17.jpg");
 }
 .card[card-id="18"] {
-  background-image: url("img/card/18.jpg");
+  background-image: url("img/cards/18.jpg");
 }
 .card[card-id="19"] {
-  background-image: url("img/card/19.jpg");
+  background-image: url("img/cards/19.jpg");
 }
 .card[card-id="20"] {
-  background-image: url("img/card/20.jpg");
+  background-image: url("img/cards/20.jpg");
 }
 .card[card-id="21"] {
-  background-image: url("img/card/21.jpg");
+  background-image: url("img/cards/21.jpg");
 }
 .card[card-id="22"] {
-  background-image: url("img/card/22.jpg");
+  background-image: url("img/cards/22.jpg");
 }
 .card[card-id="23"] {
-  background-image: url("img/card/23.jpg");
+  background-image: url("img/cards/23.jpg");
 }
 .card[card-id="24"] {
-  background-image: url("img/card/24.jpg");
+  background-image: url("img/cards/24.jpg");
 }
 .card[card-id="25"] {
-  background-image: url("img/card/25.jpg");
+  background-image: url("img/cards/25.jpg");
 }
 .card[card-id="26"] {
-  background-image: url("img/card/26.jpg");
+  background-image: url("img/cards/26.jpg");
 }
 .card[card-id="27"] {
-  background-image: url("img/card/27.jpg");
+  background-image: url("img/cards/27.jpg");
 }
 .card[card-id="28"] {
-  background-image: url("img/card/28.jpg");
+  background-image: url("img/cards/28.jpg");
 }
 .card[card-id="29"] {
-  background-image: url("img/card/29.jpg");
+  background-image: url("img/cards/29.jpg");
 }
 .card[card-id="30"] {
-  background-image: url("img/card/30.jpg");
+  background-image: url("img/cards/30.jpg");
 }
 .card[card-id="31"] {
-  background-image: url("img/card/31.jpg");
+  background-image: url("img/cards/31.jpg");
 }
 .card[card-id="32"] {
-  background-image: url("img/card/32.jpg");
+  background-image: url("img/cards/32.jpg");
 }
 .card[card-id="33"] {
-  background-image: url("img/card/33.jpg");
+  background-image: url("img/cards/33.jpg");
 }
 .card[card-id="34"] {
-  background-image: url("img/card/34.jpg");
+  background-image: url("img/cards/34.jpg");
 }
 .card[card-id="35"] {
-  background-image: url("img/card/35.jpg");
+  background-image: url("img/cards/35.jpg");
 }
 .card[card-id="36"] {
-  background-image: url("img/card/36.jpg");
+  background-image: url("img/cards/36.jpg");
 }
 .card[card-id="37"] {
-  background-image: url("img/card/37.jpg");
+  background-image: url("img/cards/37.jpg");
 }
 .card[card-id="38"] {
-  background-image: url("img/card/38.jpg");
+  background-image: url("img/cards/38.jpg");
 }
 .card[card-id="39"] {
-  background-image: url("img/card/39.jpg");
+  background-image: url("img/cards/39.jpg");
 }
 .card[card-id="40"] {
-  background-image: url("img/card/40.jpg");
+  background-image: url("img/cards/40.jpg");
 }
 .card[card-id="41"] {
-  background-image: url("img/card/41.jpg");
+  background-image: url("img/cards/41.jpg");
 }
 .card[card-id="42"] {
-  background-image: url("img/card/42.jpg");
+  background-image: url("img/cards/42.jpg");
 }
 .card[card-id="43"] {
-  background-image: url("img/card/43.jpg");
+  background-image: url("img/cards/43.jpg");
 }
 .card[card-id="44"] {
-  background-image: url("img/card/44.jpg");
+  background-image: url("img/cards/44.jpg");
 }
 .card[card-id="45"] {
-  background-image: url("img/card/45.jpg");
+  background-image: url("img/cards/45.jpg");
 }
 .card[card-id="46"] {
-  background-image: url("img/card/46.jpg");
+  background-image: url("img/cards/46.jpg");
 }
 .card[card-id="47"] {
-  background-image: url("img/card/47.jpg");
+  background-image: url("img/cards/47.jpg");
 }
 .card[card-id="48"] {
-  background-image: url("img/card/48.jpg");
+  background-image: url("img/cards/48.jpg");
 }
 .card[card-id="49"] {
-  background-image: url("img/card/49.jpg");
+  background-image: url("img/cards/49.jpg");
 }
 .card[card-id="50"] {
-  background-image: url("img/card/50.jpg");
+  background-image: url("img/cards/50.jpg");
 }
 .card[card-id="51"] {
-  background-image: url("img/card/51.jpg");
+  background-image: url("img/cards/51.jpg");
 }
 .card[card-id="52"] {
-  background-image: url("img/card/52.jpg");
+  background-image: url("img/cards/52.jpg");
 }
 .card[card-id="53"] {
-  background-image: url("img/card/53.jpg");
+  background-image: url("img/cards/53.jpg");
 }
 .card[card-id="54"] {
-  background-image: url("img/card/54.jpg");
+  background-image: url("img/cards/54.jpg");
 }
 .card[card-id="55"] {
-  background-image: url("img/card/55.jpg");
+  background-image: url("img/cards/55.jpg");
 }
 .card[card-id="56"] {
-  background-image: url("img/card/56.jpg");
+  background-image: url("img/cards/56.jpg");
 }
 .card[card-id="57"] {
-  background-image: url("img/card/57.jpg");
+  background-image: url("img/cards/57.jpg");
 }
 .card[card-id="58"] {
-  background-image: url("img/card/58.jpg");
+  background-image: url("img/cards/58.jpg");
 }
 .card[card-id="59"] {
-  background-image: url("img/card/59.jpg");
+  background-image: url("img/cards/59.jpg");
 }
 .card[card-id="60"] {
-  background-image: url("img/card/60.jpg");
+  background-image: url("img/cards/60.jpg");
 }
 .card[card-id="61"] {
-  background-image: url("img/card/61.jpg");
+  background-image: url("img/cards/61.jpg");
 }
 .card[card-id="62"] {
-  background-image: url("img/card/62.jpg");
+  background-image: url("img/cards/62.jpg");
 }
 .card[card-id="63"] {
-  background-image: url("img/card/63.jpg");
+  background-image: url("img/cards/63.jpg");
 }
 .card[card-id="64"] {
-  background-image: url("img/card/64.jpg");
+  background-image: url("img/cards/64.jpg");
 }
 .card[card-id="65"] {
-  background-image: url("img/card/65.jpg");
+  background-image: url("img/cards/65.jpg");
 }
 .card[card-id="66"] {
-  background-image: url("img/card/66.jpg");
+  background-image: url("img/cards/66.jpg");
 }
 .card[card-id="67"] {
-  background-image: url("img/card/67.jpg");
+  background-image: url("img/cards/67.jpg");
 }
 .card[card-id="68"] {
-  background-image: url("img/card/68.jpg");
+  background-image: url("img/cards/68.jpg");
 }
 .card[card-id="69"] {
-  background-image: url("img/card/69.jpg");
+  background-image: url("img/cards/69.jpg");
 }
 .card[card-id="70"] {
-  background-image: url("img/card/70.jpg");
+  background-image: url("img/cards/70.jpg");
 }
 .card[card-id="71"] {
-  background-image: url("img/card/71.jpg");
+  background-image: url("img/cards/71.jpg");
 }
 .card[card-id="72"] {
-  background-image: url("img/card/72.jpg");
+  background-image: url("img/cards/72.jpg");
 }
 .card[card-id="73"] {
-  background-image: url("img/card/73.jpg");
+  background-image: url("img/cards/73.jpg");
 }
 .card[card-id="74"] {
-  background-image: url("img/card/74.jpg");
+  background-image: url("img/cards/74.jpg");
 }
 .card[card-id="75"] {
-  background-image: url("img/card/75.jpg");
+  background-image: url("img/cards/75.jpg");
 }
 .card[card-id="76"] {
-  background-image: url("img/card/76.jpg");
+  background-image: url("img/cards/76.jpg");
 }
 .card[card-id="77"] {
-  background-image: url("img/card/77.jpg");
+  background-image: url("img/cards/77.jpg");
 }
 .card[card-id="78"] {
-  background-image: url("img/card/78.jpg");
+  background-image: url("img/cards/78.jpg");
 }
 .card[card-id="79"] {
-  background-image: url("img/card/79.jpg");
+  background-image: url("img/cards/79.jpg");
 }
 .card[card-id="80"] {
-  background-image: url("img/card/80.jpg");
+  background-image: url("img/cards/80.jpg");
 }
 .card[card-id="81"] {
-  background-image: url("img/card/81.jpg");
+  background-image: url("img/cards/81.jpg");
 }
 .card[card-id="82"] {
-  background-image: url("img/card/82.jpg");
+  background-image: url("img/cards/82.jpg");
 }
 .card[card-id="83"] {
-  background-image: url("img/card/83.jpg");
+  background-image: url("img/cards/83.jpg");
 }
 .card[card-id="84"] {
-  background-image: url("img/card/84.jpg");
+  background-image: url("img/cards/84.jpg");
 }
 .card[card-id="85"] {
-  background-image: url("img/card/85.jpg");
+  background-image: url("img/cards/85.jpg");
 }
 .card[card-id="86"] {
-  background-image: url("img/card/86.jpg");
+  background-image: url("img/cards/86.jpg");
 }
 .card[card-id="87"] {
-  background-image: url("img/card/87.jpg");
+  background-image: url("img/cards/87.jpg");
 }
 .card[card-id="88"] {
-  background-image: url("img/card/88.jpg");
+  background-image: url("img/cards/88.jpg");
 }
 .card[card-id="89"] {
-  background-image: url("img/card/89.jpg");
+  background-image: url("img/cards/89.jpg");
 }
 .card[card-id="90"] {
-  background-image: url("img/card/90.jpg");
+  background-image: url("img/cards/90.jpg");
 }
 .card[card-id="91"] {
-  background-image: url("img/card/91.jpg");
+  background-image: url("img/cards/91.jpg");
 }
 .card[card-id="92"] {
-  background-image: url("img/card/92.jpg");
+  background-image: url("img/cards/92.jpg");
 }
 .card[card-id="93"] {
-  background-image: url("img/card/93.jpg");
+  background-image: url("img/cards/93.jpg");
 }
 .card[card-id="94"] {
-  background-image: url("img/card/94.jpg");
+  background-image: url("img/cards/94.jpg");
 }
 .card[card-id="95"] {
-  background-image: url("img/card/95.jpg");
+  background-image: url("img/cards/95.jpg");
 }
 .card[card-id="96"] {
-  background-image: url("img/card/96.jpg");
+  background-image: url("img/cards/96.jpg");
 }
 .card[card-id="97"] {
-  background-image: url("img/card/97.jpg");
+  background-image: url("img/cards/97.jpg");
 }
 .card[card-id="98"] {
-  background-image: url("img/card/98.jpg");
+  background-image: url("img/cards/98.jpg");
 }
 .card[card-id="99"] {
-  background-image: url("img/card/99.jpg");
+  background-image: url("img/cards/99.jpg");
 }
 .card[card-id="100"] {
-  background-image: url("img/card/100.jpg");
+  background-image: url("img/cards/100.jpg");
 }
 .card[card-id="101"] {
-  background-image: url("img/card/101.jpg");
+  background-image: url("img/cards/101.jpg");
 }
 .card[card-id="102"] {
-  background-image: url("img/card/102.jpg");
+  background-image: url("img/cards/102.jpg");
 }
 .card[card-id="103"] {
-  background-image: url("img/card/103.jpg");
+  background-image: url("img/cards/103.jpg");
 }
 .card[card-id="104"] {
-  background-image: url("img/card/104.jpg");
+  background-image: url("img/cards/104.jpg");
 }
 .card[card-id="105"] {
-  background-image: url("img/card/105.jpg");
+  background-image: url("img/cards/105.jpg");
 }
 .card[card-id="106"] {
-  background-image: url("img/card/106.jpg");
+  background-image: url("img/cards/106.jpg");
 }
 .card[card-id="107"] {
-  background-image: url("img/card/107.jpg");
+  background-image: url("img/cards/107.jpg");
 }
 .card[card-id="108"] {
-  background-image: url("img/card/108.jpg");
+  background-image: url("img/cards/108.jpg");
 }
 .card[card-id="109"] {
-  background-image: url("img/card/109.jpg");
+  background-image: url("img/cards/109.jpg");
 }
 .card[card-id="110"] {
-  background-image: url("img/card/110.jpg");
+  background-image: url("img/cards/110.jpg");
 }
 .card[card-id="111"] {
-  background-image: url("img/card/111.jpg");
+  background-image: url("img/cards/111.jpg");
 }
 .card[card-id="112"] {
-  background-image: url("img/card/112.jpg");
+  background-image: url("img/cards/112.jpg");
 }
 .card[card-id="113"] {
-  background-image: url("img/card/113.jpg");
+  background-image: url("img/cards/113.jpg");
 }
 .card[card-id="114"] {
-  background-image: url("img/card/114.jpg");
+  background-image: url("img/cards/114.jpg");
 }
 .card[card-id="115"] {
-  background-image: url("img/card/115.jpg");
+  background-image: url("img/cards/115.jpg");
 }
 .card[card-id="116"] {
-  background-image: url("img/card/116.jpg");
+  background-image: url("img/cards/116.jpg");
 }
 .card[card-id=back] {
-  background-image: url("img/card/back.jpg");
+  background-image: url("img/cards/back.jpg");
 }
 
 /* ---- CARD CSS END ---- */
-
-/*# sourceMappingURL=paxpamirseconded.css.map */
