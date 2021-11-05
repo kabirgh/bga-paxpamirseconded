@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  *------
  * BGA framework: © Gregory Isabelli <gisabelli@boardgamearena.com> & Emmanuel Colin <ecolin@boardgamearena.com>
@@ -12,174 +13,539 @@
  * PaxPamirSecondEd stylesheet
  *
  */
-
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .pax-pamir-wrapper {
-    position: relative;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    z-index: 1;
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 1;
 }
 
 .layout-actions-wrapper {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: #f0f0f0;
-    box-shadow: 0 3px 8px rgb(0,0,0,0.3);
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #f0f0f0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
 }
 
 .layout-action-button {
-    padding: 6px 12px;
-    border: 1px solid #305a72;
-    border-radius: 6px;
-    font-size: 14px;
-    margin-right: 6px;
-    background-color: #305a72;
-    color: #f0f0f0;
-    cursor: pointer;
+  padding: 6px 12px;
+  border: 1px solid #305a72;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-right: 6px;
+  background-color: #305a72;
+  color: #f0f0f0;
+  cursor: pointer;
 }
 
 .layout-action-button:hover {
-    background-color: #6b6663;
-    border-color: #6b6663;
-    color: #f0f0f0;
-    transition: all ease-in-out 0.3s;
+  background-color: #6b6663;
+  border-color: #6b6663;
+  color: #f0f0f0;
+  transition: all ease-in-out 0.3s;
 }
+
 .disabled-layout-action-button {
-    background-color: #f0f0f0;
-    border-color: #6b6663;
-    color: #6b6663;
+  background-color: #f0f0f0;
+  border-color: #6b6663;
+  color: #6b6663;
 }
 
 #paxpamir-summary,
 #paxpamir-map,
 #paxpamir-market,
 #paxpamir-playerBoards {
-    display: none;
+  display: none;
 }
 
 #paxpamir-summary.section-visible,
 #paxpamir-map.section-visible,
 #paxpamir-market.section-visible,
 #paxpamir-playerBoards.section-visible {
-    display: flex;
+  display: flex;
 }
 
 .summary-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0 0 20px 0;
-    padding: 20px;
-    background-color: rgba(255,255,255,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 20px 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .map-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    box-sizing: border-box;
-    margin: 0 0 20px 0;
-    background-image: url('./img/mounted-map-4096.jpg');
-    /* The following options make the background image resize when the viewport resizes. */
-    /* From https://stackoverflow.com/questions/600743/how-to-get-div-height-to-auto-adjust-to-background-size */
-    background-size: contain;
-    background-repeat: no-repeat;
-    --width: 100%;
-    padding-top: calc(0.582 * var(--width)); /* (img_height / img_width) * width% */
-    width: var(--width);
-    /* Don't resize below this width */
-    min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  margin: 0 0 20px 0;
+  background-image: url("./img/mounted-map-4096.jpg");
+  /* The following options make the background image resize when the viewport resizes. */
+  /* From https://stackoverflow.com/questions/600743/how-to-get-div-height-to-auto-adjust-to-background-size */
+  background-size: contain;
+  background-repeat: no-repeat;
+  --width: 100%;
+  padding-top: calc(0.582 * var(--width));
+  /* (img_height / img_width) * width% */
+  width: var(--width);
+  /* Don't resize below this width */
+  min-width: 500px;
 }
 
 /* ------- MARKET START ------- */
-
 #market-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 .market-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-    box-sizing: border-box;
-    margin: 0 0 20px 0;
-    background-image: url('./img/mounted-market-4096.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    --width: 87.5%;
-    padding-top: calc(0.493 * var(--width)); /* (img_height / img_width) * width% */
-    width: var(--width);
-    min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  box-sizing: border-box;
+  margin: 0 0 20px 0;
+  background-image: url("./img/mounted-market-4096.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  --width: 87.5%;
+  padding-top: calc(0.493 * var(--width));
+  /* (img_height / img_width) * width% */
+  width: var(--width);
+  min-width: 500px;
 }
 
-#paxpamir-deck-container {
-    display: flex;
-    flex-direction: column;
-    width: 12.5%;
-}
-
-.deck {
-    background-image: url('./img/cards/back.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin: 5px;
-    height: 100%;
-    --width: 100%;
-    padding-top: calc(0.715 * var(--width)); /* (img_height / img_width) * width% */
-    width: var(--width);
-    border-radius: 5%;
+#paxpamir-deck {
+  background-image: url("./img/cards/back.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  --width: 12.5%;
+  padding-top: calc(0.715 * var(--width));
+  /* (img_height / img_width) * width% */
+  width: var(--width);
+  border-radius: 5%;
 }
 
 /* ------- MARKET END ------- */
-
 .playerBoards-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0 0 20px 0;
-    min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 20px 0;
+  min-width: 500px;
 }
 
 .playerBoard {
-    margin: 5px 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    --width: 70%;
-    padding-top: calc(0.228 * var(--width)); /* (img_height / img_width) * width% */
-    width: var(--width);
-    min-width: 300px;
-    /* TODO add faction wheel in row */
+  margin: 5px 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  --width: 70%;
+  padding-top: calc(0.228 * var(--width));
+  /* (img_height / img_width) * width% */
+  width: var(--width);
+  min-width: 300px;
+  /* TODO add faction wheel in row */
 }
 
-.playerBoard-305a72 {background-image: url('./img/player-board-blue.png');}
-.playerBoard-cfa580 {background-image: url('./img/player-board-yellow.png');}
-.playerBoard-d30505 {background-image: url('./img/player-board-red.png');}
-.playerBoard-292623 {background-image: url('./img/player-board-black.png');}
-.playerBoard-6b6663 {background-image: url('./img/player-board-grey.png');}
+.playerBoard-305a72 {
+  background-image: url("./img/player-board-blue.png");
+}
+
+.playerBoard-cfa580 {
+  background-image: url("./img/player-board-yellow.png");
+}
+
+.playerBoard-d30505 {
+  background-image: url("./img/player-board-red.png");
+}
+
+.playerBoard-292623 {
+  background-image: url("./img/player-board-black.png");
+}
+
+.playerBoard-6b6663 {
+  background-image: url("./img/player-board-grey.png");
+}
 
 .font-baskerville {
-    font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
 }
+
+/* ---- CARD CSS START ---- */
+.card[card-id="1"] {
+  background-image: url("img/card/1.jpg");
+}
+.card[card-id="2"] {
+  background-image: url("img/card/2.jpg");
+}
+.card[card-id="3"] {
+  background-image: url("img/card/3.jpg");
+}
+.card[card-id="4"] {
+  background-image: url("img/card/4.jpg");
+}
+.card[card-id="5"] {
+  background-image: url("img/card/5.jpg");
+}
+.card[card-id="6"] {
+  background-image: url("img/card/6.jpg");
+}
+.card[card-id="7"] {
+  background-image: url("img/card/7.jpg");
+}
+.card[card-id="8"] {
+  background-image: url("img/card/8.jpg");
+}
+.card[card-id="9"] {
+  background-image: url("img/card/9.jpg");
+}
+.card[card-id="10"] {
+  background-image: url("img/card/10.jpg");
+}
+.card[card-id="11"] {
+  background-image: url("img/card/11.jpg");
+}
+.card[card-id="12"] {
+  background-image: url("img/card/12.jpg");
+}
+.card[card-id="13"] {
+  background-image: url("img/card/13.jpg");
+}
+.card[card-id="14"] {
+  background-image: url("img/card/14.jpg");
+}
+.card[card-id="15"] {
+  background-image: url("img/card/15.jpg");
+}
+.card[card-id="16"] {
+  background-image: url("img/card/16.jpg");
+}
+.card[card-id="17"] {
+  background-image: url("img/card/17.jpg");
+}
+.card[card-id="18"] {
+  background-image: url("img/card/18.jpg");
+}
+.card[card-id="19"] {
+  background-image: url("img/card/19.jpg");
+}
+.card[card-id="20"] {
+  background-image: url("img/card/20.jpg");
+}
+.card[card-id="21"] {
+  background-image: url("img/card/21.jpg");
+}
+.card[card-id="22"] {
+  background-image: url("img/card/22.jpg");
+}
+.card[card-id="23"] {
+  background-image: url("img/card/23.jpg");
+}
+.card[card-id="24"] {
+  background-image: url("img/card/24.jpg");
+}
+.card[card-id="25"] {
+  background-image: url("img/card/25.jpg");
+}
+.card[card-id="26"] {
+  background-image: url("img/card/26.jpg");
+}
+.card[card-id="27"] {
+  background-image: url("img/card/27.jpg");
+}
+.card[card-id="28"] {
+  background-image: url("img/card/28.jpg");
+}
+.card[card-id="29"] {
+  background-image: url("img/card/29.jpg");
+}
+.card[card-id="30"] {
+  background-image: url("img/card/30.jpg");
+}
+.card[card-id="31"] {
+  background-image: url("img/card/31.jpg");
+}
+.card[card-id="32"] {
+  background-image: url("img/card/32.jpg");
+}
+.card[card-id="33"] {
+  background-image: url("img/card/33.jpg");
+}
+.card[card-id="34"] {
+  background-image: url("img/card/34.jpg");
+}
+.card[card-id="35"] {
+  background-image: url("img/card/35.jpg");
+}
+.card[card-id="36"] {
+  background-image: url("img/card/36.jpg");
+}
+.card[card-id="37"] {
+  background-image: url("img/card/37.jpg");
+}
+.card[card-id="38"] {
+  background-image: url("img/card/38.jpg");
+}
+.card[card-id="39"] {
+  background-image: url("img/card/39.jpg");
+}
+.card[card-id="40"] {
+  background-image: url("img/card/40.jpg");
+}
+.card[card-id="41"] {
+  background-image: url("img/card/41.jpg");
+}
+.card[card-id="42"] {
+  background-image: url("img/card/42.jpg");
+}
+.card[card-id="43"] {
+  background-image: url("img/card/43.jpg");
+}
+.card[card-id="44"] {
+  background-image: url("img/card/44.jpg");
+}
+.card[card-id="45"] {
+  background-image: url("img/card/45.jpg");
+}
+.card[card-id="46"] {
+  background-image: url("img/card/46.jpg");
+}
+.card[card-id="47"] {
+  background-image: url("img/card/47.jpg");
+}
+.card[card-id="48"] {
+  background-image: url("img/card/48.jpg");
+}
+.card[card-id="49"] {
+  background-image: url("img/card/49.jpg");
+}
+.card[card-id="50"] {
+  background-image: url("img/card/50.jpg");
+}
+.card[card-id="51"] {
+  background-image: url("img/card/51.jpg");
+}
+.card[card-id="52"] {
+  background-image: url("img/card/52.jpg");
+}
+.card[card-id="53"] {
+  background-image: url("img/card/53.jpg");
+}
+.card[card-id="54"] {
+  background-image: url("img/card/54.jpg");
+}
+.card[card-id="55"] {
+  background-image: url("img/card/55.jpg");
+}
+.card[card-id="56"] {
+  background-image: url("img/card/56.jpg");
+}
+.card[card-id="57"] {
+  background-image: url("img/card/57.jpg");
+}
+.card[card-id="58"] {
+  background-image: url("img/card/58.jpg");
+}
+.card[card-id="59"] {
+  background-image: url("img/card/59.jpg");
+}
+.card[card-id="60"] {
+  background-image: url("img/card/60.jpg");
+}
+.card[card-id="61"] {
+  background-image: url("img/card/61.jpg");
+}
+.card[card-id="62"] {
+  background-image: url("img/card/62.jpg");
+}
+.card[card-id="63"] {
+  background-image: url("img/card/63.jpg");
+}
+.card[card-id="64"] {
+  background-image: url("img/card/64.jpg");
+}
+.card[card-id="65"] {
+  background-image: url("img/card/65.jpg");
+}
+.card[card-id="66"] {
+  background-image: url("img/card/66.jpg");
+}
+.card[card-id="67"] {
+  background-image: url("img/card/67.jpg");
+}
+.card[card-id="68"] {
+  background-image: url("img/card/68.jpg");
+}
+.card[card-id="69"] {
+  background-image: url("img/card/69.jpg");
+}
+.card[card-id="70"] {
+  background-image: url("img/card/70.jpg");
+}
+.card[card-id="71"] {
+  background-image: url("img/card/71.jpg");
+}
+.card[card-id="72"] {
+  background-image: url("img/card/72.jpg");
+}
+.card[card-id="73"] {
+  background-image: url("img/card/73.jpg");
+}
+.card[card-id="74"] {
+  background-image: url("img/card/74.jpg");
+}
+.card[card-id="75"] {
+  background-image: url("img/card/75.jpg");
+}
+.card[card-id="76"] {
+  background-image: url("img/card/76.jpg");
+}
+.card[card-id="77"] {
+  background-image: url("img/card/77.jpg");
+}
+.card[card-id="78"] {
+  background-image: url("img/card/78.jpg");
+}
+.card[card-id="79"] {
+  background-image: url("img/card/79.jpg");
+}
+.card[card-id="80"] {
+  background-image: url("img/card/80.jpg");
+}
+.card[card-id="81"] {
+  background-image: url("img/card/81.jpg");
+}
+.card[card-id="82"] {
+  background-image: url("img/card/82.jpg");
+}
+.card[card-id="83"] {
+  background-image: url("img/card/83.jpg");
+}
+.card[card-id="84"] {
+  background-image: url("img/card/84.jpg");
+}
+.card[card-id="85"] {
+  background-image: url("img/card/85.jpg");
+}
+.card[card-id="86"] {
+  background-image: url("img/card/86.jpg");
+}
+.card[card-id="87"] {
+  background-image: url("img/card/87.jpg");
+}
+.card[card-id="88"] {
+  background-image: url("img/card/88.jpg");
+}
+.card[card-id="89"] {
+  background-image: url("img/card/89.jpg");
+}
+.card[card-id="90"] {
+  background-image: url("img/card/90.jpg");
+}
+.card[card-id="91"] {
+  background-image: url("img/card/91.jpg");
+}
+.card[card-id="92"] {
+  background-image: url("img/card/92.jpg");
+}
+.card[card-id="93"] {
+  background-image: url("img/card/93.jpg");
+}
+.card[card-id="94"] {
+  background-image: url("img/card/94.jpg");
+}
+.card[card-id="95"] {
+  background-image: url("img/card/95.jpg");
+}
+.card[card-id="96"] {
+  background-image: url("img/card/96.jpg");
+}
+.card[card-id="97"] {
+  background-image: url("img/card/97.jpg");
+}
+.card[card-id="98"] {
+  background-image: url("img/card/98.jpg");
+}
+.card[card-id="99"] {
+  background-image: url("img/card/99.jpg");
+}
+.card[card-id="100"] {
+  background-image: url("img/card/100.jpg");
+}
+.card[card-id="101"] {
+  background-image: url("img/card/101.jpg");
+}
+.card[card-id="102"] {
+  background-image: url("img/card/102.jpg");
+}
+.card[card-id="103"] {
+  background-image: url("img/card/103.jpg");
+}
+.card[card-id="104"] {
+  background-image: url("img/card/104.jpg");
+}
+.card[card-id="105"] {
+  background-image: url("img/card/105.jpg");
+}
+.card[card-id="106"] {
+  background-image: url("img/card/106.jpg");
+}
+.card[card-id="107"] {
+  background-image: url("img/card/107.jpg");
+}
+.card[card-id="108"] {
+  background-image: url("img/card/108.jpg");
+}
+.card[card-id="109"] {
+  background-image: url("img/card/109.jpg");
+}
+.card[card-id="110"] {
+  background-image: url("img/card/110.jpg");
+}
+.card[card-id="111"] {
+  background-image: url("img/card/111.jpg");
+}
+.card[card-id="112"] {
+  background-image: url("img/card/112.jpg");
+}
+.card[card-id="113"] {
+  background-image: url("img/card/113.jpg");
+}
+.card[card-id="114"] {
+  background-image: url("img/card/114.jpg");
+}
+.card[card-id="115"] {
+  background-image: url("img/card/115.jpg");
+}
+.card[card-id="116"] {
+  background-image: url("img/card/116.jpg");
+}
+.card[card-id=back] {
+  background-image: url("img/card/back.jpg");
+}
+
+/* ---- CARD CSS END ---- */
+
+/*# sourceMappingURL=paxpamirseconded.css.map */

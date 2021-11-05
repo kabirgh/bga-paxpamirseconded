@@ -1,0 +1,183 @@
+/**
+ *------
+ * BGA framework: © Gregory Isabelli <gisabelli@boardgamearena.com> & Emmanuel Colin <ecolin@boardgamearena.com>
+ * PaxPamirSecondEd implementation : © <Your name here> <Your email address here>
+ *
+ * This code has been produced on the BGA studio platform for use on http://boardgamearena.com.
+ * See http://en.boardgamearena.com/#!doc/Studio for more information.
+ * -----
+ *
+ * paxpamirseconded.css
+ *
+ * PaxPamirSecondEd stylesheet
+ *
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+.pax-pamir-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 1;
+}
+
+.layout-actions-wrapper {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #f0f0f0;
+    box-shadow: 0 3px 8px rgb(0,0,0,0.3);
+}
+
+.layout-action-button {
+    padding: 6px 12px;
+    border: 1px solid #305a72;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-right: 6px;
+    background-color: #305a72;
+    color: #f0f0f0;
+    cursor: pointer;
+}
+
+.layout-action-button:hover {
+    background-color: #6b6663;
+    border-color: #6b6663;
+    color: #f0f0f0;
+    transition: all ease-in-out 0.3s;
+}
+.disabled-layout-action-button {
+    background-color: #f0f0f0;
+    border-color: #6b6663;
+    color: #6b6663;
+}
+
+#paxpamir-summary,
+#paxpamir-map,
+#paxpamir-market,
+#paxpamir-playerBoards {
+    display: none;
+}
+
+#paxpamir-summary.section-visible,
+#paxpamir-map.section-visible,
+#paxpamir-market.section-visible,
+#paxpamir-playerBoards.section-visible {
+    display: flex;
+}
+
+.summary-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 20px 0;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.map-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    margin: 0 0 20px 0;
+    background-image: url('./img/mounted-map-4096.jpg');
+    /* The following options make the background image resize when the viewport resizes. */
+    /* From https://stackoverflow.com/questions/600743/how-to-get-div-height-to-auto-adjust-to-background-size */
+    background-size: contain;
+    background-repeat: no-repeat;
+    --width: 100%;
+    padding-top: calc(0.582 * var(--width)); /* (img_height / img_width) * width% */
+    width: var(--width);
+    /* Don't resize below this width */
+    min-width: 500px;
+}
+
+/* ------- MARKET START ------- */
+
+#market-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.market-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    box-sizing: border-box;
+    margin: 0 0 20px 0;
+    background-image: url('./img/mounted-market-4096.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    --width: 87.5%;
+    padding-top: calc(0.493 * var(--width)); /* (img_height / img_width) * width% */
+    width: var(--width);
+    min-width: 500px;
+}
+
+#paxpamir-deck {
+    background-image: url('./img/cards/back.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    --width: 12.5%;
+    padding-top: calc(0.715 * var(--width)); /* (img_height / img_width) * width% */
+    width: var(--width);
+    border-radius: 5%;
+}
+
+/* ------- MARKET END ------- */
+
+.playerBoards-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 20px 0;
+    min-width: 500px;
+}
+
+.playerBoard {
+    margin: 5px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    --width: 70%;
+    padding-top: calc(0.228 * var(--width)); /* (img_height / img_width) * width% */
+    width: var(--width);
+    min-width: 300px;
+    /* TODO add faction wheel in row */
+}
+
+.playerBoard-305a72 {background-image: url('./img/player-board-blue.png');}
+.playerBoard-cfa580 {background-image: url('./img/player-board-yellow.png');}
+.playerBoard-d30505 {background-image: url('./img/player-board-red.png');}
+.playerBoard-292623 {background-image: url('./img/player-board-black.png');}
+.playerBoard-6b6663 {background-image: url('./img/player-board-grey.png');}
+
+.font-baskerville {
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* ---- CARD CSS START ---- */
+
+@import 'modules/css/card';
+
+/* ---- CARD CSS END ---- */

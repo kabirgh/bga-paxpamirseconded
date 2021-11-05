@@ -47,6 +47,7 @@ define([
 
       setup: function (gamedatas) {
         console.log("Starting game setup");
+        this.inherited(arguments);
 
         // LAYOUT ACTION BUTTONS ZONE --- START
         const viewSummaryBtn = dojo.byId("view-summary");
@@ -70,18 +71,11 @@ define([
         dojo.connect(viewPlayerBoardsBtn, "click", this, 'changeLayoutViewMode');
         // LAYOUT ACTION BUTTONS ZONE --- END
 
-        // Setting up player boards
-        for (var player_id in gamedatas.players) {
-          var player = gamedatas.players[player_id];
-
-          // TODO: Setting up players boards if needed
-        }
-
         console.log(gamedatas) // TODO: remove
         dojo.place(this.playerBoardsHtml(gamedatas.players), document.getElementById('paxpamir-playerBoards'));
 
         // TODO: Set up your game interface here, according to "gamedatas"
-
+        this.setupMarket(gamedatas.market);
 
         // Setup game notifications to handle (see "setupNotifications" method below)
         this.setupNotifications();
@@ -94,6 +88,14 @@ define([
         return Object.entries(players).map(([id, playerData]) => {
           return `<div class='playerBoard playerBoard-${playerData.color}'></div>`
         }).join('')
+      },
+
+      setupMarket: function (market) {
+        const cards = market.map((data, index) => {
+          return `<div class='card[id="${data.cardId}"]'></div>`;
+        }).join('');
+
+        dojo.place(cards, document.getElementById('paxpamir-market'));
       },
 
       ///////////////////////////////////////////////////
