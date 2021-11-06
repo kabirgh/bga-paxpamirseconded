@@ -6,18 +6,36 @@ namespace PAX\Database;
 
 class Utils
 {
-  public static function jsonEncode($value)
+  public static function maybeJsonEncode($value)
   {
-    return self::isJson($value) ? $value : json_encode($value);
+    return is_array($value) ? json_encode($value) : $value;
   }
 
-  public static function isJson($value)
+  public static function maybeJsonDecode($value)
   {
     if (!is_string($value)) {
       return false;
     }
 
-    json_decode($value);
-    return json_last_error() === JSON_ERROR_NONE;
+    $decoded = json_decode($value);
+    return json_last_error() === JSON_ERROR_NONE ? $decoded : $value;
+  }
+
+  public static function maybeJsonEncodeMap($map)
+  {
+    $encoded = [];
+    foreach ($map as $key => $value) {
+      $encoded[$key] = Utils::maybeJsonEncode($value);
+    }
+    return $encoded;
+  }
+
+  public static function maybeJsonDecodeMap($map)
+  {
+    $decoded = [];
+    foreach ($map as $key => $value) {
+      $decoded[$key] = Utils::maybeJsonDecode($value);
+    }
+    return $decoded;
   }
 }

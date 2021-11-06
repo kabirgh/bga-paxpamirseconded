@@ -38,7 +38,7 @@ class Globals extends DbModel
 
   public function getValue()
   {
-    return $this->get('global_value');
+    return $this->getProp('global_value');
   }
 
   public function setValue($value)
@@ -46,11 +46,11 @@ class Globals extends DbModel
     $this->update(['global_value' => $value]);
   }
 
-  // Many operations need to read a value, change it by an amount, and set it
+  // Some operations need to read a value, change it by an amount, and set it
   // again. This method abstracts that operation.
   public function addAmount($amount)
   {
-    $this->update(['global_value' => $this->get('global_value') + $amount]);
+    $this->update(['global_value' => $this->getValue() + $amount]);
   }
 
   // Static queries

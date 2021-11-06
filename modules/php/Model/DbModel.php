@@ -6,10 +6,12 @@ namespace PAX\Model;
 
 use Exception;
 use PAX\Database\QueryBuilder;
+use PAX\Database\Utils;
 
 // Active Record-style ORM.
 // Subclasses may only define instance variables that will be persisted to the
-// database.
+// database. Automatically serializes arrays into json when writing, and vice
+// versa when reading.
 abstract class DbModel
 {
   abstract protected static function tableName();
@@ -17,17 +19,25 @@ abstract class DbModel
 
   protected static function create($instance)
   {
-    self::query()->insert(get_object_vars($instance));
+    // Automatically serialize arrays into json
+    self::query()->insert(Utils::maybeJsonEncodeMap(get_object_vars($instance)));
   }
 
   protected static function query()
   {
     // static:: refers to subclass if it exists, self:: refers to this class
-    return new QueryBuilder(static::tableName(), static::primaryKey());
+    return new QueryBuilder(
+      static::tableName(),
+      static::primaryKey(),
+      false,
+      function ($row) {
+        return Utils::maybeJsonDecodeMap($row);
+      }
+    );
   }
 
   // Getter
-  public function get($prop)
+  public function getProp($prop)
   {
     return get_object_vars($this)[$prop];
   }

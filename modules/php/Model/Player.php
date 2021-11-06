@@ -12,19 +12,19 @@ class Player extends DbModel
   // The BGA framework pre-defined columns in the table for these fields. See
   // https://en.doc.boardgamearena.com/Main_game_logic:_yourgamename.game.php#Accessing_player_information
   // for more details.
-  protected $player_id;
-  protected $player_name;
-  protected $player_color;
-  protected $player_canal;
-  protected $player_avatar;
-  protected $player_score;
+  protected $player_id,
+    $player_name,
+    $player_color,
+    $player_canal,
+    $player_avatar,
+    $player_score;
   // New fields
-  protected $court_cards; // list of card ids
-  protected $event_cards;
-  protected $cylinders;
-  protected $rupees;
-  protected $faction;
-  protected $loyalty;
+  protected $court_cards, // list of card ids
+    $event_cards,
+    $cylinders,
+    $rupees,
+    $faction,
+    $loyalty;
 
   static public function create($params)
   {
@@ -42,8 +42,8 @@ class Player extends DbModel
     $this->player_avatar = $params['player_avatar'];
     $this->player_score = intval($params['player_score']);
     // Do not re-encode if already a valid json string
-    $this->court_cards = Utils::jsonEncode($params['court_cards']);
-    $this->event_cards = Utils::jsonEncode($params['event_cards']);
+    $this->court_cards = $params['court_cards'];
+    $this->event_cards = $params['event_cards'];
     $this->cylinders = intval($params['cylinders']);
     $this->rupees = intval($params['rupees']);
     $this->faction = $params['faction'];
@@ -67,8 +67,8 @@ class Player extends DbModel
       'id' => $this->player_id,
       'color' => $this->player_color,
       'score' => $this->player_score,
-      'court_cards' => json_decode($this->court_cards),
-      'event_cards' => json_decode($this->event_cards),
+      'court_cards' => $this->court_cards,
+      'event_cards' => $this->event_cards,
       'cylinders' => $this->cylinders,
       'rupees' => $this->rupees,
       'faction' => $this->faction,

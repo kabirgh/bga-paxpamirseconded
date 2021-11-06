@@ -90,6 +90,7 @@ class QueryBuilder extends \APP_DbObject
     }
 
     $this->sql .= implode(',', $vals);
+    // var_dump($this->sql);
     self::DbQuery($this->sql);
     if ($this->log) {
       Log::addEntry([
@@ -231,7 +232,7 @@ class QueryBuilder extends \APP_DbObject
 
       $val = $row;
       if (is_callable($this->cast)) {
-        $val = forward_static_call($this->cast, $row);
+        $val = call_user_func($this->cast, $row);
       } elseif (is_string($this->cast)) {
         $val = $this->cast == 'object' ? ((object) $row) : new $this->cast($row);
       }
