@@ -65,7 +65,7 @@ $machinestates = [
 
     ST_CHOOSE_ACTION => [
         'name' => 'chooseAction',
-        'description' => clienttranslate('${actplayer} must play a card or pass'),
+        'description' => clienttranslate('${actplayer} must choose an action or pass'),
         'descriptionmyturn' => clienttranslate('${you} must choose an action or pass'),
         'type' => 'activeplayer',
         // TODO args to highlight possible actions

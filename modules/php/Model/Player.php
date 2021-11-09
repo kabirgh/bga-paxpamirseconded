@@ -9,9 +9,8 @@ use PAX\Database\Utils;
 
 class Player extends DbModel
 {
-  // The BGA framework pre-defined columns in the table for these fields. See
+  // The BGA framework pre-defined columns in the table for some fields. See
   // https://en.doc.boardgamearena.com/Main_game_logic:_yourgamename.game.php#Accessing_player_information
-  // for more details.
   protected $player_id,
     $player_name,
     $player_color,
@@ -25,6 +24,9 @@ class Player extends DbModel
     $rupees,
     $faction,
     $loyalty;
+
+  // Hydrated view of $court_cards
+  private $courtCardObjects;
 
   static public function create($params)
   {
@@ -41,13 +43,14 @@ class Player extends DbModel
     $this->player_canal = $params['player_canal'];
     $this->player_avatar = $params['player_avatar'];
     $this->player_score = intval($params['player_score']);
-    // Do not re-encode if already a valid json string
     $this->court_cards = $params['court_cards'];
     $this->event_cards = $params['event_cards'];
     $this->cylinders = intval($params['cylinders']);
     $this->rupees = intval($params['rupees']);
     $this->faction = $params['faction'];
     $this->loyalty = intval($params['loyalty']);
+
+    $this->afterUpdate($params);
   }
 
   protected static function tableName()
@@ -58,6 +61,52 @@ class Player extends DbModel
   protected static function primaryKey()
   {
     return 'player_id';
+  }
+
+  protected function afterUpdate($updatedProps)
+  {
+    if (isset($updatedProps['court_cards'])) {
+      // Get Card objects from ids
+      $this->courtCardObjects = array_map(
+        function ($cardId) {
+          return Card::queryById($cardId);
+        },
+        // $this->court_cards was modified in `update`
+        $this->court_cards
+      );
+    }
+  }
+
+  private function sumRankForSuit($suit)
+  {
+    // Total rank of $suit cards
+    $sum = 0;
+    foreach ($this->courtCardObjects as $card) {
+      if ($card['suit'] === $suit) {
+        $sum += $card->rank();
+      }
+    }
+    return $sum;
+  }
+
+  public function courtCapacity()
+  {
+    return 3 + $this->sumRankForSuit('Political');
+  }
+
+  public function handCapacity()
+  {
+    return 2 + $this->sumRankForSuit('Intelligence');
+  }
+
+  public function taxShelter()
+  {
+    return $this->sumRankForSuit('Economic');
+  }
+
+  public function militaryStars()
+  {
+    return $this->sumRankForSuit('Military');
   }
 
   public function toArray()
@@ -73,6 +122,10 @@ class Player extends DbModel
       'rupees' => $this->rupees,
       'faction' => $this->faction,
       'loyalty' => $this->loyalty,
+      'courtCapacity' => $this->courtCapacity(),
+      'handCapacity' => $this->handCapacity(),
+      'taxShelter' => $this->taxShelter(),
+      'militaryStars' => $this->militaryStars(),
     ];
   }
 
