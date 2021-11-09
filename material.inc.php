@@ -22,6 +22,8 @@ declare(strict_types=1);
  *
  */
 
+require_once 'modules/php/constants.inc.php';
+
 // Needs to call clienttranslate, so it can't be a real const variable.
 // This is also why the data isn't defined in the database.
 // TODO move to another file?

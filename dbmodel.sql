@@ -40,3 +40,11 @@ CREATE TABLE IF NOT EXISTS `market` (
   `coins` JSON NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8 AUTO_INCREMENT = 1;
+
+CREATE TABLE IF NOT EXISTS `map` (
+  `id` int unsigned NOT NULL,
+  `tribes` JSON NOT NULL,
+  `roads` JSON NOT NULL,
+  `armies` JSON NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8 AUTO_INCREMENT = 1;

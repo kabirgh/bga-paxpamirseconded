@@ -38,6 +38,7 @@ require_once(APP_GAMEMODULE_PATH . 'module/table/table.game.php');
 use PAX\Manager\CardManager;
 use PAX\Manager\PlayerManager;
 use PAX\Model\Market;
+use PAX\Model\Map;
 
 class PaxPamirSecondEd extends Table
 {
@@ -89,6 +90,7 @@ class PaxPamirSecondEd extends Table
     PlayerManager::setupNewGame($players, $options);
     CardManager::setupNewGame($players, $options);
     Market::setupNewGame($players, $options);
+    Map::setupNewGame($players, $options);
 
     /************ Start the game initialization *****/
 
