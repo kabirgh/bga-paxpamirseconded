@@ -15,7 +15,10 @@
   </div>
   <div id='paxpamir-map' class='map-section'></div>
   <div id='market-container'>
-    <div id='paxpamir-market' class='market-section'></div>
+    <div id='paxpamir-market' class='market-section'>
+      <div id='market-row-0' class='market-row'></div>
+      <div id='market-row-1' class='market-row'></div>
+    </div>
     <div id='paxpamir-deck'></div>
   </div>
   </div>

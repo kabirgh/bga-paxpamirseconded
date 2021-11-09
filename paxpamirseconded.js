@@ -72,9 +72,8 @@ define([
         // LAYOUT ACTION BUTTONS ZONE --- END
 
         console.log(gamedatas) // TODO: remove
-        dojo.place(this.playerBoardsHtml(gamedatas.players), document.getElementById('paxpamir-playerBoards'));
 
-        // TODO: Set up your game interface here, according to "gamedatas"
+        this.setupPlayerBoards(gamedatas.players);
         this.setupMarket(gamedatas.market);
 
         // Setup game notifications to handle (see "setupNotifications" method below)
@@ -83,19 +82,22 @@ define([
         console.log("Ending game setup");
       },
 
-
-      playerBoardsHtml: function (players) {
-        return Object.entries(players).map(([id, playerData]) => {
+      setupPlayerBoards: function (players) {
+        const boards = Object.entries(players).map(([id, playerData]) => {
           return `<div class="playerBoard playerBoard-${playerData.color}"></div>`
         }).join('')
+
+        dojo.place(boards, document.getElementById('paxpamir-playerBoards'));
       },
 
       setupMarket: function (market) {
-        const cards = market.cards.map((cardId, index) => {
-          return `<div class="card" card-id="${cardId}"></div>`;
-        }).join('');
+        for (const row of [0, 1]) {
+          const cards = market.cards.slice(row * 6, row * 6 + 6).map(cardId => {
+            return `<div class="card" card-id="${cardId}"></div>`;
+          }).join('');
 
-        dojo.place(cards, document.getElementById('paxpamir-market'));
+          dojo.place(cards, document.getElementById(`market-row-${row}`));
+        }
       },
 
       ///////////////////////////////////////////////////

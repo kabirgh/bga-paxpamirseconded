@@ -110,37 +110,7 @@
 
 /* ------- MARKET START ------- */
 
-#market-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.market-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-    box-sizing: border-box;
-    margin: 0 0 20px 0;
-    background-image: url('./img/mounted-market-4096.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    --width: 87.5%;
-    padding-top: calc(0.493 * var(--width)); /* (img_height / img_width) * width% */
-    width: var(--width);
-    min-width: 500px;
-}
-
-#paxpamir-deck {
-    background-image: url('./img/cards/back.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    --width: 12.5%;
-    padding-top: calc(0.715 * var(--width)); /* (img_height / img_width) * width% */
-    width: var(--width);
-    border-radius: 5%;
-}
+@import 'modules/css/market';
 
 /* ------- MARKET END ------- */
 
@@ -176,8 +146,8 @@
     font-family: 'Libre Baskerville', serif;
 }
 
-/* ---- CARD CSS START ---- */
+/* ------- CARD CSS START ------- */
 
 @import 'modules/css/card';
 
-/* ---- CARD CSS END ---- */
+/* ------- CARD CSS END ------- */

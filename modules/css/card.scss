@@ -14,7 +14,8 @@
 
   background-size: contain;
   background-repeat: no-repeat;
-  --width: 12.5%;
+  background-position: center;
+  --width: 27%;
   padding-top: calc(0.715 * var(--width)); /* (img_height / img_width) * width% */
   width: var(--width);
   border-radius: 5%;
