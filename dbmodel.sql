@@ -18,8 +18,12 @@
 -- Note: The database schema is created from this file when the game starts. If you modify this file,
 --       you have to restart a game to see your changes in database.
 
+-- IMPT: no inline comments allowed!
 
 ALTER TABLE `player`
+  ADD `court_cards` JSON DEFAULT NULL,
+  ADD `event_cards` JSON DEFAULT NULL,
+  ADD `cylinders` int unsigned NOT NULL,
   ADD `rupees` int unsigned NOT NULL DEFAULT 0,
   ADD `faction` enum('Afghan', 'British', 'Russian'),
   ADD `loyalty` int unsigned NOT NULL DEFAULT 0;

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PAX\Model;
 
 use PAX\Model\DbModel;
+use PAX\Database\Utils;
 
 class Player extends DbModel
 {
@@ -18,6 +19,9 @@ class Player extends DbModel
   protected $player_avatar;
   protected $player_score;
   // New fields
+  protected $court_cards; // list of card ids
+  protected $event_cards;
+  protected $cylinders;
   protected $rupees;
   protected $faction;
   protected $loyalty;
@@ -36,10 +40,14 @@ class Player extends DbModel
     $this->player_color = $params['player_color'];
     $this->player_canal = $params['player_canal'];
     $this->player_avatar = $params['player_avatar'];
-    $this->player_score = $params['player_score'];
-    $this->rupees = $params['rupees'];
+    $this->player_score = intval($params['player_score']);
+    // Do not re-encode if already a valid json string
+    $this->court_cards = Utils::jsonEncode($params['court_cards']);
+    $this->event_cards = Utils::jsonEncode($params['event_cards']);
+    $this->cylinders = intval($params['cylinders']);
+    $this->rupees = intval($params['rupees']);
     $this->faction = $params['faction'];
-    $this->loyalty = $params['loyalty'];
+    $this->loyalty = intval($params['loyalty']);
   }
 
   protected static function tableName()
@@ -56,9 +64,12 @@ class Player extends DbModel
   {
     // Transform to make frontend happy
     return [
-      'id' => strval($this->player_id),
-      'color' => strval($this->player_color),
+      'id' => $this->player_id,
+      'color' => $this->player_color,
       'score' => $this->player_score,
+      'court_cards' => json_decode($this->court_cards),
+      'event_cards' => json_decode($this->event_cards),
+      'cylinders' => $this->cylinders,
       'rupees' => $this->rupees,
       'faction' => $this->faction,
       'loyalty' => $this->loyalty,
