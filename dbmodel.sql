@@ -33,3 +33,10 @@ CREATE TABLE IF NOT EXISTS `card` (
   `deck_pos` int unsigned NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8 AUTO_INCREMENT = 1;
+
+CREATE TABLE IF NOT EXISTS `market` (
+  `id` int unsigned NOT NULL,
+  `cards` JSON NOT NULL,
+  `coins` JSON NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8 AUTO_INCREMENT = 1;

@@ -35,6 +35,29 @@ class Card extends DbModel
     return 'id';
   }
 
+  // Getters
+  /** @return string court|event */
+  public function type()
+  {
+    return $this->data['type'];
+  }
+
+  /** @return int|null */
+  public function rank()
+  {
+    return $this->getElseNull('rank');
+  }
+
+  /** @return string|null Intelligence|Military|Political|Economic */
+  public function suit()
+  {
+    return $this->getElseNull('suit');
+  }
+
+  private function getElseNull($key)
+  {
+    return isset($this->data[$key]) ? $this->data[$key] : null;
+  }
   // Static queries
 
   public static function queryById($id)

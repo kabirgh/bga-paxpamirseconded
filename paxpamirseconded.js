@@ -91,8 +91,8 @@ define([
       },
 
       setupMarket: function (market) {
-        const cards = market.map((data, index) => {
-          return `<div class="card" card-id="${data.cardId}"></div>`;
+        const cards = market.cards.map((cardId, index) => {
+          return `<div class="card" card-id="${cardId}"></div>`;
         }).join('');
 
         dojo.place(cards, document.getElementById('paxpamir-market'));

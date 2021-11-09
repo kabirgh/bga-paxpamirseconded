@@ -36,8 +36,8 @@ spl_autoload_register($swdNamespaceAutoload, true, true);
 require_once(APP_GAMEMODULE_PATH . 'module/table/table.game.php');
 
 use PAX\Manager\CardManager;
-use PAX\Manager\MarketManager;
 use PAX\Manager\PlayerManager;
+use PAX\Model\Market;
 
 class PaxPamirSecondEd extends Table
 {
@@ -88,7 +88,7 @@ class PaxPamirSecondEd extends Table
   {
     PlayerManager::setupNewGame($players, $options);
     CardManager::setupNewGame($players, $options);
-    MarketManager::setupNewGame($players, $options);
+    Market::setupNewGame($players, $options);
 
     /************ Start the game initialization *****/
 
@@ -122,7 +122,7 @@ class PaxPamirSecondEd extends Table
   {
     return [
       'players' => PlayerManager::getUiData(),
-      'market' => MarketManager::getUiData(),
+      'market' => Market::get()->getUiData(),
     ];
   }
 

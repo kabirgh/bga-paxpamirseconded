@@ -39,10 +39,14 @@ class CardManager
     return self::getNextCards(1)[0];
   }
 
+  /**
+   * TODO handle empty deck
+   * @param int $n
+   * @return Card[] */
   public static function getNextCards($n)
   {
     $deckPosGlobal = Globals::queryById(self::DECK_CURSOR_ID);
-    $cards = Card::queryByDeckPosAndLimit($deckPosGlobal->get('global_value'), $n);
+    $cards = Card::queryByDeckPosAndLimit($deckPosGlobal->getValue(), $n);
     $deckPosGlobal->addAmount($n);
 
     return $cards;
