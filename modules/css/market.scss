@@ -30,6 +30,25 @@
   height: 100%;
 }
 
+.market-row-spacer-left {
+  width: 3.5%;
+  height: 100%;
+  z-index: 3; // same as .card
+}
+
+.market-row-spacer {
+  width: 2.5%;
+  height: 100%;
+  z-index: 3; // same as .card
+}
+
+// Is added to market-row-spacer on the right
+.market-row-spacer-right {
+  width: 0.5%;
+  height: 100%;
+  z-index: 3; // same as .card
+}
+
 // TODO fit cards on to the squares better
 #market-row-0 {
   top:0;

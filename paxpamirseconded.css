@@ -140,6 +140,24 @@
   height: 100%;
 }
 
+.market-row-spacer-left {
+  width: 3.5%;
+  height: 100%;
+  z-index: 3;
+}
+
+.market-row-spacer {
+  width: 2.5%;
+  height: 100%;
+  z-index: 3;
+}
+
+.market-row-spacer-right {
+  width: 0.5%;
+  height: 100%;
+  z-index: 3;
+}
+
 #market-row-0 {
   top: 0;
   left: 0;
@@ -218,9 +236,9 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  --width: 27%;
-  padding-top: calc(0.715 * var(--width));
-  /* (img_height / img_width) * width% */
+  --width: 30%;
+  padding-top: calc(0.69 * var(--width));
+  /* approx (img_height / img_width) * width% */
   width: var(--width);
   border-radius: 5%;
   z-index: 3;

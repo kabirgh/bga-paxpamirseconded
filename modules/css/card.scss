@@ -15,8 +15,11 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  --width: 27%;
-  padding-top: calc(0.715 * var(--width)); /* (img_height / img_width) * width% */
+  // Don't know why these values for width and padding-top work, but they give
+  // cards correct width to fill the outlines on the market. They're still a
+  // little tall, but I think that's the image aspect ratio
+  --width: 30%;
+  padding-top: calc(0.69 * var(--width)); /* approx (img_height / img_width) * width% */
   width: var(--width);
   border-radius: 5%;
   z-index: 3; // higher than market

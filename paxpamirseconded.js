@@ -92,9 +92,11 @@ define([
 
       setupMarket: function (market) {
         for (const row of [0, 1]) {
-          const cards = market.cards.slice(row * 6, row * 6 + 6).map((cardId, i) => {
-            return `<div id="card-pos-${row * 6 + i}" class="card" card-id="${cardId}"></div>`;
-          }).join('');
+          const cards = `<div class="market-row-spacer-left"></div>` +
+            market.cards.slice(row * 6, row * 6 + 6).map((cardId, i) => {
+              return `<div id="card-pos-${row * 6 + i}" class="card" card-id="${cardId}"></div><div class="market-row-spacer"></div>`;
+            }).join('') +
+            `<div class="market-row-spacer-right"></div>`;
 
           dojo.place(cards, document.getElementById(`market-row-${row}`));
         }
