@@ -77,6 +77,12 @@ class Player extends DbModel
     }
   }
 
+  // TODO handle right placement
+  public function purchaseCard($cardId, $placement)
+  {
+    $this->update(['court_cards' => array_merge($this->court_cards, [$cardId])]);
+  }
+
   private function sumRankForSuit($suit)
   {
     // Total rank of $suit cards

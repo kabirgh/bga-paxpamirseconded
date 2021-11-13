@@ -111,6 +111,12 @@ class PaxPamirSecondEd extends Table
     /************ End of the game initialization *****/
   }
 
+  // TODO check if setting static variable for market works
+  public function market()
+  {
+    return Market::get();
+  }
+
   /*
         getAllDatas:
 

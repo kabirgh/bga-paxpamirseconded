@@ -39,6 +39,15 @@ class action_paxpamirseconded extends APP_GameAction
 
   // TODO: defines your action entry points there
 
+  public function actPurchase()
+  {
+    self::setAjaxMode();
+    $index = self::getArg('index', AT_json, false);
+
+    $this->game->market()->purchaseCard($index);
+
+    self::ajaxResponse();
+  }
 
   /*
 
