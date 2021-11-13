@@ -91,23 +91,35 @@ define([
       },
 
       setupMarket: function (market) {
-        for (const row of [0, 1]) {
-          const cards = `<div class="market-row-spacer-left"></div>` +
-            market.cards.slice(row * 6, row * 6 + 6).map((cardId, i) => {
-              return `<div id="card-pos-${row * 6 + i}" class="card" card-id="${cardId}"></div><div class="market-row-spacer"></div>`;
-            }).join('') +
-            `<div class="market-row-spacer-right"></div>`;
+        // TODO can't call this.takeAction unavailable inside elem.onclick scope
+        takeAction = this.takeAction;
 
-          dojo.place(cards, document.getElementById(`market-row-${row}`));
-        }
+        market.cards.map((cardId, i) => {
+          const cardElem = document.querySelector(`div[card-pos='${i}']`);
+          cardElem.setAttribute('card-id', cardId);
 
-        // TODO move into a card module?
-        // TODO ajax action request
-        document.querySelectorAll(".card").forEach(elem => {
-          elem.onclick = function (cardElem) {
-            console.log(`Clicked ${cardElem}`);
+          // TODO move into a card module?
+          // TODO ajax action request
+          cardElem.onclick = function (event) {
+            // TODO update onclick after purchase and discard
+            takeAction('actPurchase', { index: event.target.getAttribute('card-pos') });
           }
         })
+      },
+
+      takeAction: function (action, data) {
+        ajaxcall = this.ajaxcall;
+        return new Promise((resolve, reject) => {
+          ajaxcall(
+            '/' + this.game_name + '/' + this.game_name + '/' + action + '.html',
+            data || {},
+            this,
+            (data) => resolve(data),
+            (isError, message, code) => {
+              if (isError) reject(message, code);
+            },
+          );
+        });
       },
 
       ///////////////////////////////////////////////////

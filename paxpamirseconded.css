@@ -169,7 +169,7 @@
   top: 0;
   left: 0;
   align-items: flex-end;
-  margin-top: -2%;
+  margin-top: -1%;
 }
 
 #paxpamir-deck {
@@ -242,6 +242,7 @@
   width: var(--width);
   border-radius: 5%;
   z-index: 3;
+  cursor: pointer;
 }
 .card[card-id="1"] {
   background-image: url("img/cards/1.jpg");
