@@ -11,7 +11,7 @@ use PAX\Core\Game;
 class QueryBuilder extends \APP_DbObject
 {
   private $table,
-    $cast,
+    $selectCast,
     $primary,
     $associative,
     $columns,
@@ -28,12 +28,13 @@ class QueryBuilder extends \APP_DbObject
     $operation,
     $operationDatas;
 
-  public function __construct($table, $primary = 'id', $log = false, $cast = null)
+  public function __construct($table, $primary = 'id', $log = false, $selectCast = null, $updateCast = null)
   {
     $this->table = $table;
     $this->primary = $primary;
     $this->log = $log;
-    $this->cast = $cast;
+    $this->selectCast = $selectCast;
+    $this->updateCast = $updateCast;
     $this->columns = null;
     $this->sql = null;
     $this->limit = null;
@@ -121,6 +122,10 @@ class QueryBuilder extends \APP_DbObject
    */
   public function update($fields = [], $id = null)
   {
+    if (is_callable($this->updateCast)) {
+      $fields = call_user_func($this->updateCast, $fields);
+    }
+
     $values = [];
     foreach ($fields as $column => $field) {
       $values[] = "`$column` = " . (is_null($field) ? 'NULL' : "'$field'");
@@ -231,10 +236,10 @@ class QueryBuilder extends \APP_DbObject
       unset($row['result_associative_index']);
 
       $val = $row;
-      if (is_callable($this->cast)) {
-        $val = call_user_func($this->cast, $row);
-      } elseif (is_string($this->cast)) {
-        $val = $this->cast == 'object' ? ((object) $row) : new $this->cast($row);
+      if (is_callable($this->selectCast)) {
+        $val = call_user_func($this->selectCast, $row);
+      } elseif (is_string($this->selectCast)) {
+        $val = $this->selectCast == 'object' ? ((object) $row) : new $this->selectCast($row);
       }
 
       $oRes[$id] = $val;

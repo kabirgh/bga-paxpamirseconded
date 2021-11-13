@@ -32,6 +32,9 @@ abstract class DbModel
       false,
       function ($row) {
         return Utils::maybeJsonDecodeMap($row);
+      },
+      function ($map) {
+        return Utils::maybeJsonEncodeMap($map);
       }
     );
   }
